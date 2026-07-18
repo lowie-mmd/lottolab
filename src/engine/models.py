@@ -28,6 +28,7 @@ class Draw:
     prizes: dict                      # {t1:{winners,amount},...}；缺漏時為空 dict
     data_quality: str                 # full | partial | numbers_only
     promo: Optional[dict] = None      # 節慶加碼（§2.3）；核心引擎不讀
+    source: Optional[str] = None      # 來源信任層；官方為 None，北銀延伸層為 "thirdparty_pre2007"
 
     @property
     def period_int(self) -> int:
@@ -57,6 +58,7 @@ def draw_from_dict(d: dict[str, Any]) -> Draw:
         prizes=d.get("prizes") or {},
         data_quality=d.get("data_quality", QUALITY_NUMBERS_ONLY),
         promo=d.get("promo"),
+        source=d.get("source"),
     )
 
 
@@ -70,6 +72,7 @@ def draw_to_dict(dr: Draw) -> dict[str, Any]:
         "prizes": dr.prizes,
         "data_quality": dr.data_quality,
         "promo": dr.promo,
+        "source": dr.source,
     }
 
 

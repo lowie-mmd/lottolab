@@ -26,29 +26,61 @@ from strategies.registry import build_all_strategies
 
 ROOT = Path(__file__).resolve().parents[2]
 DRAWS_PATH = ROOT / "data" / "draws.json"
+PRE2007_PATH = ROOT / "data" / "draws_pre2007.json"
 CONFIG_PATH = ROOT / "config" / "config.json"
 RESULTS_DIR = ROOT / "data" / "results"
 
 
-def run_audit(draws, game) -> dict:
-    print("硬體隨機性審計（全歷史）…")
-    report = {
+def _audit_body(draws, game) -> dict:
+    return {
         "n_draws": len(draws),
         "single_number": single_number_chisquare(draws, game),
         "special_number": special_chisquare(draws, game),
         "pair_cooccurrence": pair_cooccurrence(draws, game),
         "segmented_by_year": segmented_by_year(draws, game),
-        "note": (
-            "不做 NIST 套件（§5.2）。台彩定期輪換球組與搖獎機，全歷史混池檢定"
-            "只能偵測長期系統性偏差，無法偵測單一球組短期物理瑕疵。"
-        ),
     }
+
+
+def run_audit(draws, game) -> dict:
+    """主審計（headline）：只用官方源（台彩 2007+）。"""
+    print("硬體隨機性審計（主：官方源 2007+）…")
+    report = _audit_body(draws, game)
+    report["trust_tier"] = "official"
+    report["note"] = (
+        "主混池檢定只用官方源（台彩 2007+）。不做 NIST 套件（§5.2）。台彩定期輪換球組與"
+        "搖獎機，混池檢定只能偵測長期系統性偏差，無法偵測單一球組短期物理瑕疵。"
+    )
     (RESULTS_DIR / "audit.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     sn, sp, pr = report["single_number"], report["special_number"], report["pair_cooccurrence"]
     print(f"  單號卡方  chi2={sn['chi2']:.2f} df={sn['df']} p={sn['p_value']:.4f}")
     print(f"  特別號卡方 chi2={sp['chi2']:.2f} df={sp['df']} p={sp['p_value']:.4f}")
     print(f"  配對共現  chi2={pr['chi2']:.2f} df={pr['df']} p={pr['p_value']:.4f}")
+    return report
+
+
+def run_audit_extended(draws, game) -> dict:
+    """延伸視圖：官方源 + 北銀 2004–2006 第三方層（numbers_only）。清楚標註信任層級。
+    headline 結論站在官方源（run_audit）；本視圖僅供延伸觀察與分段檢定。"""
+    if not PRE2007_PATH.exists():
+        print("延伸視圖：找不到 data/draws_pre2007.json，先執行 scraper.build_pre2007。")
+        return {}
+    pre = load_draws(PRE2007_PATH)
+    combined = sorted(draws + pre, key=lambda d: (d.date or "", d.period_int))
+    print(f"硬體隨機性審計（延伸視圖：官方 {len(draws)} + 北銀第三方 {len(pre)} = {len(combined)}）…")
+    report = _audit_body(combined, game)
+    report["trust_tier"] = "extended_thirdparty"
+    report["n_official"] = len(draws)
+    report["n_extended_pre2007"] = len(pre)
+    report["note"] = (
+        "延伸視圖：含 2004–2006 北銀時代第三方雙源對帳資料（numbers_only、信任層級較低）。"
+        "非 headline 結論；headline 以官方源 audit.json 為準。分段檢定可見北銀 vs 台彩"
+        "跨承辦商（球組更換）邊界。永不進入策略推論。"
+    )
+    (RESULTS_DIR / "audit_extended.json").write_text(
+        json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    sn = report["single_number"]
+    print(f"  延伸單號卡方 chi2={sn['chi2']:.2f} df={sn['df']} p={sn['p_value']:.4f}")
     return report
 
 
@@ -106,6 +138,7 @@ def run_validate(draws, game, cfg, n_perm, observational) -> dict:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--audit", action="store_true")
+    ap.add_argument("--extended", action="store_true", help="另出北銀延伸視圖 audit_extended.json")
     ap.add_argument("--validate", action="store_true")
     ap.add_argument("--observational", action="store_true")
     ap.add_argument("--n-perm", type=int, default=1000)
@@ -118,6 +151,8 @@ def main() -> None:
 
     if args.audit:
         run_audit(draws, game)
+        if args.extended:
+            run_audit_extended(draws, game)
     if args.validate:
         run_validate(draws, game, cfg, args.n_perm, args.observational)
     if not (args.audit or args.validate):

@@ -1,0 +1,5631 @@
+{
+  "meta": {
+    "game": "lotto649",
+    "era": "taipeibank_2004_2006",
+    "updated": "2026-07-18T13:31:24.051140+00:00",
+    "sources": [
+      "pilio",
+      "lotto-8"
+    ],
+    "trust_tier": "extended_thirdparty",
+    "note": "北銀時代延伸資料層；numbers_only；雙第三方對帳；僅用於硬體審計延伸視圖與分段檢定，不進策略推論，主混池檢定維持官方源（見 DECISIONS.md 2026-07-18）"
+  },
+  "draws": [
+    {
+      "period": "093000001",
+      "date": "2004-01-05",
+      "numbers": [
+        6,
+        9,
+        12,
+        13,
+        33,
+        39
+      ],
+      "special": 21,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000002",
+      "date": "2004-01-08",
+      "numbers": [
+        16,
+        21,
+        27,
+        30,
+        31,
+        47
+      ],
+      "special": 35,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000003",
+      "date": "2004-01-12",
+      "numbers": [
+        2,
+        4,
+        25,
+        26,
+        34,
+        43
+      ],
+      "special": 41,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000004",
+      "date": "2004-01-15",
+      "numbers": [
+        18,
+        19,
+        28,
+        29,
+        30,
+        34
+      ],
+      "special": 12,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000005",
+      "date": "2004-01-19",
+      "numbers": [
+        14,
+        15,
+        20,
+        29,
+        32,
+        39
+      ],
+      "special": 43,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000006",
+      "date": "2004-01-22",
+      "numbers": [
+        13,
+        28,
+        29,
+        32,
+        33,
+        34
+      ],
+      "special": 43,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000007",
+      "date": "2004-01-26",
+      "numbers": [
+        2,
+        6,
+        13,
+        34,
+        40,
+        44
+      ],
+      "special": 14,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000008",
+      "date": "2004-01-29",
+      "numbers": [
+        22,
+        29,
+        34,
+        36,
+        44,
+        46
+      ],
+      "special": 37,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000009",
+      "date": "2004-02-02",
+      "numbers": [
+        4,
+        6,
+        11,
+        22,
+        42,
+        48
+      ],
+      "special": 23,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000010",
+      "date": "2004-02-05",
+      "numbers": [
+        17,
+        22,
+        26,
+        29,
+        37,
+        43
+      ],
+      "special": 31,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000011",
+      "date": "2004-02-09",
+      "numbers": [
+        14,
+        17,
+        20,
+        25,
+        43,
+        48
+      ],
+      "special": 15,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000012",
+      "date": "2004-02-12",
+      "numbers": [
+        1,
+        2,
+        26,
+        31,
+        39,
+        40
+      ],
+      "special": 38,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000013",
+      "date": "2004-02-16",
+      "numbers": [
+        7,
+        13,
+        18,
+        19,
+        25,
+        37
+      ],
+      "special": 14,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000014",
+      "date": "2004-02-19",
+      "numbers": [
+        4,
+        21,
+        25,
+        32,
+        37,
+        43
+      ],
+      "special": 2,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000015",
+      "date": "2004-02-23",
+      "numbers": [
+        3,
+        6,
+        17,
+        23,
+        28,
+        32
+      ],
+      "special": 45,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000016",
+      "date": "2004-02-26",
+      "numbers": [
+        8,
+        12,
+        23,
+        24,
+        45,
+        46
+      ],
+      "special": 36,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000017",
+      "date": "2004-03-01",
+      "numbers": [
+        1,
+        11,
+        17,
+        25,
+        41,
+        45
+      ],
+      "special": 32,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000018",
+      "date": "2004-03-04",
+      "numbers": [
+        12,
+        15,
+        22,
+        23,
+        41,
+        48
+      ],
+      "special": 17,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000019",
+      "date": "2004-03-08",
+      "numbers": [
+        8,
+        12,
+        17,
+        18,
+        19,
+        34
+      ],
+      "special": 37,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000020",
+      "date": "2004-03-11",
+      "numbers": [
+        8,
+        14,
+        21,
+        22,
+        30,
+        31
+      ],
+      "special": 48,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000021",
+      "date": "2004-03-15",
+      "numbers": [
+        1,
+        2,
+        7,
+        26,
+        38,
+        43
+      ],
+      "special": 4,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000022",
+      "date": "2004-03-18",
+      "numbers": [
+        6,
+        16,
+        20,
+        25,
+        33,
+        46
+      ],
+      "special": 12,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000023",
+      "date": "2004-03-22",
+      "numbers": [
+        2,
+        12,
+        14,
+        30,
+        41,
+        46
+      ],
+      "special": 29,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000024",
+      "date": "2004-03-25",
+      "numbers": [
+        11,
+        17,
+        21,
+        36,
+        43,
+        49
+      ],
+      "special": 5,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000025",
+      "date": "2004-03-29",
+      "numbers": [
+        11,
+        13,
+        15,
+        21,
+        35,
+        38
+      ],
+      "special": 37,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000026",
+      "date": "2004-04-01",
+      "numbers": [
+        3,
+        7,
+        42,
+        45,
+        46,
+        49
+      ],
+      "special": 8,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000027",
+      "date": "2004-04-05",
+      "numbers": [
+        16,
+        24,
+        25,
+        26,
+        39,
+        44
+      ],
+      "special": 30,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000028",
+      "date": "2004-04-08",
+      "numbers": [
+        5,
+        14,
+        26,
+        38,
+        41,
+        43
+      ],
+      "special": 4,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000029",
+      "date": "2004-04-12",
+      "numbers": [
+        24,
+        25,
+        26,
+        30,
+        36,
+        48
+      ],
+      "special": 45,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000030",
+      "date": "2004-04-15",
+      "numbers": [
+        13,
+        14,
+        20,
+        30,
+        37,
+        45
+      ],
+      "special": 1,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000031",
+      "date": "2004-04-19",
+      "numbers": [
+        13,
+        17,
+        19,
+        26,
+        39,
+        45
+      ],
+      "special": 11,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000032",
+      "date": "2004-04-22",
+      "numbers": [
+        3,
+        11,
+        19,
+        20,
+        22,
+        28
+      ],
+      "special": 13,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000033",
+      "date": "2004-04-26",
+      "numbers": [
+        22,
+        25,
+        29,
+        31,
+        34,
+        46
+      ],
+      "special": 49,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000034",
+      "date": "2004-04-29",
+      "numbers": [
+        1,
+        10,
+        13,
+        33,
+        34,
+        46
+      ],
+      "special": 7,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000035",
+      "date": "2004-05-03",
+      "numbers": [
+        3,
+        9,
+        13,
+        28,
+        40,
+        48
+      ],
+      "special": 39,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000036",
+      "date": "2004-05-06",
+      "numbers": [
+        6,
+        27,
+        40,
+        44,
+        45,
+        47
+      ],
+      "special": 11,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000037",
+      "date": "2004-05-10",
+      "numbers": [
+        3,
+        4,
+        10,
+        23,
+        25,
+        26
+      ],
+      "special": 33,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000038",
+      "date": "2004-05-13",
+      "numbers": [
+        4,
+        10,
+        11,
+        14,
+        32,
+        36
+      ],
+      "special": 9,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000039",
+      "date": "2004-05-17",
+      "numbers": [
+        2,
+        4,
+        18,
+        20,
+        32,
+        49
+      ],
+      "special": 30,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000040",
+      "date": "2004-05-20",
+      "numbers": [
+        6,
+        28,
+        30,
+        34,
+        43,
+        46
+      ],
+      "special": 9,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000041",
+      "date": "2004-05-24",
+      "numbers": [
+        1,
+        16,
+        17,
+        30,
+        36,
+        49
+      ],
+      "special": 44,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000042",
+      "date": "2004-05-27",
+      "numbers": [
+        6,
+        22,
+        27,
+        34,
+        42,
+        44
+      ],
+      "special": 36,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000043",
+      "date": "2004-05-31",
+      "numbers": [
+        1,
+        17,
+        30,
+        31,
+        32,
+        45
+      ],
+      "special": 33,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000044",
+      "date": "2004-06-03",
+      "numbers": [
+        1,
+        4,
+        31,
+        32,
+        34,
+        35
+      ],
+      "special": 33,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000045",
+      "date": "2004-06-07",
+      "numbers": [
+        6,
+        15,
+        25,
+        37,
+        41,
+        49
+      ],
+      "special": 3,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000046",
+      "date": "2004-06-10",
+      "numbers": [
+        2,
+        10,
+        16,
+        22,
+        30,
+        33
+      ],
+      "special": 41,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000047",
+      "date": "2004-06-14",
+      "numbers": [
+        5,
+        12,
+        41,
+        43,
+        45,
+        46
+      ],
+      "special": 33,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000048",
+      "date": "2004-06-17",
+      "numbers": [
+        5,
+        11,
+        30,
+        34,
+        44,
+        48
+      ],
+      "special": 40,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000049",
+      "date": "2004-06-21",
+      "numbers": [
+        6,
+        9,
+        11,
+        17,
+        22,
+        36
+      ],
+      "special": 44,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000050",
+      "date": "2004-06-24",
+      "numbers": [
+        11,
+        17,
+        29,
+        36,
+        44,
+        49
+      ],
+      "special": 33,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000051",
+      "date": "2004-06-28",
+      "numbers": [
+        12,
+        17,
+        19,
+        22,
+        27,
+        42
+      ],
+      "special": 48,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000052",
+      "date": "2004-07-01",
+      "numbers": [
+        6,
+        10,
+        11,
+        16,
+        29,
+        44
+      ],
+      "special": 37,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000053",
+      "date": "2004-07-05",
+      "numbers": [
+        7,
+        19,
+        27,
+        31,
+        42,
+        46
+      ],
+      "special": 39,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000054",
+      "date": "2004-07-08",
+      "numbers": [
+        4,
+        5,
+        7,
+        13,
+        24,
+        30
+      ],
+      "special": 49,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000055",
+      "date": "2004-07-12",
+      "numbers": [
+        3,
+        4,
+        8,
+        25,
+        36,
+        42
+      ],
+      "special": 32,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000056",
+      "date": "2004-07-15",
+      "numbers": [
+        2,
+        5,
+        32,
+        38,
+        42,
+        49
+      ],
+      "special": 44,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000057",
+      "date": "2004-07-19",
+      "numbers": [
+        2,
+        3,
+        7,
+        26,
+        30,
+        49
+      ],
+      "special": 6,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000058",
+      "date": "2004-07-22",
+      "numbers": [
+        11,
+        15,
+        24,
+        27,
+        37,
+        46
+      ],
+      "special": 1,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000059",
+      "date": "2004-07-26",
+      "numbers": [
+        1,
+        15,
+        28,
+        38,
+        41,
+        42
+      ],
+      "special": 24,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000060",
+      "date": "2004-07-29",
+      "numbers": [
+        20,
+        31,
+        33,
+        40,
+        42,
+        46
+      ],
+      "special": 30,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000061",
+      "date": "2004-08-02",
+      "numbers": [
+        3,
+        11,
+        19,
+        21,
+        40,
+        42
+      ],
+      "special": 14,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000062",
+      "date": "2004-08-05",
+      "numbers": [
+        13,
+        14,
+        21,
+        24,
+        27,
+        30
+      ],
+      "special": 20,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000063",
+      "date": "2004-08-09",
+      "numbers": [
+        5,
+        17,
+        19,
+        26,
+        28,
+        43
+      ],
+      "special": 25,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000064",
+      "date": "2004-08-12",
+      "numbers": [
+        11,
+        16,
+        27,
+        33,
+        34,
+        40
+      ],
+      "special": 7,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000065",
+      "date": "2004-08-16",
+      "numbers": [
+        5,
+        6,
+        11,
+        16,
+        19,
+        42
+      ],
+      "special": 10,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000066",
+      "date": "2004-08-19",
+      "numbers": [
+        10,
+        22,
+        31,
+        32,
+        41,
+        48
+      ],
+      "special": 24,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000067",
+      "date": "2004-08-23",
+      "numbers": [
+        13,
+        29,
+        31,
+        38,
+        45,
+        46
+      ],
+      "special": 43,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000068",
+      "date": "2004-08-26",
+      "numbers": [
+        14,
+        31,
+        34,
+        37,
+        42,
+        48
+      ],
+      "special": 29,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000069",
+      "date": "2004-08-30",
+      "numbers": [
+        4,
+        22,
+        28,
+        29,
+        44,
+        47
+      ],
+      "special": 32,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000070",
+      "date": "2004-09-02",
+      "numbers": [
+        9,
+        16,
+        18,
+        32,
+        41,
+        47
+      ],
+      "special": 46,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000071",
+      "date": "2004-09-06",
+      "numbers": [
+        12,
+        25,
+        26,
+        31,
+        36,
+        42
+      ],
+      "special": 29,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000072",
+      "date": "2004-09-09",
+      "numbers": [
+        7,
+        13,
+        14,
+        20,
+        21,
+        49
+      ],
+      "special": 34,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000073",
+      "date": "2004-09-13",
+      "numbers": [
+        8,
+        10,
+        11,
+        21,
+        23,
+        44
+      ],
+      "special": 42,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000074",
+      "date": "2004-09-16",
+      "numbers": [
+        7,
+        19,
+        26,
+        37,
+        38,
+        46
+      ],
+      "special": 29,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000075",
+      "date": "2004-09-20",
+      "numbers": [
+        5,
+        6,
+        8,
+        9,
+        10,
+        43
+      ],
+      "special": 13,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000076",
+      "date": "2004-09-23",
+      "numbers": [
+        1,
+        15,
+        16,
+        33,
+        35,
+        48
+      ],
+      "special": 10,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000077",
+      "date": "2004-09-27",
+      "numbers": [
+        26,
+        27,
+        40,
+        41,
+        42,
+        43
+      ],
+      "special": 28,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000078",
+      "date": "2004-09-30",
+      "numbers": [
+        7,
+        13,
+        15,
+        20,
+        22,
+        47
+      ],
+      "special": 19,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000079",
+      "date": "2004-10-04",
+      "numbers": [
+        12,
+        15,
+        21,
+        23,
+        25,
+        35
+      ],
+      "special": 24,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000080",
+      "date": "2004-10-07",
+      "numbers": [
+        3,
+        6,
+        19,
+        22,
+        31,
+        32
+      ],
+      "special": 5,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000081",
+      "date": "2004-10-11",
+      "numbers": [
+        1,
+        7,
+        10,
+        32,
+        42,
+        45
+      ],
+      "special": 26,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000082",
+      "date": "2004-10-14",
+      "numbers": [
+        4,
+        23,
+        36,
+        39,
+        45,
+        47
+      ],
+      "special": 25,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000083",
+      "date": "2004-10-18",
+      "numbers": [
+        10,
+        21,
+        23,
+        25,
+        38,
+        42
+      ],
+      "special": 33,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000084",
+      "date": "2004-10-21",
+      "numbers": [
+        3,
+        10,
+        20,
+        21,
+        24,
+        48
+      ],
+      "special": 26,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000085",
+      "date": "2004-10-25",
+      "numbers": [
+        6,
+        13,
+        30,
+        34,
+        38,
+        44
+      ],
+      "special": 48,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000086",
+      "date": "2004-10-28",
+      "numbers": [
+        10,
+        12,
+        13,
+        24,
+        31,
+        40
+      ],
+      "special": 47,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000087",
+      "date": "2004-11-01",
+      "numbers": [
+        1,
+        10,
+        25,
+        28,
+        38,
+        49
+      ],
+      "special": 23,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000088",
+      "date": "2004-11-04",
+      "numbers": [
+        23,
+        26,
+        31,
+        33,
+        36,
+        38
+      ],
+      "special": 21,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000089",
+      "date": "2004-11-08",
+      "numbers": [
+        12,
+        24,
+        25,
+        27,
+        34,
+        36
+      ],
+      "special": 39,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000090",
+      "date": "2004-11-11",
+      "numbers": [
+        9,
+        12,
+        17,
+        28,
+        40,
+        43
+      ],
+      "special": 13,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000091",
+      "date": "2004-11-15",
+      "numbers": [
+        8,
+        11,
+        14,
+        17,
+        23,
+        33
+      ],
+      "special": 30,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000092",
+      "date": "2004-11-18",
+      "numbers": [
+        7,
+        11,
+        20,
+        38,
+        39,
+        45
+      ],
+      "special": 30,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000093",
+      "date": "2004-11-22",
+      "numbers": [
+        2,
+        14,
+        27,
+        28,
+        44,
+        49
+      ],
+      "special": 30,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000094",
+      "date": "2004-11-25",
+      "numbers": [
+        3,
+        4,
+        9,
+        10,
+        27,
+        31
+      ],
+      "special": 26,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000095",
+      "date": "2004-11-29",
+      "numbers": [
+        4,
+        12,
+        23,
+        30,
+        35,
+        48
+      ],
+      "special": 46,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000096",
+      "date": "2004-12-02",
+      "numbers": [
+        5,
+        16,
+        23,
+        28,
+        38,
+        47
+      ],
+      "special": 49,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000097",
+      "date": "2004-12-06",
+      "numbers": [
+        2,
+        8,
+        11,
+        12,
+        26,
+        35
+      ],
+      "special": 47,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000098",
+      "date": "2004-12-09",
+      "numbers": [
+        16,
+        28,
+        35,
+        44,
+        46,
+        48
+      ],
+      "special": 26,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000099",
+      "date": "2004-12-13",
+      "numbers": [
+        5,
+        15,
+        24,
+        37,
+        38,
+        39
+      ],
+      "special": 6,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000100",
+      "date": "2004-12-16",
+      "numbers": [
+        2,
+        12,
+        18,
+        22,
+        34,
+        36
+      ],
+      "special": 8,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000101",
+      "date": "2004-12-20",
+      "numbers": [
+        3,
+        4,
+        13,
+        26,
+        39,
+        42
+      ],
+      "special": 18,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000102",
+      "date": "2004-12-23",
+      "numbers": [
+        3,
+        5,
+        18,
+        23,
+        40,
+        45
+      ],
+      "special": 41,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000103",
+      "date": "2004-12-27",
+      "numbers": [
+        1,
+        8,
+        16,
+        22,
+        24,
+        30
+      ],
+      "special": 14,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "093000104",
+      "date": "2004-12-30",
+      "numbers": [
+        3,
+        18,
+        33,
+        34,
+        43,
+        45
+      ],
+      "special": 2,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000001",
+      "date": "2005-01-03",
+      "numbers": [
+        5,
+        10,
+        27,
+        37,
+        39,
+        46
+      ],
+      "special": 8,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000002",
+      "date": "2005-01-06",
+      "numbers": [
+        6,
+        23,
+        39,
+        45,
+        46,
+        47
+      ],
+      "special": 18,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000003",
+      "date": "2005-01-10",
+      "numbers": [
+        1,
+        3,
+        14,
+        17,
+        36,
+        49
+      ],
+      "special": 10,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000004",
+      "date": "2005-01-13",
+      "numbers": [
+        1,
+        2,
+        15,
+        21,
+        31,
+        35
+      ],
+      "special": 33,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000005",
+      "date": "2005-01-17",
+      "numbers": [
+        7,
+        14,
+        16,
+        38,
+        45,
+        49
+      ],
+      "special": 25,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000006",
+      "date": "2005-01-20",
+      "numbers": [
+        1,
+        23,
+        26,
+        27,
+        33,
+        41
+      ],
+      "special": 18,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000007",
+      "date": "2005-01-24",
+      "numbers": [
+        14,
+        17,
+        30,
+        31,
+        36,
+        47
+      ],
+      "special": 28,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000008",
+      "date": "2005-01-27",
+      "numbers": [
+        3,
+        25,
+        39,
+        44,
+        45,
+        48
+      ],
+      "special": 13,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000009",
+      "date": "2005-01-31",
+      "numbers": [
+        2,
+        17,
+        31,
+        35,
+        37,
+        46
+      ],
+      "special": 3,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000010",
+      "date": "2005-02-03",
+      "numbers": [
+        7,
+        8,
+        19,
+        30,
+        43,
+        48
+      ],
+      "special": 49,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000011",
+      "date": "2005-02-07",
+      "numbers": [
+        11,
+        31,
+        41,
+        44,
+        47,
+        49
+      ],
+      "special": 25,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000012",
+      "date": "2005-02-10",
+      "numbers": [
+        19,
+        26,
+        28,
+        33,
+        38,
+        46
+      ],
+      "special": 48,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000013",
+      "date": "2005-02-14",
+      "numbers": [
+        5,
+        7,
+        24,
+        26,
+        30,
+        47
+      ],
+      "special": 36,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000014",
+      "date": "2005-02-17",
+      "numbers": [
+        12,
+        14,
+        21,
+        23,
+        25,
+        30
+      ],
+      "special": 3,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000015",
+      "date": "2005-02-21",
+      "numbers": [
+        6,
+        11,
+        21,
+        22,
+        35,
+        41
+      ],
+      "special": 27,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000016",
+      "date": "2005-02-24",
+      "numbers": [
+        2,
+        4,
+        36,
+        41,
+        42,
+        48
+      ],
+      "special": 34,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000017",
+      "date": "2005-02-28",
+      "numbers": [
+        14,
+        21,
+        25,
+        27,
+        43,
+        47
+      ],
+      "special": 5,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000018",
+      "date": "2005-03-03",
+      "numbers": [
+        25,
+        28,
+        31,
+        32,
+        34,
+        36
+      ],
+      "special": 43,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000019",
+      "date": "2005-03-07",
+      "numbers": [
+        1,
+        6,
+        16,
+        34,
+        36,
+        40
+      ],
+      "special": 38,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000020",
+      "date": "2005-03-10",
+      "numbers": [
+        1,
+        3,
+        16,
+        31,
+        42,
+        48
+      ],
+      "special": 23,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000021",
+      "date": "2005-03-14",
+      "numbers": [
+        5,
+        12,
+        19,
+        21,
+        33,
+        42
+      ],
+      "special": 9,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000022",
+      "date": "2005-03-17",
+      "numbers": [
+        7,
+        10,
+        12,
+        22,
+        30,
+        34
+      ],
+      "special": 8,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000023",
+      "date": "2005-03-21",
+      "numbers": [
+        2,
+        5,
+        6,
+        19,
+        38,
+        45
+      ],
+      "special": 1,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000024",
+      "date": "2005-03-24",
+      "numbers": [
+        7,
+        10,
+        23,
+        44,
+        45,
+        47
+      ],
+      "special": 38,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000025",
+      "date": "2005-03-28",
+      "numbers": [
+        1,
+        2,
+        9,
+        25,
+        28,
+        44
+      ],
+      "special": 42,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000026",
+      "date": "2005-03-31",
+      "numbers": [
+        20,
+        22,
+        28,
+        38,
+        41,
+        47
+      ],
+      "special": 25,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000027",
+      "date": "2005-04-04",
+      "numbers": [
+        5,
+        15,
+        28,
+        29,
+        33,
+        40
+      ],
+      "special": 26,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000028",
+      "date": "2005-04-07",
+      "numbers": [
+        5,
+        15,
+        23,
+        29,
+        31,
+        44
+      ],
+      "special": 17,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000029",
+      "date": "2005-04-11",
+      "numbers": [
+        2,
+        6,
+        9,
+        24,
+        27,
+        45
+      ],
+      "special": 49,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000030",
+      "date": "2005-04-14",
+      "numbers": [
+        18,
+        20,
+        25,
+        36,
+        48,
+        49
+      ],
+      "special": 21,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000031",
+      "date": "2005-04-18",
+      "numbers": [
+        11,
+        20,
+        40,
+        41,
+        45,
+        49
+      ],
+      "special": 36,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000032",
+      "date": "2005-04-21",
+      "numbers": [
+        4,
+        5,
+        22,
+        33,
+        36,
+        43
+      ],
+      "special": 26,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000033",
+      "date": "2005-04-25",
+      "numbers": [
+        1,
+        16,
+        25,
+        34,
+        36,
+        38
+      ],
+      "special": 41,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000034",
+      "date": "2005-04-28",
+      "numbers": [
+        4,
+        5,
+        15,
+        20,
+        29,
+        39
+      ],
+      "special": 34,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000035",
+      "date": "2005-05-02",
+      "numbers": [
+        1,
+        3,
+        29,
+        35,
+        43,
+        47
+      ],
+      "special": 40,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000036",
+      "date": "2005-05-05",
+      "numbers": [
+        5,
+        14,
+        18,
+        34,
+        44,
+        47
+      ],
+      "special": 10,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000037",
+      "date": "2005-05-09",
+      "numbers": [
+        1,
+        2,
+        7,
+        9,
+        16,
+        29
+      ],
+      "special": 15,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000038",
+      "date": "2005-05-12",
+      "numbers": [
+        15,
+        28,
+        29,
+        31,
+        32,
+        47
+      ],
+      "special": 18,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000039",
+      "date": "2005-05-16",
+      "numbers": [
+        1,
+        6,
+        11,
+        37,
+        41,
+        44
+      ],
+      "special": 4,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000040",
+      "date": "2005-05-19",
+      "numbers": [
+        2,
+        4,
+        14,
+        24,
+        27,
+        46
+      ],
+      "special": 28,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000041",
+      "date": "2005-05-23",
+      "numbers": [
+        2,
+        8,
+        9,
+        10,
+        21,
+        31
+      ],
+      "special": 44,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000042",
+      "date": "2005-05-26",
+      "numbers": [
+        3,
+        9,
+        16,
+        18,
+        41,
+        48
+      ],
+      "special": 22,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000043",
+      "date": "2005-05-30",
+      "numbers": [
+        4,
+        8,
+        11,
+        15,
+        16,
+        25
+      ],
+      "special": 43,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000044",
+      "date": "2005-06-02",
+      "numbers": [
+        4,
+        15,
+        21,
+        30,
+        41,
+        46
+      ],
+      "special": 48,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000045",
+      "date": "2005-06-06",
+      "numbers": [
+        3,
+        4,
+        9,
+        10,
+        28,
+        45
+      ],
+      "special": 37,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000046",
+      "date": "2005-06-09",
+      "numbers": [
+        4,
+        6,
+        13,
+        22,
+        30,
+        44
+      ],
+      "special": 5,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000047",
+      "date": "2005-06-13",
+      "numbers": [
+        9,
+        14,
+        25,
+        31,
+        36,
+        46
+      ],
+      "special": 40,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000048",
+      "date": "2005-06-16",
+      "numbers": [
+        8,
+        12,
+        16,
+        25,
+        28,
+        45
+      ],
+      "special": 49,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000049",
+      "date": "2005-06-20",
+      "numbers": [
+        4,
+        20,
+        22,
+        28,
+        47,
+        48
+      ],
+      "special": 43,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000050",
+      "date": "2005-06-23",
+      "numbers": [
+        4,
+        10,
+        18,
+        34,
+        40,
+        43
+      ],
+      "special": 3,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000051",
+      "date": "2005-06-27",
+      "numbers": [
+        10,
+        17,
+        22,
+        37,
+        43,
+        49
+      ],
+      "special": 8,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000052",
+      "date": "2005-06-30",
+      "numbers": [
+        2,
+        4,
+        5,
+        9,
+        35,
+        45
+      ],
+      "special": 48,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000053",
+      "date": "2005-07-04",
+      "numbers": [
+        2,
+        15,
+        17,
+        31,
+        32,
+        38
+      ],
+      "special": 11,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000054",
+      "date": "2005-07-07",
+      "numbers": [
+        6,
+        12,
+        21,
+        27,
+        36,
+        48
+      ],
+      "special": 18,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000055",
+      "date": "2005-07-11",
+      "numbers": [
+        1,
+        11,
+        14,
+        18,
+        35,
+        43
+      ],
+      "special": 25,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000056",
+      "date": "2005-07-14",
+      "numbers": [
+        3,
+        22,
+        31,
+        43,
+        46,
+        47
+      ],
+      "special": 14,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000057",
+      "date": "2005-07-18",
+      "numbers": [
+        7,
+        11,
+        13,
+        25,
+        30,
+        40
+      ],
+      "special": 6,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000058",
+      "date": "2005-07-21",
+      "numbers": [
+        11,
+        22,
+        26,
+        28,
+        33,
+        37
+      ],
+      "special": 42,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000059",
+      "date": "2005-07-25",
+      "numbers": [
+        5,
+        12,
+        25,
+        27,
+        41,
+        44
+      ],
+      "special": 18,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000060",
+      "date": "2005-07-28",
+      "numbers": [
+        9,
+        14,
+        24,
+        27,
+        37,
+        41
+      ],
+      "special": 12,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000061",
+      "date": "2005-08-01",
+      "numbers": [
+        2,
+        13,
+        16,
+        36,
+        44,
+        47
+      ],
+      "special": 21,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000062",
+      "date": "2005-08-04",
+      "numbers": [
+        9,
+        20,
+        26,
+        29,
+        40,
+        41
+      ],
+      "special": 21,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000063",
+      "date": "2005-08-08",
+      "numbers": [
+        24,
+        28,
+        37,
+        38,
+        43,
+        45
+      ],
+      "special": 18,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000064",
+      "date": "2005-08-11",
+      "numbers": [
+        9,
+        20,
+        22,
+        31,
+        45,
+        46
+      ],
+      "special": 3,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000065",
+      "date": "2005-08-15",
+      "numbers": [
+        13,
+        15,
+        33,
+        37,
+        38,
+        41
+      ],
+      "special": 47,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000066",
+      "date": "2005-08-18",
+      "numbers": [
+        3,
+        8,
+        11,
+        36,
+        38,
+        49
+      ],
+      "special": 19,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000067",
+      "date": "2005-08-22",
+      "numbers": [
+        17,
+        18,
+        23,
+        24,
+        25,
+        28
+      ],
+      "special": 41,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000068",
+      "date": "2005-08-25",
+      "numbers": [
+        2,
+        4,
+        6,
+        21,
+        25,
+        46
+      ],
+      "special": 28,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000069",
+      "date": "2005-08-29",
+      "numbers": [
+        9,
+        10,
+        36,
+        40,
+        42,
+        43
+      ],
+      "special": 41,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000070",
+      "date": "2005-09-01",
+      "numbers": [
+        6,
+        12,
+        20,
+        43,
+        47,
+        48
+      ],
+      "special": 41,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000071",
+      "date": "2005-09-05",
+      "numbers": [
+        5,
+        8,
+        22,
+        26,
+        27,
+        44
+      ],
+      "special": 10,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000072",
+      "date": "2005-09-08",
+      "numbers": [
+        3,
+        10,
+        11,
+        36,
+        37,
+        45
+      ],
+      "special": 29,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000073",
+      "date": "2005-09-12",
+      "numbers": [
+        4,
+        24,
+        28,
+        30,
+        35,
+        39
+      ],
+      "special": 19,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000074",
+      "date": "2005-09-15",
+      "numbers": [
+        4,
+        15,
+        23,
+        41,
+        44,
+        45
+      ],
+      "special": 46,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000075",
+      "date": "2005-09-19",
+      "numbers": [
+        3,
+        26,
+        29,
+        38,
+        43,
+        45
+      ],
+      "special": 28,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000076",
+      "date": "2005-09-22",
+      "numbers": [
+        2,
+        11,
+        35,
+        37,
+        48,
+        49
+      ],
+      "special": 5,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000077",
+      "date": "2005-09-26",
+      "numbers": [
+        4,
+        18,
+        26,
+        37,
+        41,
+        44
+      ],
+      "special": 6,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000078",
+      "date": "2005-09-29",
+      "numbers": [
+        1,
+        8,
+        19,
+        23,
+        38,
+        40
+      ],
+      "special": 5,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000079",
+      "date": "2005-10-03",
+      "numbers": [
+        3,
+        15,
+        16,
+        25,
+        40,
+        48
+      ],
+      "special": 18,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000080",
+      "date": "2005-10-06",
+      "numbers": [
+        2,
+        8,
+        24,
+        28,
+        31,
+        48
+      ],
+      "special": 15,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000081",
+      "date": "2005-10-10",
+      "numbers": [
+        6,
+        11,
+        23,
+        29,
+        45,
+        49
+      ],
+      "special": 26,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000082",
+      "date": "2005-10-13",
+      "numbers": [
+        3,
+        11,
+        26,
+        43,
+        46,
+        48
+      ],
+      "special": 5,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000083",
+      "date": "2005-10-17",
+      "numbers": [
+        27,
+        30,
+        35,
+        39,
+        43,
+        47
+      ],
+      "special": 25,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000084",
+      "date": "2005-10-20",
+      "numbers": [
+        11,
+        13,
+        14,
+        21,
+        42,
+        47
+      ],
+      "special": 22,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000085",
+      "date": "2005-10-24",
+      "numbers": [
+        7,
+        8,
+        17,
+        22,
+        27,
+        44
+      ],
+      "special": 28,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000086",
+      "date": "2005-10-27",
+      "numbers": [
+        6,
+        8,
+        23,
+        26,
+        28,
+        36
+      ],
+      "special": 37,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000087",
+      "date": "2005-10-31",
+      "numbers": [
+        5,
+        10,
+        22,
+        26,
+        31,
+        48
+      ],
+      "special": 41,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000088",
+      "date": "2005-11-03",
+      "numbers": [
+        6,
+        8,
+        17,
+        19,
+        30,
+        47
+      ],
+      "special": 23,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000089",
+      "date": "2005-11-07",
+      "numbers": [
+        16,
+        17,
+        23,
+        32,
+        42,
+        48
+      ],
+      "special": 2,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000090",
+      "date": "2005-11-10",
+      "numbers": [
+        4,
+        7,
+        19,
+        30,
+        36,
+        46
+      ],
+      "special": 48,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000091",
+      "date": "2005-11-14",
+      "numbers": [
+        2,
+        13,
+        29,
+        39,
+        44,
+        49
+      ],
+      "special": 35,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000092",
+      "date": "2005-11-17",
+      "numbers": [
+        2,
+        3,
+        4,
+        17,
+        27,
+        39
+      ],
+      "special": 15,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000093",
+      "date": "2005-11-21",
+      "numbers": [
+        7,
+        13,
+        23,
+        33,
+        34,
+        42
+      ],
+      "special": 30,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000094",
+      "date": "2005-11-24",
+      "numbers": [
+        9,
+        11,
+        30,
+        41,
+        47,
+        49
+      ],
+      "special": 4,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000095",
+      "date": "2005-11-28",
+      "numbers": [
+        2,
+        14,
+        23,
+        25,
+        26,
+        40
+      ],
+      "special": 6,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000096",
+      "date": "2005-12-01",
+      "numbers": [
+        7,
+        30,
+        38,
+        39,
+        40,
+        43
+      ],
+      "special": 13,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000097",
+      "date": "2005-12-05",
+      "numbers": [
+        25,
+        31,
+        34,
+        40,
+        41,
+        47
+      ],
+      "special": 15,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000098",
+      "date": "2005-12-08",
+      "numbers": [
+        13,
+        18,
+        26,
+        28,
+        35,
+        48
+      ],
+      "special": 42,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000099",
+      "date": "2005-12-12",
+      "numbers": [
+        26,
+        28,
+        29,
+        30,
+        36,
+        37
+      ],
+      "special": 18,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000100",
+      "date": "2005-12-15",
+      "numbers": [
+        7,
+        16,
+        32,
+        39,
+        45,
+        49
+      ],
+      "special": 30,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000101",
+      "date": "2005-12-19",
+      "numbers": [
+        3,
+        20,
+        21,
+        22,
+        26,
+        27
+      ],
+      "special": 25,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000102",
+      "date": "2005-12-22",
+      "numbers": [
+        12,
+        22,
+        24,
+        26,
+        27,
+        47
+      ],
+      "special": 40,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000103",
+      "date": "2005-12-26",
+      "numbers": [
+        1,
+        2,
+        7,
+        8,
+        27,
+        45
+      ],
+      "special": 19,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "094000104",
+      "date": "2005-12-29",
+      "numbers": [
+        6,
+        7,
+        10,
+        13,
+        31,
+        39
+      ],
+      "special": 18,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000001",
+      "date": "2006-01-02",
+      "numbers": [
+        6,
+        15,
+        22,
+        25,
+        35,
+        41
+      ],
+      "special": 32,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000002",
+      "date": "2006-01-05",
+      "numbers": [
+        18,
+        23,
+        26,
+        38,
+        39,
+        48
+      ],
+      "special": 45,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000003",
+      "date": "2006-01-09",
+      "numbers": [
+        8,
+        20,
+        22,
+        39,
+        45,
+        46
+      ],
+      "special": 31,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000004",
+      "date": "2006-01-12",
+      "numbers": [
+        7,
+        11,
+        22,
+        24,
+        28,
+        30
+      ],
+      "special": 35,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000005",
+      "date": "2006-01-16",
+      "numbers": [
+        4,
+        12,
+        15,
+        19,
+        26,
+        31
+      ],
+      "special": 41,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000006",
+      "date": "2006-01-19",
+      "numbers": [
+        3,
+        11,
+        18,
+        20,
+        21,
+        26
+      ],
+      "special": 24,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000007",
+      "date": "2006-01-23",
+      "numbers": [
+        1,
+        11,
+        16,
+        21,
+        23,
+        40
+      ],
+      "special": 10,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000008",
+      "date": "2006-01-26",
+      "numbers": [
+        10,
+        29,
+        30,
+        32,
+        43,
+        47
+      ],
+      "special": 35,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000009",
+      "date": "2006-01-30",
+      "numbers": [
+        4,
+        5,
+        13,
+        26,
+        32,
+        42
+      ],
+      "special": 46,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000010",
+      "date": "2006-02-02",
+      "numbers": [
+        2,
+        8,
+        12,
+        20,
+        26,
+        33
+      ],
+      "special": 13,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000011",
+      "date": "2006-02-06",
+      "numbers": [
+        11,
+        15,
+        18,
+        25,
+        29,
+        49
+      ],
+      "special": 5,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000012",
+      "date": "2006-02-09",
+      "numbers": [
+        12,
+        21,
+        34,
+        37,
+        38,
+        39
+      ],
+      "special": 27,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000013",
+      "date": "2006-02-13",
+      "numbers": [
+        3,
+        15,
+        21,
+        23,
+        36,
+        49
+      ],
+      "special": 10,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000014",
+      "date": "2006-02-16",
+      "numbers": [
+        5,
+        6,
+        18,
+        23,
+        26,
+        29
+      ],
+      "special": 16,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000015",
+      "date": "2006-02-20",
+      "numbers": [
+        2,
+        14,
+        18,
+        21,
+        37,
+        43
+      ],
+      "special": 13,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000016",
+      "date": "2006-02-23",
+      "numbers": [
+        7,
+        12,
+        16,
+        17,
+        19,
+        33
+      ],
+      "special": 39,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000017",
+      "date": "2006-02-27",
+      "numbers": [
+        9,
+        17,
+        18,
+        27,
+        36,
+        42
+      ],
+      "special": 10,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000018",
+      "date": "2006-03-02",
+      "numbers": [
+        5,
+        8,
+        24,
+        31,
+        32,
+        39
+      ],
+      "special": 4,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000019",
+      "date": "2006-03-06",
+      "numbers": [
+        5,
+        7,
+        9,
+        15,
+        31,
+        34
+      ],
+      "special": 38,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000020",
+      "date": "2006-03-09",
+      "numbers": [
+        6,
+        13,
+        15,
+        17,
+        18,
+        22
+      ],
+      "special": 3,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000021",
+      "date": "2006-03-13",
+      "numbers": [
+        4,
+        21,
+        25,
+        35,
+        39,
+        42
+      ],
+      "special": 45,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000022",
+      "date": "2006-03-16",
+      "numbers": [
+        3,
+        9,
+        18,
+        42,
+        45,
+        46
+      ],
+      "special": 5,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000023",
+      "date": "2006-03-20",
+      "numbers": [
+        12,
+        28,
+        30,
+        40,
+        47,
+        49
+      ],
+      "special": 3,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000024",
+      "date": "2006-03-23",
+      "numbers": [
+        7,
+        23,
+        28,
+        29,
+        38,
+        46
+      ],
+      "special": 14,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000025",
+      "date": "2006-03-28",
+      "numbers": [
+        5,
+        8,
+        9,
+        15,
+        29,
+        45
+      ],
+      "special": 18,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000026",
+      "date": "2006-03-30",
+      "numbers": [
+        12,
+        17,
+        26,
+        31,
+        35,
+        48
+      ],
+      "special": 40,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000027",
+      "date": "2006-04-04",
+      "numbers": [
+        6,
+        10,
+        11,
+        32,
+        34,
+        39
+      ],
+      "special": 7,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000028",
+      "date": "2006-04-06",
+      "numbers": [
+        5,
+        23,
+        36,
+        38,
+        40,
+        42
+      ],
+      "special": 1,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000029",
+      "date": "2006-04-11",
+      "numbers": [
+        8,
+        10,
+        16,
+        22,
+        37,
+        38
+      ],
+      "special": 14,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000030",
+      "date": "2006-04-13",
+      "numbers": [
+        1,
+        23,
+        25,
+        37,
+        39,
+        45
+      ],
+      "special": 21,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000031",
+      "date": "2006-04-18",
+      "numbers": [
+        4,
+        6,
+        14,
+        16,
+        20,
+        41
+      ],
+      "special": 2,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000032",
+      "date": "2006-04-20",
+      "numbers": [
+        9,
+        13,
+        15,
+        27,
+        34,
+        42
+      ],
+      "special": 2,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000033",
+      "date": "2006-04-25",
+      "numbers": [
+        3,
+        9,
+        19,
+        40,
+        44,
+        49
+      ],
+      "special": 4,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000034",
+      "date": "2006-04-27",
+      "numbers": [
+        9,
+        12,
+        30,
+        33,
+        42,
+        49
+      ],
+      "special": 4,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000035",
+      "date": "2006-05-02",
+      "numbers": [
+        3,
+        16,
+        24,
+        25,
+        40,
+        43
+      ],
+      "special": 48,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000036",
+      "date": "2006-05-04",
+      "numbers": [
+        2,
+        3,
+        19,
+        26,
+        27,
+        41
+      ],
+      "special": 7,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000037",
+      "date": "2006-05-09",
+      "numbers": [
+        5,
+        8,
+        18,
+        26,
+        38,
+        42
+      ],
+      "special": 2,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000038",
+      "date": "2006-05-11",
+      "numbers": [
+        2,
+        12,
+        19,
+        26,
+        34,
+        46
+      ],
+      "special": 38,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000039",
+      "date": "2006-05-16",
+      "numbers": [
+        8,
+        20,
+        35,
+        36,
+        45,
+        46
+      ],
+      "special": 44,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000040",
+      "date": "2006-05-18",
+      "numbers": [
+        1,
+        23,
+        28,
+        46,
+        47,
+        49
+      ],
+      "special": 6,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000041",
+      "date": "2006-05-23",
+      "numbers": [
+        11,
+        20,
+        31,
+        38,
+        42,
+        46
+      ],
+      "special": 37,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000042",
+      "date": "2006-05-25",
+      "numbers": [
+        1,
+        15,
+        20,
+        37,
+        47,
+        48
+      ],
+      "special": 38,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000043",
+      "date": "2006-05-30",
+      "numbers": [
+        2,
+        9,
+        15,
+        16,
+        22,
+        49
+      ],
+      "special": 7,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000044",
+      "date": "2006-06-01",
+      "numbers": [
+        4,
+        11,
+        34,
+        35,
+        45,
+        48
+      ],
+      "special": 24,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000045",
+      "date": "2006-06-06",
+      "numbers": [
+        4,
+        12,
+        15,
+        37,
+        41,
+        42
+      ],
+      "special": 19,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000046",
+      "date": "2006-06-08",
+      "numbers": [
+        3,
+        4,
+        15,
+        23,
+        26,
+        47
+      ],
+      "special": 12,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000047",
+      "date": "2006-06-13",
+      "numbers": [
+        8,
+        11,
+        12,
+        32,
+        38,
+        45
+      ],
+      "special": 24,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000048",
+      "date": "2006-06-15",
+      "numbers": [
+        1,
+        25,
+        35,
+        37,
+        44,
+        46
+      ],
+      "special": 43,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000049",
+      "date": "2006-06-20",
+      "numbers": [
+        3,
+        8,
+        14,
+        18,
+        19,
+        43
+      ],
+      "special": 29,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000050",
+      "date": "2006-06-22",
+      "numbers": [
+        1,
+        18,
+        31,
+        39,
+        41,
+        47
+      ],
+      "special": 44,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000051",
+      "date": "2006-06-27",
+      "numbers": [
+        1,
+        20,
+        29,
+        30,
+        35,
+        39
+      ],
+      "special": 43,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000052",
+      "date": "2006-06-29",
+      "numbers": [
+        11,
+        15,
+        17,
+        21,
+        23,
+        31
+      ],
+      "special": 9,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000053",
+      "date": "2006-07-04",
+      "numbers": [
+        8,
+        9,
+        14,
+        19,
+        20,
+        33
+      ],
+      "special": 29,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000054",
+      "date": "2006-07-06",
+      "numbers": [
+        14,
+        23,
+        24,
+        41,
+        44,
+        47
+      ],
+      "special": 10,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000055",
+      "date": "2006-07-11",
+      "numbers": [
+        1,
+        6,
+        9,
+        16,
+        42,
+        44
+      ],
+      "special": 3,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000056",
+      "date": "2006-07-13",
+      "numbers": [
+        6,
+        16,
+        24,
+        34,
+        42,
+        43
+      ],
+      "special": 23,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000057",
+      "date": "2006-07-18",
+      "numbers": [
+        11,
+        20,
+        31,
+        34,
+        36,
+        38
+      ],
+      "special": 15,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000058",
+      "date": "2006-07-20",
+      "numbers": [
+        7,
+        30,
+        37,
+        41,
+        43,
+        49
+      ],
+      "special": 10,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000059",
+      "date": "2006-07-25",
+      "numbers": [
+        14,
+        16,
+        25,
+        27,
+        42,
+        49
+      ],
+      "special": 44,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000060",
+      "date": "2006-07-27",
+      "numbers": [
+        4,
+        36,
+        37,
+        42,
+        45,
+        46
+      ],
+      "special": 1,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000061",
+      "date": "2006-08-01",
+      "numbers": [
+        12,
+        28,
+        29,
+        35,
+        37,
+        42
+      ],
+      "special": 8,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000062",
+      "date": "2006-08-03",
+      "numbers": [
+        3,
+        20,
+        21,
+        42,
+        44,
+        46
+      ],
+      "special": 25,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000063",
+      "date": "2006-08-08",
+      "numbers": [
+        4,
+        8,
+        12,
+        20,
+        22,
+        39
+      ],
+      "special": 48,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000064",
+      "date": "2006-08-10",
+      "numbers": [
+        3,
+        9,
+        16,
+        40,
+        43,
+        48
+      ],
+      "special": 42,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000065",
+      "date": "2006-08-15",
+      "numbers": [
+        6,
+        10,
+        19,
+        27,
+        32,
+        41
+      ],
+      "special": 43,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000066",
+      "date": "2006-08-17",
+      "numbers": [
+        18,
+        23,
+        25,
+        28,
+        35,
+        36
+      ],
+      "special": 16,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000067",
+      "date": "2006-08-22",
+      "numbers": [
+        16,
+        20,
+        24,
+        30,
+        38,
+        40
+      ],
+      "special": 6,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000068",
+      "date": "2006-08-24",
+      "numbers": [
+        10,
+        11,
+        14,
+        17,
+        24,
+        45
+      ],
+      "special": 19,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000069",
+      "date": "2006-08-29",
+      "numbers": [
+        17,
+        24,
+        34,
+        38,
+        42,
+        49
+      ],
+      "special": 30,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000070",
+      "date": "2006-08-31",
+      "numbers": [
+        5,
+        6,
+        25,
+        33,
+        38,
+        49
+      ],
+      "special": 47,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000071",
+      "date": "2006-09-05",
+      "numbers": [
+        2,
+        5,
+        27,
+        30,
+        33,
+        48
+      ],
+      "special": 19,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000072",
+      "date": "2006-09-07",
+      "numbers": [
+        11,
+        12,
+        15,
+        28,
+        43,
+        48
+      ],
+      "special": 37,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000073",
+      "date": "2006-09-12",
+      "numbers": [
+        2,
+        8,
+        11,
+        14,
+        15,
+        21
+      ],
+      "special": 31,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000074",
+      "date": "2006-09-14",
+      "numbers": [
+        1,
+        10,
+        37,
+        39,
+        43,
+        44
+      ],
+      "special": 35,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000075",
+      "date": "2006-09-19",
+      "numbers": [
+        1,
+        9,
+        21,
+        39,
+        40,
+        41
+      ],
+      "special": 46,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000076",
+      "date": "2006-09-21",
+      "numbers": [
+        6,
+        13,
+        20,
+        21,
+        33,
+        40
+      ],
+      "special": 26,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000077",
+      "date": "2006-09-26",
+      "numbers": [
+        2,
+        6,
+        8,
+        25,
+        30,
+        45
+      ],
+      "special": 38,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000078",
+      "date": "2006-09-28",
+      "numbers": [
+        8,
+        19,
+        30,
+        33,
+        37,
+        43
+      ],
+      "special": 22,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000079",
+      "date": "2006-10-03",
+      "numbers": [
+        6,
+        7,
+        23,
+        31,
+        33,
+        36
+      ],
+      "special": 24,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000080",
+      "date": "2006-10-05",
+      "numbers": [
+        7,
+        15,
+        20,
+        32,
+        36,
+        44
+      ],
+      "special": 3,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000081",
+      "date": "2006-10-10",
+      "numbers": [
+        1,
+        17,
+        21,
+        35,
+        36,
+        46
+      ],
+      "special": 19,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000082",
+      "date": "2006-10-12",
+      "numbers": [
+        9,
+        17,
+        23,
+        26,
+        30,
+        41
+      ],
+      "special": 19,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000083",
+      "date": "2006-10-17",
+      "numbers": [
+        8,
+        13,
+        16,
+        41,
+        43,
+        46
+      ],
+      "special": 31,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000084",
+      "date": "2006-10-19",
+      "numbers": [
+        9,
+        10,
+        12,
+        25,
+        33,
+        38
+      ],
+      "special": 5,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000085",
+      "date": "2006-10-24",
+      "numbers": [
+        1,
+        4,
+        5,
+        15,
+        18,
+        42
+      ],
+      "special": 6,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000086",
+      "date": "2006-10-26",
+      "numbers": [
+        5,
+        7,
+        11,
+        19,
+        36,
+        42
+      ],
+      "special": 23,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000087",
+      "date": "2006-10-31",
+      "numbers": [
+        6,
+        8,
+        29,
+        39,
+        46,
+        49
+      ],
+      "special": 23,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000088",
+      "date": "2006-11-02",
+      "numbers": [
+        6,
+        30,
+        34,
+        45,
+        46,
+        48
+      ],
+      "special": 29,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000089",
+      "date": "2006-11-07",
+      "numbers": [
+        5,
+        18,
+        20,
+        33,
+        38,
+        40
+      ],
+      "special": 34,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000090",
+      "date": "2006-11-09",
+      "numbers": [
+        12,
+        14,
+        20,
+        22,
+        37,
+        40
+      ],
+      "special": 23,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000091",
+      "date": "2006-11-14",
+      "numbers": [
+        5,
+        17,
+        29,
+        34,
+        38,
+        47
+      ],
+      "special": 26,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000092",
+      "date": "2006-11-16",
+      "numbers": [
+        2,
+        17,
+        28,
+        29,
+        38,
+        49
+      ],
+      "special": 16,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000093",
+      "date": "2006-11-21",
+      "numbers": [
+        6,
+        7,
+        11,
+        19,
+        47,
+        48
+      ],
+      "special": 17,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000094",
+      "date": "2006-11-23",
+      "numbers": [
+        1,
+        23,
+        34,
+        37,
+        43,
+        45
+      ],
+      "special": 9,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000095",
+      "date": "2006-11-28",
+      "numbers": [
+        14,
+        19,
+        31,
+        37,
+        42,
+        45
+      ],
+      "special": 11,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000096",
+      "date": "2006-11-30",
+      "numbers": [
+        3,
+        6,
+        7,
+        14,
+        16,
+        43
+      ],
+      "special": 17,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000097",
+      "date": "2006-12-05",
+      "numbers": [
+        14,
+        26,
+        28,
+        35,
+        41,
+        45
+      ],
+      "special": 33,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000098",
+      "date": "2006-12-07",
+      "numbers": [
+        5,
+        27,
+        28,
+        30,
+        35,
+        42
+      ],
+      "special": 37,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000099",
+      "date": "2006-12-12",
+      "numbers": [
+        16,
+        18,
+        37,
+        38,
+        45,
+        46
+      ],
+      "special": 10,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000100",
+      "date": "2006-12-14",
+      "numbers": [
+        2,
+        4,
+        8,
+        27,
+        33,
+        48
+      ],
+      "special": 14,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000101",
+      "date": "2006-12-19",
+      "numbers": [
+        12,
+        19,
+        30,
+        32,
+        34,
+        36
+      ],
+      "special": 37,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000102",
+      "date": "2006-12-21",
+      "numbers": [
+        16,
+        32,
+        42,
+        45,
+        46,
+        49
+      ],
+      "special": 3,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000103",
+      "date": "2006-12-26",
+      "numbers": [
+        6,
+        13,
+        24,
+        31,
+        32,
+        49
+      ],
+      "special": 3,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    },
+    {
+      "period": "095000104",
+      "date": "2006-12-28",
+      "numbers": [
+        1,
+        4,
+        7,
+        8,
+        25,
+        31
+      ],
+      "special": 33,
+      "sales_amount": null,
+      "prizes": {},
+      "data_quality": "numbers_only",
+      "promo": null,
+      "source": "thirdparty_pre2007"
+    }
+  ]
+}

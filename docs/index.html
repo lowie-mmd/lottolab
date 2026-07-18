@@ -95,6 +95,7 @@ function linePath(vals, W, H, ymin, ymax, pad){
       j("./data/group_comparison.json"), j("./data/hotness.json")
     ]);
     let audit=null; try{ audit=await j("./data/audit.json"); }catch(e){}
+    let auditExt=null; try{ auditExt=await j("./data/audit_extended.json"); }catch(e){}
 
     // meta
     $("meta").innerHTML = `<span class="pill">${meta.n_periods} 期</span> `+
@@ -163,6 +164,15 @@ function linePath(vals, W, H, ymin, ymax, pad){
         const y=d.z>=0?(Hd/2-h):(Hd/2); return `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(bw*0.7).toFixed(1)}" height="${h.toFixed(1)}" fill="${d.z>=0?'var(--accent)':'var(--warn)'}"><title>號 ${d.number} z=${d.z}</title></rect>
         <text x="${(x+bw*0.35).toFixed(1)}" y="${Hd-2}" font-size="9" fill="var(--muted)" text-anchor="middle">${d.number}</text>`;}).join("");
       $("devChart").innerHTML=`<svg viewBox="0 0 ${Wd} ${Hd}"><line x1="10" y1="${Hd/2}" x2="${Wd-10}" y2="${Hd/2}" stroke="var(--line)"/>${bars}</svg>`;
+      // 延伸視圖（北銀 2004–2006，第三方，較低信任層）——不影響上方 headline 結論
+      if(auditExt){
+        const e=auditExt.single_number;
+        $("auditTable").insertAdjacentHTML("afterend",
+          `<p class="muted" style="margin-top:8px;border-top:1px dashed var(--line);padding-top:8px">
+           <span class="pill">延伸視圖</span> 含北銀 2004–2006（第三方雙源對帳、numbers_only、信任層級較低，
+           <b>不列入上方 headline</b>）：合計 ${auditExt.n_draws} 期（官方 ${auditExt.n_official}＋北銀 ${auditExt.n_extended_pre2007}），
+           延伸單號卡方 p=${e.p_value.toFixed(4)}。北銀 vs 台彩為跨承辦商球組更換邊界，分段檢定未見偏差集中。</p>`);
+      }
     } else { $("auditTable").innerHTML='<p class="muted">審計資料尚未產生。</p>'; }
 
     // 6.5 report

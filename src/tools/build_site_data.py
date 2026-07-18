@@ -130,6 +130,9 @@ def main() -> None:
     audit = RESULTS_DIR / "audit.json"
     if audit.exists():
         shutil.copy(audit, DOCS_DATA / "audit.json")
+    audit_ext = RESULTS_DIR / "audit_extended.json"
+    if audit_ext.exists():
+        shutil.copy(audit_ext, DOCS_DATA / "audit_extended.json")
 
     # 供 personal.html 於 GitHub Pages（docs/）下取用：開獎、config，以及
     # 洛伊已 commit 的 bets.enc（僅複製密文，永不接觸密語或明文，符合 §8）
