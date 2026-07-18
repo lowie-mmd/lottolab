@@ -1,0 +1,74 @@
+name: 每日開獎更新與回測
+
+# v1.2：因應春節連續開獎改為每日冪等執行（§8）
+on:
+  schedule:
+    - cron: '0 15 * * *'      # 每日 UTC 15:00 = 台北 23:00
+  workflow_dispatch: {}         # 手動觸發
+
+permissions:
+  contents: write               # 提交 draws.json / results / docs/data
+  issues: write                 # 失敗時開 issue
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 安裝 Python 依賴
+        run: pip install -r requirements.txt
+
+      - name: 冪等抓取新開獎（無新期數則 no-op）
+        id: fetch
+        run: |
+          PYTHONPATH=src python -m scraper.build_draws --update
+          if git diff --quiet -- data/draws.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "無新期數，冪等退出。"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 回歸測試（前視保護等不可跳過項）
+        if: steps.fetch.outputs.changed == 'true'
+        run: PYTHONPATH=src python -m pytest -q
+
+      - name: 全策略回測 + 統計審計 + 站台資料
+        if: steps.fetch.outputs.changed == 'true'
+        run: |
+          PYTHONPATH=src python -m engine.run_backtest --group A --group B --group C --group D --group E --group F --quiet
+          PYTHONPATH=src python -m stats.run_stats --audit
+          PYTHONPATH=src python -m tools.build_site_data
+
+      - name: 提交更新（任一步失敗不提交半套）
+        if: steps.fetch.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/draws.json data/quality_report.json data/results docs/data
+          git commit -m "自動更新：新開獎回測 $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: 失敗開 issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "每日更新失敗 $(date -u +%Y-%m-%d)" \
+            --body "workflow run 失敗，未提交任何資料（避免半套）。請檢查 log：${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+# 私人加密投注層（M5）完全 client-side，不在此流程（§8）。
