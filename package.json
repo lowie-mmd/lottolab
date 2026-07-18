@@ -1,0 +1,14 @@
+{
+  "name": "lotto-lab",
+  "version": "1.2.0",
+  "private": true,
+  "description": "大樂透隨機性驗證實驗裝置 — 私人加密投注層 (M5) 的 JS 引擎與加密封裝",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0"
+  }
+}

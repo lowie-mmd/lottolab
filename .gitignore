@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# OS
+.DS_Store
+
+# 私人層明文（設計鐵律 §7.2：私人號碼永不進 repo）
+# 只允許 data/private/bets.enc（密文）進版控，其餘明文一律排除
+data/private/*.json
+data/private/*.plain
+data/private/bets.plain.json
+!data/private/bets.enc
+
+# 本地暫存
+scratch/
+*.tmp
+
+# 爬蟲執行日誌
+data/build.log

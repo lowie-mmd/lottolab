@@ -1,0 +1,8 @@
+# Lotto Lab — Python 依賴
+# M1 爬蟲
+requests>=2.31
+# M4 統計（卡方、permutation、FDR）
+numpy>=1.24
+scipy>=1.10
+# 測試
+pytest>=7.4

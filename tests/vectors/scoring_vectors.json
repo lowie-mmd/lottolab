@@ -1,0 +1,39 @@
+{
+  "_note": "M2↔M5 共用計分測試向量（規格 §4.2 驗收③、§7.2）。Python 引擎與 engine.js 皆須對此輸出全等。theoretical_prizes 為測試用固定值，非真實凍結中位數。",
+  "game": "lotto649",
+  "theoretical_prizes": {
+    "fixed": { "t5": 2000, "t6": 1000, "t7": 400, "t8": 400 },
+    "frozen_median": { "t1": 100000000, "t2": 3000000, "t3": 60000, "t4": 15000 }
+  },
+  "draw": {
+    "period": "113000001",
+    "date": "2024-01-02",
+    "numbers": [3, 12, 19, 27, 33, 41],
+    "special": 7,
+    "sales_amount": 500000000,
+    "prizes": {
+      "t1": { "winners": 1, "amount": 100000000 },
+      "t2": { "winners": 2, "amount": 3000000 },
+      "t3": { "winners": 10, "amount": 60000 },
+      "t4": { "winners": 50, "amount": 15000 },
+      "t5": { "winners": 1000, "amount": 2000 },
+      "t6": { "winners": 2000, "amount": 1000 },
+      "t7": { "winners": 20000, "amount": 400 },
+      "t8": { "winners": 30000, "amount": 400 }
+    },
+    "data_quality": "full",
+    "promo": null
+  },
+  "cases": [
+    { "label": "t1 頭獎 6個",     "ticket": [3, 12, 19, 27, 33, 41], "tier": "t1", "payout_theoretical": 100000000, "payout_actual": 100000000 },
+    { "label": "t2 貳獎 5+特",    "ticket": [3, 12, 19, 27, 33, 7],  "tier": "t2", "payout_theoretical": 3000000,   "payout_actual": 3000000 },
+    { "label": "t3 參獎 5個",     "ticket": [3, 12, 19, 27, 33, 45], "tier": "t3", "payout_theoretical": 60000,     "payout_actual": 60000 },
+    { "label": "t4 肆獎 4+特",    "ticket": [3, 12, 19, 27, 7, 45],  "tier": "t4", "payout_theoretical": 15000,     "payout_actual": 15000 },
+    { "label": "t5 伍獎 4個",     "ticket": [3, 12, 19, 27, 45, 46], "tier": "t5", "payout_theoretical": 2000,      "payout_actual": 2000 },
+    { "label": "t6 陸獎 3+特",    "ticket": [3, 12, 19, 7, 45, 46],  "tier": "t6", "payout_theoretical": 1000,      "payout_actual": 1000 },
+    { "label": "t7 柒獎 2+特",    "ticket": [3, 12, 7, 45, 46, 48],  "tier": "t7", "payout_theoretical": 400,       "payout_actual": 400 },
+    { "label": "t8 普獎 3個",     "ticket": [3, 12, 19, 45, 46, 48], "tier": "t8", "payout_theoretical": 400,       "payout_actual": 400 },
+    { "label": "未中 0個",        "ticket": [2, 4, 5, 6, 8, 9],      "tier": null, "payout_theoretical": 0,         "payout_actual": 0 },
+    { "label": "未中 2個無特",    "ticket": [3, 12, 45, 46, 48, 49], "tier": null, "payout_theoretical": 0,         "payout_actual": 0 }
+  ]
+}
