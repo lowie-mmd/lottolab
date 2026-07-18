@@ -151,7 +151,8 @@ def main() -> None:
 
     if args.audit:
         run_audit(draws, game)
-        if args.extended:
+        # 只要北銀延伸資料存在就自動一併更新延伸視圖（毋須改 workflow）
+        if args.extended or PRE2007_PATH.exists():
             run_audit_extended(draws, game)
     if args.validate:
         run_validate(draws, game, cfg, args.n_perm, args.observational)
