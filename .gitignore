@@ -26,3 +26,4 @@ scratch/
 
 # 爬蟲執行日誌
 data/build.log
+data/results/validate.log

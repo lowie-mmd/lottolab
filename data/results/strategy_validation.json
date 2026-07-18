@@ -1,0 +1,690 @@
+{
+  "n_periods": 2153,
+  "n_perm": 400,
+  "champion_roi": 1.04875058058523,
+  "champion_median": 0.30283325592196936,
+  "strategies": {
+    "A00": {
+      "roi_theoretical": 0.2861124013005109,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.5835411471321695,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "A01": {
+      "roi_theoretical": 0.2619600557361821,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.7830423940149626,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9355920543468914,
+      "fdr_rejected": false
+    },
+    "A02": {
+      "roi_theoretical": 0.3214119832791454,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.314214463840399,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8150591263776044,
+      "fdr_rejected": false
+    },
+    "A03": {
+      "roi_theoretical": 0.30840687412912215,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.3865336658354115,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8213840399002494,
+      "fdr_rejected": false
+    },
+    "A04": {
+      "roi_theoretical": 0.215513237343242,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.972568578553616,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.972568578553616,
+      "fdr_rejected": false
+    },
+    "A05": {
+      "roi_theoretical": 0.3660009289363679,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.14463840399002495,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "A06": {
+      "roi_theoretical": 0.2879702740362285,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.5660847880299252,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "A07": {
+      "roi_theoretical": 0.2879702740362285,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.5660847880299252,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "A08": {
+      "roi_theoretical": 0.23594983743613562,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.9152119700748129,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9678879723767504,
+      "fdr_rejected": false
+    },
+    "A09": {
+      "roi_theoretical": 0.31398049233627495,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.35910224438902744,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8150591263776044,
+      "fdr_rejected": false
+    },
+    "A10": {
+      "roi_theoretical": 0.3251277287505806,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.28428927680798005,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8150591263776044,
+      "fdr_rejected": false
+    },
+    "A11": {
+      "roi_theoretical": 0.24152345564328845,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.8952618453865336,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9678879723767504,
+      "fdr_rejected": false
+    },
+    "A12": {
+      "roi_theoretical": 0.30283325592196936,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.43640897755610975,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "A13": {
+      "roi_theoretical": 0.3455643288434742,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.18952618453865336,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "A14": {
+      "roi_theoretical": 0.3814584300975383,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.11471321695760599,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "A15": {
+      "roi_theoretical": 0.3790060380863911,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.11970074812967581,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "A16": {
+      "roi_theoretical": 0.25081281932187643,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.8478802992518704,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9451780385102817,
+      "fdr_rejected": false
+    },
+    "A17": {
+      "roi_theoretical": 0.2768230376219229,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.6708229426433915,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.914380714879468,
+      "fdr_rejected": false
+    },
+    "A18": {
+      "roi_theoretical": 0.3938690199721319,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.10972568578553615,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "A19": {
+      "roi_theoretical": 0.21179749187180677,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.972568578553616,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.972568578553616,
+      "fdr_rejected": false
+    },
+    "A20": {
+      "roi_theoretical": 0.32326985601486297,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.2967581047381546,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8150591263776044,
+      "fdr_rejected": false
+    },
+    "A21": {
+      "roi_theoretical": 0.31212261960055737,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.371571072319202,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8150591263776044,
+      "fdr_rejected": false
+    },
+    "A22": {
+      "roi_theoretical": 0.2712494194147701,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.713216957605985,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9326683291770573,
+      "fdr_rejected": false
+    },
+    "A23": {
+      "roi_theoretical": 0.3288434742220158,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.26184538653366585,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8150591263776044,
+      "fdr_rejected": false
+    },
+    "A24": {
+      "roi_theoretical": 0.9050998606595448,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.022443890274314215,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.5652535328345802,
+      "fdr_rejected": false
+    },
+    "A25": {
+      "roi_theoretical": 0.25452856479331165,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.8254364089775561,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9451780385102817,
+      "fdr_rejected": false
+    },
+    "A26": {
+      "roi_theoretical": 0.2916860195076637,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.5361596009975063,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "A27": {
+      "roi_theoretical": 0.3362749651648862,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.22443890274314215,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.797007481296758,
+      "fdr_rejected": false
+    },
+    "A28": {
+      "roi_theoretical": 0.3399907106363214,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.19451371571072318,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "A29": {
+      "roi_theoretical": 0.23594983743613562,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.9152119700748129,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9678879723767504,
+      "fdr_rejected": false
+    },
+    "A30": {
+      "roi_theoretical": 0.30283325592196936,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.43640897755610975,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "A31": {
+      "roi_theoretical": 0.871658151416628,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.02493765586034913,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.5652535328345802,
+      "fdr_rejected": false
+    },
+    "A32": {
+      "roi_theoretical": 0.44834184858337206,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.06483790523690773,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "A33": {
+      "roi_theoretical": 0.31212261960055737,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.371571072319202,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8150591263776044,
+      "fdr_rejected": false
+    },
+    "A34": {
+      "roi_theoretical": 0.26010218300046445,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.7855361596009975,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9355920543468914,
+      "fdr_rejected": false
+    },
+    "A35": {
+      "roi_theoretical": 0.2916860195076637,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.5361596009975063,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "A36": {
+      "roi_theoretical": 0.3548536925220622,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.16209476309226933,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "A37": {
+      "roi_theoretical": 0.2805387830933581,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.628428927680798,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.909216320899878,
+      "fdr_rejected": false
+    },
+    "A38": {
+      "roi_theoretical": 0.35299581978634464,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.17206982543640897,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "A39": {
+      "roi_theoretical": 0.23409196470041801,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.9251870324189526,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9678879723767504,
+      "fdr_rejected": false
+    },
+    "A40": {
+      "roi_theoretical": 0.2786809103576405,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.6508728179551122,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.914380714879468,
+      "fdr_rejected": false
+    },
+    "A41": {
+      "roi_theoretical": 0.2749651648862053,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.685785536159601,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.914380714879468,
+      "fdr_rejected": false
+    },
+    "A42": {
+      "roi_theoretical": 0.2916860195076637,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.5361596009975063,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "A43": {
+      "roi_theoretical": 0.341848583372039,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.19451371571072318,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "A44": {
+      "roi_theoretical": 0.29725963771481656,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.47880299251870323,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "A45": {
+      "roi_theoretical": 0.32326985601486297,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.2967581047381546,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8150591263776044,
+      "fdr_rejected": false
+    },
+    "A46": {
+      "roi_theoretical": 1.04875058058523,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.00997506234413965,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.5652535328345802,
+      "fdr_rejected": false
+    },
+    "A47": {
+      "roi_theoretical": 0.2879702740362285,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.5660847880299252,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "A48": {
+      "roi_theoretical": 0.25267069205759407,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.8403990024937655,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9451780385102817,
+      "fdr_rejected": false
+    },
+    "A49": {
+      "roi_theoretical": 0.2861124013005109,
+      "bet_type": "single",
+      "group": "A",
+      "p_value": 0.5835411471321695,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "B01": {
+      "roi_theoretical": 0.35299581978634464,
+      "bet_type": "single",
+      "group": "B",
+      "p_value": 0.17206982543640897,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "B02": {
+      "roi_theoretical": 0.2861124013005109,
+      "bet_type": "single",
+      "group": "B",
+      "p_value": 0.5835411471321695,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "B03": {
+      "roi_theoretical": 0.3214119832791454,
+      "bet_type": "single",
+      "group": "B",
+      "p_value": 0.314214463840399,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8150591263776044,
+      "fdr_rejected": false
+    },
+    "B04": {
+      "roi_theoretical": 0.3009753831862517,
+      "bet_type": "single",
+      "group": "B",
+      "p_value": 0.4488778054862843,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "B05": {
+      "roi_theoretical": 0.31212261960055737,
+      "bet_type": "single",
+      "group": "B",
+      "p_value": 0.371571072319202,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8150591263776044,
+      "fdr_rejected": false
+    },
+    "C01": {
+      "roi_theoretical": 0.2619600557361821,
+      "bet_type": "single",
+      "group": "C",
+      "p_value": 0.7830423940149626,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9355920543468914,
+      "fdr_rejected": false
+    },
+    "C02": {
+      "roi_theoretical": 0.2656758012076173,
+      "bet_type": "single",
+      "group": "C",
+      "p_value": 0.7581047381546134,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9355920543468914,
+      "fdr_rejected": false
+    },
+    "C03": {
+      "roi_theoretical": 0.3344170924291686,
+      "bet_type": "single",
+      "group": "C",
+      "p_value": 0.2344139650872818,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.797007481296758,
+      "fdr_rejected": false
+    },
+    "D01": {
+      "roi_theoretical": 0.26939154667905246,
+      "bet_type": "single",
+      "group": "D",
+      "p_value": 0.7331670822942643,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.9355920543468914,
+      "fdr_rejected": false
+    },
+    "D02": {
+      "roi_theoretical": 0.31398049233627495,
+      "bet_type": "single",
+      "group": "D",
+      "p_value": 0.35910224438902744,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.8150591263776044,
+      "fdr_rejected": false
+    },
+    "D03": {
+      "roi_theoretical": 0.20808174640037158,
+      "bet_type": "single",
+      "group": "D",
+      "p_value": 0.972568578553616,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.972568578553616,
+      "fdr_rejected": false
+    },
+    "E01": {
+      "roi_theoretical": 0.3697166744078031,
+      "bet_type": "wheel7",
+      "group": "E",
+      "p_value": 0.2119700748129676,
+      "null_mean": 0.37070824762789484,
+      "beats_champion": false,
+      "q_value": 0.797007481296758,
+      "fdr_rejected": false
+    },
+    "E02": {
+      "roi_theoretical": 0.3171329042532015,
+      "bet_type": "wheel8",
+      "group": "E",
+      "p_value": 0.513715710723192,
+      "null_mean": 0.46413610493663304,
+      "beats_champion": false,
+      "q_value": 0.8626260435866854,
+      "fdr_rejected": false
+    },
+    "E03": {
+      "roi_theoretical": 0.299778382323668,
+      "bet_type": "wheel8",
+      "group": "E",
+      "p_value": 0.6733167082294265,
+      "null_mean": 0.46413610493663304,
+      "beats_champion": false,
+      "q_value": 0.914380714879468,
+      "fdr_rejected": false
+    },
+    "E04": {
+      "roi_theoretical": 0.2841218233693849,
+      "bet_type": "wheel8",
+      "group": "E",
+      "p_value": 0.7980049875311721,
+      "null_mean": 0.46413610493663304,
+      "beats_champion": false,
+      "q_value": 0.9355920543468914,
+      "fdr_rejected": false
+    },
+    "E05": {
+      "roi_theoretical": 0.39104704399177226,
+      "bet_type": "wheel8",
+      "group": "E",
+      "p_value": 0.1770573566084788,
+      "null_mean": 0.46413610493663304,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "F01": {
+      "roi_theoretical": 0.35856943799349744,
+      "bet_type": "single",
+      "group": "F",
+      "p_value": 0.1546134663341646,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    },
+    "F02": {
+      "roi_theoretical": 0.4013005109150023,
+      "bet_type": "single",
+      "group": "F",
+      "p_value": 0.10972568578553615,
+      "null_mean": 3.031727821644216,
+      "beats_champion": false,
+      "q_value": 0.7780548628428927,
+      "fdr_rejected": false
+    }
+  },
+  "label": "observational_full_history",
+  "honest_note": "觀察性（歷史段），非預先註冊推論；200 期的檢定力只足以偵測『大幅』偏離；接受 H0 ≠ 證明完美隨機，只代表偏差（若存在）小於本實驗可偵測門檻（§5.1）。"
+}
