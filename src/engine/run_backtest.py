@@ -16,7 +16,7 @@ from engine.backtest import TheoreticalPrizeTable, run_walk_forward, summarize
 from engine.game import get_game
 from engine.models import load_draws
 from strategies.base import StrategyRegistry
-from strategies.group_a import build_group_a
+from strategies.registry import build_all_strategies
 
 ROOT = Path(__file__).resolve().parents[2]
 DRAWS_PATH = ROOT / "data" / "draws.json"
@@ -26,10 +26,8 @@ RESULTS_DIR = ROOT / "data" / "results"
 
 def build_registry(cfg: dict, game, groups: list[str]) -> StrategyRegistry:
     reg = StrategyRegistry()
-    if "A" in groups:
-        for s in build_group_a(cfg, game):
-            reg.register(s)
-    # B–F 於後續模組加入
+    for s in build_all_strategies(cfg, game, groups):
+        reg.register(s)
     return reg
 
 
