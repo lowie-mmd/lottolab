@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lotto Lab · 大樂透隨機性驗證實驗</title>
+<style>
+  :root { color-scheme: light dark; --fg:#222; --bg:#fff; --muted:#7a7a7a; --line:#8883;
+          --ctrl:#bbb; --accent:#2a7ae2; --warn:#e2662a; --pos:#1a9a6a; }
+  @media (prefers-color-scheme: dark){ :root{ --fg:#e6e6e6; --bg:#16171a; --muted:#9aa; --ctrl:#556; } }
+  body{ font-family:-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif; color:var(--fg);
+        background:var(--bg); max-width:960px; margin:0 auto; padding:24px; line-height:1.6; }
+  h1{ font-size:1.5rem; margin-bottom:2px; } h2{ font-size:1.15rem; margin-top:8px; }
+  .sub{ color:var(--muted); font-size:.9rem; }
+  .card{ border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin:16px 0; }
+  .muted{ color:var(--muted); font-size:.85rem; }
+  table{ border-collapse:collapse; width:100%; margin-top:8px; font-size:.9rem; }
+  th,td{ border-bottom:1px solid var(--line); padding:5px 8px; text-align:right; }
+  th:first-child,td:first-child{ text-align:left; }
+  svg{ width:100%; height:auto; display:block; }
+  nav a{ color:var(--accent); margin-right:14px; text-decoration:none; font-size:.9rem; }
+  .pill{ display:inline-block; padding:2px 8px; border-radius:99px; background:var(--line); font-size:.8rem; }
+  .legend span{ margin-right:12px; font-size:.82rem; }
+  .sw{ display:inline-block; width:10px; height:10px; border-radius:2px; vertical-align:middle; margin-right:4px; }
+</style>
+</head>
+<body>
+<h1>Lotto Lab · 大樂透隨機性驗證實驗</h1>
+<p class="sub">這不是報明牌系統，而是證明（或推翻）隨機性的實驗裝置。預設假說 H0：所有策略的長期每元投報率，統計上無法與純隨機對照組區分。</p>
+<nav>
+  <a href="#cloud">運氣雲</a><a href="#groups">組別對比</a><a href="#hotness">熱門度</a>
+  <a href="#audit">硬體審計</a><a href="#report">最終報告</a><a href="personal.html">私人分析</a>
+</nav>
+<div id="meta" class="muted"></div>
+
+<div class="card" id="cloud">
+  <h2>6.1 運氣雲</h2>
+  <p class="muted">A 組 50 條純隨機對照理論軌（淡灰）為背景；真策略（B–F）疊上。一眼看出誰跳出雜訊——目前沒有。</p>
+  <div class="legend">
+    <span><i class="sw" style="background:var(--ctrl)"></i>A 對照組</span>
+    <span><i class="sw" style="background:#2a7ae2"></i>B 統計</span>
+    <span><i class="sw" style="background:#1a9a6a"></i>C 序列</span>
+    <span><i class="sw" style="background:#b23"></i>D 養牌</span>
+    <span><i class="sw" style="background:#e2a02a"></i>E 包牌</span>
+    <span><i class="sw" style="background:#8a2be2"></i>F 反熱門</span>
+  </div>
+  <div id="cloudChart"></div>
+  <p class="muted">縱軸＝累積理論軌 ROI（每元報酬）；橫軸＝期序。理論軌為推論主指標（§4.2）。</p>
+</div>
+
+<div class="card" id="groups">
+  <h2>6.2 組別對比</h2>
+  <div id="groupTable"></div>
+  <p class="muted">真策略需顯著贏過 A 組對照冠軍（非平均，§5.1）。包牌組（E）以每元報酬標準差呈現波動性差異：包牌不改變每元期望值，只改變波動性與命中頻率。</p>
+</div>
+
+<div class="card" id="hotness">
+  <h2>6.3 熱門度分析</h2>
+  <p class="muted">各期低獎項（t5–t8）中獎注數 ÷ 當期總注數（sales/50）＝每萬注中獎率。標準化後異常升高（紅點，z≥2）代表該期號碼為群眾偏好熱門組合。僅用 full 期。</p>
+  <div id="hotChart"></div>
+  <p class="muted" id="hotNote"></p>
+</div>
+
+<div class="card" id="audit">
+  <h2>6.4 硬體隨機性審計</h2>
+  <p class="muted">全歷史混池卡方檢定（獨立於策略驗證）。明確不做 NIST 套件。誠實標註：台彩定期輪換球組與搖獎機，混池檢定只能偵測長期系統性偏差。</p>
+  <div id="auditTable"></div>
+  <h3 style="font-size:1rem">各號碼出現次數偏差（標準化殘差 z）</h3>
+  <div id="devChart"></div>
+</div>
+
+<div class="card" id="report">
+  <h2>6.5 最終報告</h2>
+  <div id="reportBox" class="muted"></div>
+</div>
+
+<footer class="muted">資料來源：台彩官方 API。真錢防火牆：系統只做虛擬損益；洛伊實際投注不回饋進任何策略評分。規格 v1.2 凍結。</footer>
+
+<script type="module">
+const $ = (id)=>document.getElementById(id);
+const GC = { A:"var(--ctrl)", B:"#2a7ae2", C:"#1a9a6a", D:"#b23", E:"#e2a02a", F:"#8a2be2" };
+async function j(p){ const r=await fetch(p,{cache:"no-store"}); if(!r.ok) throw new Error(p); return r.json(); }
+
+function linePath(vals, W, H, ymin, ymax, pad){
+  const n=vals.length; if(!n) return "";
+  const x=(i)=> pad + (W-2*pad)*(i/(n-1||1));
+  const y=(v)=>{ v=Math.max(ymin,Math.min(ymax,v)); return H-pad - (H-2*pad)*((v-ymin)/((ymax-ymin)||1)); };
+  return vals.map((v,i)=> (i?"L":"M")+x(i).toFixed(1)+" "+y(v).toFixed(1)).join(" ");
+}
+
+(async function(){
+  try{
+    const [meta, luck, groups, hot] = await Promise.all([
+      j("./data/meta.json"), j("./data/luck_cloud.json"),
+      j("./data/group_comparison.json"), j("./data/hotness.json")
+    ]);
+    let audit=null; try{ audit=await j("./data/audit.json"); }catch(e){}
+
+    // meta
+    $("meta").innerHTML = `<span class="pill">${meta.n_periods} 期</span> `+
+      `${meta.first_period}–${meta.last_period}（至 ${meta.last_date}） · ${meta.n_strategies} 策略 · `+
+      (meta.prospective_start_period ? `前瞻段起 ${meta.prospective_start_period}` : "前瞻段尚未啟動（現為歷史觀察段）");
+
+    // 6.1 luck cloud
+    const W=920,H=340,pad=34;
+    const curves=Object.entries(luck.strategies);
+    // y 軸依「最終收斂 ROI」設定，裁掉早期少數期的巨大暫態尖峰（單次頭獎），使收斂雲清晰
+    let ymin=0,ymax=0;
+    for(const [,s] of curves) if(s.roi_final!=null) ymax=Math.max(ymax,s.roi_final);
+    ymax=Math.max(1.2, ymax*1.35);
+    const order=curves.sort((a,b)=> (a[1].group==="A"?-1:1)-(b[1].group==="A"?-1:1)); // A 先畫(底層)
+    let paths="";
+    for(const [id,s] of order){
+      const col=GC[s.group]||"#999"; const op=s.group==="A"?0.35:0.95; const w=s.group==="A"?0.8:1.6;
+      paths+=`<path d="${linePath(s.curve,W,H,ymin,ymax,pad)}" fill="none" stroke="${col}" stroke-width="${w}" opacity="${op}"/>`;
+    }
+    const y0=(v)=> (H-pad-(H-2*pad)*((v-ymin)/((ymax-ymin)||1))).toFixed(1);
+    $("cloudChart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="運氣雲">
+      <line x1="${pad}" y1="${H-pad}" x2="${W-pad}" y2="${H-pad}" stroke="var(--line)"/>
+      <line x1="${pad}" y1="${pad}" x2="${pad}" y2="${H-pad}" stroke="var(--line)"/>
+      <text x="${pad}" y="${pad-6}" font-size="11" fill="var(--muted)">ROI</text>
+      <text x="${pad+2}" y="${y0(ymin)}" font-size="10" fill="var(--muted)">${ymin.toFixed(2)}</text>
+      <text x="${pad+2}" y="${(+y0(ymax)+10)}" font-size="10" fill="var(--muted)">${ymax.toFixed(2)}</text>
+      ${paths}</svg>`;
+
+    // 6.2 groups table
+    const gs=Object.entries(groups).filter(([k])=>!k.startsWith("_"));
+    let rows=gs.map(([g,v])=>`<tr><td>${g}</td><td>${v.n}</td>
+      <td>${v.roi_mean?.toFixed(4)??"—"}</td><td>${v.roi_median?.toFixed(4)??"—"}</td>
+      <td>${v.roi_min?.toFixed(4)??"—"}</td><td>${v.roi_max?.toFixed(4)??"—"}</td></tr>`).join("");
+    $("groupTable").innerHTML=`<table><thead><tr><th>組</th><th>策略數</th><th>ROI 平均</th>
+      <th>中位</th><th>最低</th><th>最高</th></tr></thead><tbody>${rows}</tbody></table>
+      <div class="muted" style="margin-top:6px">對照組冠軍 ROI=<b>${groups._control_champion?.toFixed(4)}</b>，
+      對照中位=${groups._control_median?.toFixed(4)}</div>`;
+
+    // 6.3 hotness
+    const hs=hot.series; const rates=hs.map(x=>x.rate_per_10k);
+    const hmin=Math.min(...rates), hmax=Math.max(...rates);
+    const Wc=920,Hc=260,p2=34;
+    const hx=(i)=> p2+(Wc-2*p2)*(i/(hs.length-1||1));
+    const hy=(v)=> Hc-p2-(Hc-2*p2)*((v-hmin)/((hmax-hmin)||1));
+    const line=`<path d="${linePath(rates,Wc,Hc,hmin,hmax,p2)}" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>`;
+    const dots=hs.map((x,i)=> x.z>=2 ? `<circle cx="${hx(i).toFixed(1)}" cy="${hy(x.rate_per_10k).toFixed(1)}" r="3" fill="var(--warn)"><title>${x.date} z=${x.z}</title></circle>`:"").join("");
+    const meanY=hy(hot.mean_rate_per_10k);
+    $("hotChart").innerHTML=`<svg viewBox="0 0 ${Wc} ${Hc}" role="img" aria-label="熱門度">
+      <line x1="${p2}" y1="${meanY.toFixed(1)}" x2="${Wc-p2}" y2="${meanY.toFixed(1)}" stroke="var(--muted)" stroke-dasharray="4 3"/>
+      <text x="${Wc-p2-70}" y="${(meanY-4).toFixed(1)}" font-size="10" fill="var(--muted)">均值 ${hot.mean_rate_per_10k}</text>
+      ${line}${dots}</svg>`;
+    $("hotNote").textContent=hot.note;
+
+    // 6.4 audit
+    if(audit){
+      const sn=audit.single_number, sp=audit.special_number, pr=audit.pair_cooccurrence;
+      $("auditTable").innerHTML=`<table><thead><tr><th>檢定</th><th>chi²</th><th>df</th><th>p 值</th><th>判讀</th></tr></thead><tbody>
+        <tr><td>單號頻率</td><td>${sn.chi2.toFixed(2)}</td><td>${sn.df}</td><td>${sn.p_value.toFixed(4)}</td><td>${sn.p_value>0.05?"未見偏差":"偏差待查"}</td></tr>
+        <tr><td>特別號</td><td>${sp.chi2.toFixed(2)}</td><td>${sp.df}</td><td>${sp.p_value.toFixed(4)}</td><td>${sp.p_value>0.05?"未見偏差":"邊際"}</td></tr>
+        <tr><td>配對共現</td><td>${pr.chi2.toFixed(1)}</td><td>${pr.df}</td><td>${pr.p_value.toFixed(4)}</td><td>${pr.p_value>0.05?"未見偏差":"偏差待查"}</td></tr>
+        </tbody></table>`;
+      // deviation bars (single number top deviations)
+      const devs=sn.top_deviations; const Wd=920,Hd=140,zmax=Math.max(...devs.map(d=>Math.abs(d.z)),3);
+      const bw=(Wd-40)/devs.length;
+      const bars=devs.map((d,i)=>{ const h=(Hd/2-10)*Math.abs(d.z)/zmax; const x=20+i*bw;
+        const y=d.z>=0?(Hd/2-h):(Hd/2); return `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(bw*0.7).toFixed(1)}" height="${h.toFixed(1)}" fill="${d.z>=0?'var(--accent)':'var(--warn)'}"><title>號 ${d.number} z=${d.z}</title></rect>
+        <text x="${(x+bw*0.35).toFixed(1)}" y="${Hd-2}" font-size="9" fill="var(--muted)" text-anchor="middle">${d.number}</text>`;}).join("");
+      $("devChart").innerHTML=`<svg viewBox="0 0 ${Wd} ${Hd}"><line x1="10" y1="${Hd/2}" x2="${Wd-10}" y2="${Hd/2}" stroke="var(--line)"/>${bars}</svg>`;
+    } else { $("auditTable").innerHTML='<p class="muted">審計資料尚未產生。</p>'; }
+
+    // 6.5 report
+    $("reportBox").innerHTML = meta.prospective_start_period
+      ? "前瞻段進行中；期滿（約 200 期）自動生成最終報告。"
+      : "前瞻段尚未啟動——啟動日由洛伊確認、config 凍結 commit 之時間戳即為預先註冊時點。目前為歷史觀察段，一切證據以前瞻段為準（§4.4、§5.3）。";
+  }catch(e){
+    document.body.insertAdjacentHTML("beforeend", `<div class="card">載入資料失敗：${e.message}。請先執行 tools.build_site_data 並發佈 docs/data。</div>`);
+  }
+})();
+</script>
+</body>
+</html>
