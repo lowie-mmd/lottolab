@@ -58,7 +58,7 @@ $("go").onclick = async () => {
   let bets, draws, cfg;
   try {
     const [env, drawsFile, config] = await Promise.all([
-      loadJSON("./bets.enc"), loadJSON("./draws.json"), loadJSON("./config.json"),
+      loadJSON("./data/bets.enc"), loadJSON("./data/draws.json"), loadJSON("./data/config.json"),
     ]);
     draws = drawsFile.draws; cfg = config;
     bets = await decryptJSON(env, $("pass").value);

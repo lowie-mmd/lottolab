@@ -131,6 +131,14 @@ def main() -> None:
     if audit.exists():
         shutil.copy(audit, DOCS_DATA / "audit.json")
 
+    # 供 personal.html 於 GitHub Pages（docs/）下取用：開獎、config，以及
+    # 洛伊已 commit 的 bets.enc（僅複製密文，永不接觸密語或明文，符合 §8）
+    shutil.copy(DRAWS_PATH, DOCS_DATA / "draws.json")
+    shutil.copy(CONFIG_PATH, DOCS_DATA / "config.json")
+    bets_enc = ROOT / "data" / "private" / "bets.enc"
+    if bets_enc.exists():
+        shutil.copy(bets_enc, DOCS_DATA / "bets.enc")
+
     # meta
     (DOCS_DATA / "meta.json").write_text(json.dumps({
         "n_periods": len(draws),
