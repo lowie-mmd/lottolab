@@ -8,131 +8,163 @@
   :root { color-scheme: light dark; }
   body { font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
          max-width: 880px; margin: 0 auto; padding: 24px; line-height: 1.6; }
-  h1 { font-size: 1.4rem; }
+  h1 { font-size: 1.4rem; } h2 { font-size: 1.1rem; }
   .card { border: 1px solid #8884; border-radius: 10px; padding: 16px; margin: 14px 0; }
-  input[type=password] { padding: 8px; width: 240px; font-size: 1rem; }
-  button { padding: 8px 16px; font-size: 1rem; cursor: pointer; }
+  input, select { padding: 7px; font-size: 1rem; border: 1px solid #8886; border-radius: 6px;
+                  background: transparent; color: inherit; }
+  input[type=password], input[type=text] { width: 220px; }
+  button { padding: 8px 16px; font-size: 1rem; cursor: pointer; border-radius: 6px; }
   .muted { color: #8889; font-size: 0.85rem; }
   table { border-collapse: collapse; width: 100%; margin-top: 8px; }
   th, td { border-bottom: 1px solid #8883; padding: 6px 8px; text-align: right; }
   th:first-child, td:first-child { text-align: left; }
-  .err { color: #d33; }
-  .pos { color: #2a8; } .neg { color: #d55; }
+  .err { color: #d33; } .pos { color: #2a8; } .neg { color: #d55; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 6px 0; }
+  .row label { font-size: .9rem; min-width: 64px; }
+  .chip { display:inline-flex; align-items:center; gap:4px; padding:3px 8px; border:1px solid #8886;
+          border-radius:99px; font-size:.85rem; }
+  .save { background:#2a7ae2; color:#fff; border:none; }
+  .hidden { display:none; }
+  .warn { color:#e2662a; font-size:.85rem; }
 </style>
 </head>
 <body>
 <h1>Lotto Lab · 私人投注分析</h1>
-<p class="muted">號碼經 AES-256-GCM 加密，只在你輸入密語後於本瀏覽器記憶體解密計分；
-密文可公開存放，明文永不進入 repo 或任何伺服器（規格 §7）。</p>
+<p class="muted">號碼經 AES-256-GCM 加密，只在你輸入密語後於本瀏覽器記憶體解密計分／編輯；
+密文可公開存放，明文永不進入 repo 或任何伺服器（規格 §7）。<a href="index.html">← 回公開實驗</a></p>
 
 <div class="card">
   <label>通關密語　<input id="pass" type="password" autocomplete="off" /></label>
-  <button id="go">解密並分析</button>
+  <button id="go">解密</button>
+  <span class="muted">（第一次使用還沒有資料？輸入你要設定的密語，按「解密」即可從空白開始）</span>
   <div id="status" class="muted"></div>
 </div>
 
-<div id="out"></div>
+<div id="app" class="hidden">
+  <div id="out"></div>
+
+  <div class="card">
+    <h2>✏️ 編輯（新增後記得按最下方「下載 bets.enc」）</h2>
+
+    <h3 style="font-size:.98rem">固定組（夢境／塔位，設一次）</h3>
+    <div class="row">
+      <label>名稱</label><input id="rLabel" type="text" placeholder="夢境號碼" />
+      <label>號碼</label><input id="rNums" type="text" placeholder="3 11 19 28 33 45（空白分隔）" />
+      <label>起始期</label><input id="rSince" type="text" placeholder="115000072" style="width:120px" />
+      <button id="addRec">新增固定組</button>
+    </div>
+    <div id="recList" class="muted"></div>
+
+    <h3 style="font-size:.98rem;margin-top:12px">單期投注</h3>
+    <div class="row">
+      <label>期別</label><input id="bPeriod" type="text" placeholder="115000072" style="width:120px" />
+      <label>花費</label><input id="bCost" type="text" placeholder="150" style="width:80px" />
+    </div>
+    <div class="row">
+      <label>電腦選號</label><input id="bAuto" type="text" placeholder="7 14 21 28 35 42（可留空）" />
+    </div>
+    <div class="row"><label>跟固定組</label><span id="useChips" class="muted">（先新增固定組）</span></div>
+    <div class="row"><button id="addBet">新增這期投注</button></div>
+
+    <hr style="border:none;border-top:1px solid #8883;margin:14px 0" />
+    <div class="row">
+      <button id="download" class="save">⬇️ 下載 bets.enc</button>
+      <span id="dirty" class="warn"></span>
+    </div>
+    <p class="muted">下載後：到 GitHub 專案的 <code>data/private/</code> 資料夾，把這個
+    <code>bets.enc</code> 上傳覆蓋（Add file → Upload files），就完成了，全程免終端機。</p>
+  </div>
+</div>
 
 <script type="module">
-import { decryptJSON } from "./crypto.js";
-import { scoreTicket, scorePeriod, scorePromo, theoreticalAmount } from "./engine.js";
+import { decryptJSON, encryptJSON } from "./crypto.js";
+import { scorePeriod, scorePromo } from "./engine.js";
 
 const $ = (id) => document.getElementById(id);
 const fmt = (n) => n == null ? "—" : n.toLocaleString();
+const parseNums = (s) => (s.match(/\d+/g) || []).map(Number).sort((a,b)=>a-b);
 
-async function loadJSON(path) {
-  const r = await fetch(path, { cache: "no-store" });
-  if (!r.ok) throw new Error(`載入 ${path} 失敗`);
-  return r.json();
-}
+const STATE = { bets: null, draws: [], cfg: null, pass: "", dirty: false };
 
-function resolveTicket(tk, recurring) {
-  if (tk.numbers) return tk.numbers;
-  const rec = recurring.find((r) => r.label === tk.label);
-  return rec ? rec.numbers : null;
-}
+async function loadJSON(path){ const r = await fetch(path,{cache:"no-store"}); if(!r.ok) throw new Error(path); return r.json(); }
 
 $("go").onclick = async () => {
-  $("out").innerHTML = "";
   $("status").textContent = "解密中…";
-  let bets, draws, cfg;
   try {
-    const [env, drawsFile, config] = await Promise.all([
-      loadJSON("./data/bets.enc"), loadJSON("./data/draws.json"), loadJSON("./data/config.json"),
-    ]);
-    draws = drawsFile.draws; cfg = config;
-    bets = await decryptJSON(env, $("pass").value);
+    const [drawsFile, config] = await Promise.all([loadJSON("./data/draws.json"), loadJSON("./data/config.json")]);
+    STATE.draws = drawsFile.draws; STATE.cfg = config; STATE.pass = $("pass").value;
+    try {
+      const env = await loadJSON("./data/bets.enc");
+      STATE.bets = await decryptJSON(env, STATE.pass);
+    } catch (e) {
+      // 沒有 bets.enc → 全新開始（空白）
+      STATE.bets = { recurring: [], bets: [] };
+    }
   } catch (e) {
-    // 解密失敗只顯示「無法解密」，不洩漏任何結構資訊（§7.2）
-    $("status").innerHTML = '<span class="err">無法解密</span>';
-    return;
+    $("status").innerHTML = '<span class="err">無法解密</span>'; return;
   }
-  $("status").textContent = "";
-  render(bets, draws, cfg);
+  $("status").textContent = ""; $("app").classList.remove("hidden");
+  renderAll();
 };
 
-function render(bets, draws, cfg) {
-  const theo = cfg.theoretical_prizes;
-  const byPeriod = Object.fromEntries(draws.map((d) => [String(d.period), d]));
-  const recurring = bets.recurring || [];
+function renderAll(){ renderAnalysis(); renderEditor(); $("dirty").textContent = STATE.dirty ? "● 有未儲存變更，記得下載" : ""; }
 
-  // 各投注 label 拆開統計（電腦選號 vs 夢境 vs 塔位，§7.3）
-  const groups = {};
-  const ensure = (label) => (groups[label] ||= {
-    label, cost: 0, theo: 0, actual: 0, actualNA: 0, promo: 0, hits: {},
-  });
+function resolveTicket(tk){ if(tk.numbers) return tk.numbers; const r=STATE.bets.recurring.find(x=>x.label===tk.label); return r?r.numbers:null; }
 
-  for (const bet of bets.bets || []) {
-    const draw = byPeriod[String(bet.period)];
-    if (!draw) continue;
-    for (const tk of bet.tickets) {
-      const nums = resolveTicket(tk, recurring);
-      if (!nums) continue;
-      const g = ensure(tk.label);
-      g.cost += 50;
-      const r = scorePeriod([nums], draw, theo);
-      g.theo += r.payout_theoretical;
-      if (r.payout_actual == null) g.actualNA += 1; else g.actual += r.payout_actual;
-      for (const [t, c] of Object.entries(r.tier_hits)) g.hits[t] = (g.hits[t] || 0) + c;
-      // 加碼比對：私人實際軌含加碼、理論軌不含（§7.3）
-      if (draw.promo) g.promo += scorePromo(nums, draw.promo).win;
-    }
-  }
-
-  const rows = Object.values(groups).map((g) => {
-    const net = g.theo - g.cost;
-    const actualNet = g.actual + g.promo - g.cost;
-    return `<tr>
-      <td>${g.label}</td>
-      <td>${fmt(g.cost)}</td>
-      <td class="${net>=0?'pos':'neg'}">${fmt(net)}</td>
-      <td>${g.cost ? (g.theo/g.cost).toFixed(3) : "—"}</td>
-      <td class="${actualNet>=0?'pos':'neg'}">${fmt(actualNet)}</td>
-      <td>${fmt(g.promo)}</td>
-    </tr>`;
-  }).join("");
-
-  const total = Object.values(groups).reduce((a, g) => {
-    a.cost += g.cost; a.theo += g.theo; a.actual += g.actual; a.promo += g.promo; return a;
-  }, { cost: 0, theo: 0, actual: 0, promo: 0 });
-
-  $("out").innerHTML = `
-    <div class="card">
-      <h2 style="font-size:1.1rem">三組號碼績效拆解（§7.3）</h2>
-      <table>
-        <thead><tr><th>組別</th><th>成本</th><th>理論淨損益</th><th>理論ROI</th>
-          <th>實際淨損益(含加碼)</th><th>加碼獎金</th></tr></thead>
-        <tbody>${rows || '<tr><td colspan="6" class="muted">尚無投注紀錄</td></tr>'}</tbody>
-      </table>
-      <p class="muted">理論軌不含加碼、實際軌含加碼；兩者差額即加碼活動帶來的額外期望。
-      漏買期不內插（缺席）。運氣餘額 = 實際 − 理論。</p>
-    </div>
-    <div class="card">
-      <strong>合計</strong>：成本 ${fmt(total.cost)}，理論淨 ${fmt(total.theo-total.cost)}，
-      實際淨(含加碼) ${fmt(total.actual+total.promo-total.cost)}，加碼 ${fmt(total.promo)}。
-      <div class="muted">運氣餘額（至今比數學期望多賺/虧）：${fmt((total.actual+total.promo)-total.theo)}</div>
-    </div>`;
+function renderAnalysis(){
+  const theo = STATE.cfg.theoretical_prizes;
+  const byP = Object.fromEntries(STATE.draws.map(d=>[String(d.period),d]));
+  const groups = {}; const ensure=(l)=>(groups[l] ||= {label:l,cost:0,theo:0,actual:0,promo:0,na:0});
+  for(const bet of STATE.bets.bets){ const draw=byP[String(bet.period)]; if(!draw) continue;
+    for(const tk of bet.tickets){ const nums=resolveTicket(tk); if(!nums) continue; const g=ensure(tk.label);
+      g.cost+=50; const r=scorePeriod([nums],draw,theo); g.theo+=r.payout_theoretical;
+      if(r.payout_actual==null) g.na++; else g.actual+=r.payout_actual;
+      if(draw.promo) g.promo+=scorePromo(nums,draw.promo).win; } }
+  const rows=Object.values(groups).map(g=>{ const net=g.theo-g.cost, an=g.actual+g.promo-g.cost;
+    return `<tr><td>${g.label}</td><td>${fmt(g.cost)}</td><td class="${net>=0?'pos':'neg'}">${fmt(net)}</td>
+      <td>${g.cost?(g.theo/g.cost).toFixed(3):'—'}</td><td class="${an>=0?'pos':'neg'}">${fmt(an)}</td><td>${fmt(g.promo)}</td></tr>`;}).join("");
+  const tot=Object.values(groups).reduce((a,g)=>{a.cost+=g.cost;a.theo+=g.theo;a.actual+=g.actual;a.promo+=g.promo;return a;},{cost:0,theo:0,actual:0,promo:0});
+  $("out").innerHTML=`<div class="card"><h2>三組號碼績效拆解（§7.3）</h2>
+    <table><thead><tr><th>組別</th><th>成本</th><th>理論淨</th><th>理論ROI</th><th>實際淨(含加碼)</th><th>加碼</th></tr></thead>
+    <tbody>${rows||'<tr><td colspan="6" class="muted">尚無投注紀錄</td></tr>'}</tbody></table>
+    <div class="muted" style="margin-top:6px">合計成本 ${fmt(tot.cost)}，理論淨 ${fmt(tot.theo-tot.cost)}，
+    實際淨(含加碼) ${fmt(tot.actual+tot.promo-tot.cost)}；運氣餘額（實際−理論）${fmt((tot.actual+tot.promo)-tot.theo)}。
+    理論軌不含加碼、實際軌含加碼；漏買期不內插。</div></div>`;
 }
+
+function renderEditor(){
+  $("recList").innerHTML = STATE.bets.recurring.length
+    ? STATE.bets.recurring.map(r=>`<span class="chip">${r.label}: ${r.numbers.join(" ")}</span>`).join(" ")
+    : "（尚無固定組）";
+  $("useChips").innerHTML = STATE.bets.recurring.length
+    ? STATE.bets.recurring.map(r=>`<label class="chip"><input type="checkbox" class="useCk" value="${r.label}"> ${r.label}</label>`).join(" ")
+    : "（先新增固定組）";
+}
+
+$("addRec").onclick = () => {
+  const label=$("rLabel").value.trim(), nums=parseNums($("rNums").value), since=$("rSince").value.trim()||"";
+  if(!label || nums.length!==6){ alert("請填名稱與 6 個號碼"); return; }
+  STATE.bets.recurring.push({label, numbers:nums, since}); STATE.dirty=true;
+  $("rLabel").value=$("rNums").value=""; renderAll();
+};
+
+$("addBet").onclick = () => {
+  const period=$("bPeriod").value.trim(), cost=Number($("bCost").value)||0;
+  if(!period){ alert("請填期別"); return; }
+  const tickets=[];
+  const auto=parseNums($("bAuto").value); if(auto.length===6) tickets.push({label:"電腦選號",numbers:auto});
+  document.querySelectorAll(".useCk:checked").forEach(c=>tickets.push({label:c.value}));
+  if(!tickets.length){ alert("至少要有電腦選號或勾選一個固定組"); return; }
+  STATE.bets.bets.push({period, tickets, cost}); STATE.dirty=true;
+  $("bPeriod").value=$("bCost").value=$("bAuto").value=""; renderAll();
+};
+
+$("download").onclick = async () => {
+  const env = await encryptJSON(STATE.bets, STATE.pass);
+  const blob = new Blob([JSON.stringify(env,null,2)], {type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="bets.enc"; a.click();
+  STATE.dirty=false; $("dirty").textContent="已下載 ✓";
+};
 </script>
 </body>
 </html>
