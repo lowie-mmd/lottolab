@@ -14,7 +14,7 @@ from engine.models import Draw
 from strategies.util import seeded_pick, strat_seed
 
 GROUP = "F"
-REG = "TBD"
+REG = "115000072"
 
 
 class _Base:

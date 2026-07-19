@@ -18,7 +18,7 @@ from strategies.util import (
 )
 
 GROUP = "E"
-REG = "TBD"
+REG = "115000072"
 
 
 class _Base:

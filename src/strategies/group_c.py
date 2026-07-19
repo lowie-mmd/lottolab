@@ -12,7 +12,7 @@ from engine.models import Draw
 from strategies.util import RECENT_N, recent, seeded_pick, strat_seed
 
 GROUP = "C"
-REG = "TBD"
+REG = "115000072"
 
 
 class _Base:

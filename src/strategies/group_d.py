@@ -11,7 +11,7 @@ from engine.game import Game, Ticket
 from engine.models import Draw
 
 GROUP = "D"
-REG = "TBD"
+REG = "115000072"
 
 
 class FrozenStrategy:

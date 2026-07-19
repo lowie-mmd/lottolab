@@ -3,6 +3,6 @@
   "first_period": "96000001",
   "last_period": "115000071",
   "last_date": "2026-07-17",
-  "prospective_start_period": null,
+  "prospective_start_period": "115000072",
   "n_strategies": 68
 }
