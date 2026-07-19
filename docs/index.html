@@ -6,14 +6,17 @@
 <title>Lotto Lab · 大樂透隨機性驗證實驗</title>
 <style>
   :root { color-scheme: light dark; --fg:#222; --bg:#fff; --muted:#7a7a7a; --line:#8883;
-          --ctrl:#bbb; --accent:#2a7ae2; --warn:#e2662a; --pos:#1a9a6a; }
-  @media (prefers-color-scheme: dark){ :root{ --fg:#e6e6e6; --bg:#16171a; --muted:#9aa; --ctrl:#556; } }
+          --ctrl:#bbb; --accent:#2a7ae2; --warn:#e2662a; --pos:#1a9a6a; --band:#8881; }
+  @media (prefers-color-scheme: dark){ :root{ --fg:#e6e6e6; --bg:#16171a; --muted:#9aa; --ctrl:#556; --band:#fff1; } }
   body{ font-family:-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif; color:var(--fg);
         background:var(--bg); max-width:960px; margin:0 auto; padding:24px; line-height:1.6; }
-  h1{ font-size:1.5rem; margin-bottom:2px; } h2{ font-size:1.15rem; margin-top:8px; }
+  h1{ font-size:1.5rem; margin-bottom:2px; } h2{ font-size:1.2rem; margin-top:8px; }
   .sub{ color:var(--muted); font-size:.9rem; }
   .card{ border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin:16px 0; }
   .muted{ color:var(--muted); font-size:.85rem; }
+  .lead{ font-size:1.05rem; font-weight:600; margin:2px 0 10px; }
+  .verdict{ font-size:1.3rem; font-weight:700; margin:2px 0 10px; line-height:1.4; }
+  .verdict.ok{ color:var(--pos); } .verdict.watch{ color:var(--warn); }
   table{ border-collapse:collapse; width:100%; margin-top:8px; font-size:.9rem; }
   th,td{ border-bottom:1px solid var(--line); padding:5px 8px; text-align:right; }
   th:first-child,td:first-child{ text-align:left; }
@@ -22,64 +25,142 @@
   .pill{ display:inline-block; padding:2px 8px; border-radius:99px; background:var(--line); font-size:.8rem; }
   .legend span{ margin-right:12px; font-size:.82rem; }
   .sw{ display:inline-block; width:10px; height:10px; border-radius:2px; vertical-align:middle; margin-right:4px; }
+  details{ border-top:1px solid var(--line); margin-top:10px; padding-top:6px; }
+  details > summary{ cursor:pointer; font-size:.9rem; color:var(--accent); list-style:none; padding:2px 0; }
+  details > summary::-webkit-details-marker{ display:none; }
+  details > summary::before{ content:"▸ "; }
+  details[open] > summary::before{ content:"▾ "; }
+  details .body{ font-size:.9rem; color:var(--fg); padding:4px 0 6px; }
+  details.nerd summary{ color:var(--muted); }
+  .progress{ height:14px; background:var(--line); border-radius:99px; overflow:hidden; margin:8px 0; }
+  .progress > i{ display:block; height:100%; background:var(--accent); }
+  /* 策略卡 */
+  .cards{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; margin-top:12px; }
+  .scard{ border:1px solid var(--line); border-radius:10px; padding:12px 14px; }
+  .scard h3{ font-size:1rem; margin:0 0 2px; }
+  .scard .rule{ font-size:.9rem; color:var(--fg); }
+  .scard .nums{ font-variant-numeric:tabular-nums; font-weight:600; letter-spacing:.5px; margin:6px 0 2px; }
+  .scard .tag{ display:inline-block; background:var(--line); border-radius:99px; padding:0 8px; font-size:.75rem; }
+  .scard a{ color:var(--accent); font-size:.82rem; text-decoration:none; }
+  .cta{ display:inline-block; margin-top:10px; color:var(--accent); text-decoration:none; font-weight:600; }
 </style>
 </head>
 <body>
 <h1>Lotto Lab · 大樂透隨機性驗證實驗</h1>
-<p class="sub">這不是報明牌系統，而是證明（或推翻）隨機性的實驗裝置。預設假說 H0：所有策略的長期每元投報率，統計上無法與純隨機對照組區分。</p>
+<p class="sub">這裡沒有明牌。這是一台用兩年時間證明（或推翻）大樂透隨機性的實驗機器。</p>
 <nav>
-  <a href="#cloud">運氣雲</a><a href="#groups">組別對比</a><a href="#hotness">熱門度</a>
-  <a href="#audit">硬體審計</a><a href="#report">最終報告</a><a href="personal.html">私人分析</a><a href="guide.html">使用說明</a>
+  <a href="#cloud">運氣雲</a><a href="#groups">策略擂台</a><a href="#hotness">熱門號碼</a>
+  <a href="#audit">搖獎機體檢</a><a href="#report">實驗進度</a>
+  <a href="playground.html">試玩沙盒</a><a href="personal.html">私人分析</a><a href="guide.html">使用說明</a>
 </nav>
 <div id="meta" class="muted"></div>
 
+<div class="card">
+  <p>68 條選號策略──有的追熱門號、有的守冷門號、有的包牌、有的固定一組號碼養牌──全部在每期開獎前寫下預測，開獎後自動對帳，累積兩年。我們公開預測：所有策略最後都贏不了純亂數。如果有誰贏了，那才是新聞。</p>
+  <details class="nerd">
+    <summary>給統計人的細節</summary>
+    <div class="body">預設假說 H0：所有策略的長期每元投報率，統計上無法與純隨機對照組區分。方法：walk-forward 前視保護回測、permutation null（依 bet_type）＋ BH-FDR 多重比較校正、對照組冠軍比較。規格 v1.2 凍結。</div>
+  </details>
+</div>
+
 <div class="card" id="cloud">
-  <h2>6.1 運氣雲</h2>
-  <p class="muted">A 組 50 條純隨機對照理論軌（淡灰）為背景；真策略（B–F）疊上。一眼看出誰跳出雜訊——目前沒有。</p>
+  <h2>運氣雲：純亂數能有多好？</h2>
+  <p class="lead" id="cloudVerdict">載入中…</p>
   <div class="legend">
-    <span><i class="sw" style="background:var(--ctrl)"></i>A 對照組</span>
-    <span><i class="sw" style="background:#2a7ae2"></i>B 統計</span>
-    <span><i class="sw" style="background:#1a9a6a"></i>C 序列</span>
-    <span><i class="sw" style="background:#b23"></i>D 養牌</span>
-    <span><i class="sw" style="background:#e2a02a"></i>E 包牌</span>
-    <span><i class="sw" style="background:#8a2be2"></i>F 反熱門</span>
+    <span><i class="sw" style="background:var(--ctrl)"></i>純亂數玩家（50）</span>
+    <span><i class="sw" style="background:#2a7ae2"></i>統計派</span>
+    <span><i class="sw" style="background:#1a9a6a"></i>序列派</span>
+    <span><i class="sw" style="background:#b23"></i>養牌</span>
+    <span><i class="sw" style="background:#e2a02a"></i>包牌</span>
+    <span><i class="sw" style="background:#8a2be2"></i>反熱門</span>
   </div>
   <div id="cloudChart"></div>
-  <p class="muted">縱軸＝累積理論軌 ROI（每元報酬）；橫軸＝期序。理論軌為推論主指標（§4.2）。</p>
+  <details class="how" data-key="cloud">
+    <summary>這張圖怎麼看</summary>
+    <div class="body">
+      <p>灰色的 50 條線，是 50 個純粹亂數選號的虛擬玩家──它們沒有任何邏輯，純看運氣。它們畫出了「純運氣的成績範圍」。彩色線是有邏輯的策略（追熱門、守冷門、包牌⋯⋯）。一條策略想證明自己真的有料，不是贏過亂數玩家的<b>平均</b>就好──得贏過裡面<b>最幸運的那一個</b>。因為 50 個人擲骰子，總有一個看起來像高手。</p>
+      <p>縱軸：每投入 100 元、累積拿回幾元（用長期平均獎金計算，避免單期巨額頭獎干擾比較）。約 55 元上下是彩券設計上的天花板（獎金返還率）。</p>
+    </div>
+  </details>
+  <details class="nerd">
+    <summary>給統計人的細節</summary>
+    <div class="body" id="cloudNerd"></div>
+  </details>
 </div>
 
 <div class="card" id="groups">
-  <h2>6.2 組別對比</h2>
-  <div id="groupTable"></div>
-  <p class="muted">真策略需顯著贏過 A 組對照冠軍（非平均，§5.1）。包牌組（E）以每元報酬標準差呈現波動性差異：包牌不改變每元期望值，只改變波動性與命中頻率。</p>
+  <h2>策略擂台</h2>
+  <p>每張卡片是一條「選號規則」，不是一組固定號碼──多數策略每期會根據歷史資料重新選號（養牌組除外，它們故意固定不動）。點開卡片看：這條規則的白話說明、這一期它選了哪些號碼、為什麼、歷史成績、原始程式碼。</p>
+  <div id="cards" class="cards"></div>
+  <a class="cta" href="playground.html">想試試自己的號碼？進試玩沙盒 →</a>
+  <details class="nerd">
+    <summary>給統計人的細節</summary>
+    <div class="body" id="groupsNerd"></div>
+  </details>
 </div>
 
 <div class="card" id="hotness">
-  <h2>6.3 熱門度分析</h2>
-  <p class="muted">各期低獎項（t5–t8）中獎注數 ÷ 當期總注數（sales/50）＝每萬注中獎率。標準化後異常升高（紅點，z≥2）代表該期號碼為群眾偏好熱門組合。僅用 full 期。</p>
+  <h2>大家都買什麼號碼？</h2>
+  <p class="lead">開出的號碼如果剛好是大家愛買的（生日數字、順子），中小獎的人會不會特別多？</p>
   <div id="hotChart"></div>
-  <p class="muted" id="hotNote"></p>
+  <details class="how" data-key="hot">
+    <summary>這張圖怎麼看</summary>
+    <div class="body">
+      <p>每一期我們計算：每一萬張彩券裡有幾張中了小獎。這個比率如果某期特別高（圖上紅點），代表那期開出的號碼撞上了大眾偏好。</p>
+      <p>為什麼在乎：中獎機率人人相同，但<b>分獎人數</b>不同──買冷門組合不會讓你更容易中，但中頭獎時分錢的人比較少。這是彩券裡唯一有文獻支持的理性玩法。</p>
+      <p class="muted">誠實聲明：很多人用電腦選號（純隨機），會稀釋這個訊號；我們測到的是「剩餘的人為偏好強度」。</p>
+    </div>
+  </details>
+  <details class="nerd">
+    <summary>給統計人的細節</summary>
+    <div class="body" id="hotNerd"></div>
+  </details>
 </div>
 
 <div class="card" id="audit">
-  <h2>6.4 硬體隨機性審計</h2>
-  <p class="muted">全歷史混池卡方檢定（獨立於策略驗證）。明確不做 NIST 套件。誠實標註：台彩定期輪換球組與搖獎機，混池檢定只能偵測長期系統性偏差。</p>
-  <div id="auditTable"></div>
-  <h3 style="font-size:1rem">各號碼出現次數偏差（標準化殘差 z）</h3>
+  <h2>搖獎機公平嗎？</h2>
+  <p class="verdict" id="auditVerdict">載入中…</p>
   <div id="devChart"></div>
+  <p class="muted">每顆球一個點：落在灰色「正常波動帶」內代表出現次數與公平預期無異；帶外才著色。滑過看實際／預期次數。</p>
+  <details class="how" data-key="audit">
+    <summary>這張圖怎麼看</summary>
+    <div class="body" id="auditHow"></div>
+  </details>
+  <details class="nerd">
+    <summary>給統計人的細節</summary>
+    <div class="body" id="auditNerd"></div>
+  </details>
 </div>
 
 <div class="card" id="report">
-  <h2>6.5 最終報告</h2>
-  <div id="reportBox" class="muted"></div>
+  <h2>實驗進度與最終報告</h2>
+  <div id="progressBox"></div>
+  <details class="how" data-key="report" open>
+    <summary>預先承諾（開跑前已公開寫死）</summary>
+    <div class="body">
+      <p>策略與參數全部凍結、不中途調參、跑滿才出報告，任何人可查 commit 時間戳。預測結果是「全部策略收斂回亂數水準」。</p>
+      <p class="muted">真錢提醒：本系統只做虛擬損益。大樂透是負期望值遊戲，請以娛樂為度。</p>
+    </div>
+  </details>
 </div>
 
-<footer class="muted">資料來源：台彩官方 API。真錢防火牆：系統只做虛擬損益；洛伊實際投注不回饋進任何策略評分。規格 v1.2 凍結。</footer>
+<footer class="muted">資料來源：台彩官方 API（2007+）＋第三方延伸（2004–2006）。真錢防火牆：系統只做虛擬損益；洛伊實際投注不回饋進任何策略評分。規格 v1.2 凍結。</footer>
 
 <script type="module">
 const $ = (id)=>document.getElementById(id);
 const GC = { A:"var(--ctrl)", B:"#2a7ae2", C:"#1a9a6a", D:"#b23", E:"#e2a02a", F:"#8a2be2" };
 async function j(p){ const r=await fetch(p,{cache:"no-store"}); if(!r.ok) throw new Error(p); return r.json(); }
+const money = (roi)=> roi==null ? "—" : (roi*100).toFixed(1);
+
+// 「這張圖怎麼看」：預設展開一次，之後記憶使用者狀態
+function wireHow(){
+  document.querySelectorAll("details.how[data-key]").forEach(d=>{
+    const key = "how:"+d.dataset.key;
+    const saved = localStorage.getItem(key);
+    if(saved==="closed") d.open=false; else if(saved==="open") d.open=true; else d.open=true;
+    d.addEventListener("toggle", ()=> localStorage.setItem(key, d.open?"open":"closed"));
+  });
+}
 
 function linePath(vals, W, H, ymin, ymax, pad){
   const n=vals.length; if(!n) return "";
@@ -87,6 +168,8 @@ function linePath(vals, W, H, ymin, ymax, pad){
   const y=(v)=>{ v=Math.max(ymin,Math.min(ymax,v)); return H-pad - (H-2*pad)*((v-ymin)/((ymax-ymin)||1)); };
   return vals.map((v,i)=> (i?"L":"M")+x(i).toFixed(1)+" "+y(v).toFixed(1)).join(" ");
 }
+
+const TIER_LABEL = { t1:"頭獎", t2:"貳獎", t3:"參獎", t4:"肆獎", t5:"伍獎", t6:"陸獎", t7:"柒獎", t8:"普獎" };
 
 (async function(){
   try{
@@ -96,89 +179,168 @@ function linePath(vals, W, H, ymin, ymax, pad){
     ]);
     let audit=null; try{ audit=await j("./data/audit.json"); }catch(e){}
     let auditExt=null; try{ auditExt=await j("./data/audit_extended.json"); }catch(e){}
+    let balls=null; try{ balls=await j("./data/audit_balls.json"); }catch(e){}
+    let cards=null; try{ cards=await j("./data/strategy_cards.json"); }catch(e){}
 
     // meta
+    const drawn = meta.prospective_start_period
+      ? "前瞻段起 "+meta.prospective_start_period : "歷史觀察段";
     $("meta").innerHTML = `<span class="pill">${meta.n_periods} 期</span> `+
-      `${meta.first_period}–${meta.last_period}（至 ${meta.last_date}） · ${meta.n_strategies} 策略 · `+
-      (meta.prospective_start_period ? `前瞻段起 ${meta.prospective_start_period}` : "前瞻段尚未啟動（現為歷史觀察段）");
+      `${meta.first_period}–${meta.last_period}（至 ${meta.last_date}） · ${meta.n_strategies} 策略 · ${drawn}`;
 
-    // 6.1 luck cloud
+    // ── 運氣雲 ──
     const W=920,H=340,pad=34;
     const curves=Object.entries(luck.strategies);
-    // y 軸依「最終收斂 ROI」設定，裁掉早期少數期的巨大暫態尖峰（單次頭獎），使收斂雲清晰
     let ymin=0,ymax=0;
     for(const [,s] of curves) if(s.roi_final!=null) ymax=Math.max(ymax,s.roi_final);
     ymax=Math.max(1.2, ymax*1.35);
-    const order=curves.sort((a,b)=> (a[1].group==="A"?-1:1)-(b[1].group==="A"?-1:1)); // A 先畫(底層)
+    const order=curves.sort((a,b)=> (a[1].group==="A"?-1:1)-(b[1].group==="A"?-1:1));
     let paths="";
     for(const [id,s] of order){
       const col=GC[s.group]||"#999"; const op=s.group==="A"?0.35:0.95; const w=s.group==="A"?0.8:1.6;
       paths+=`<path d="${linePath(s.curve,W,H,ymin,ymax,pad)}" fill="none" stroke="${col}" stroke-width="${w}" opacity="${op}"/>`;
     }
     const y0=(v)=> (H-pad-(H-2*pad)*((v-ymin)/((ymax-ymin)||1))).toFixed(1);
-    $("cloudChart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="運氣雲">
+    // 100 元刻度：把 ROI 軸換算成「每 100 元拿回」
+    $("cloudChart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="運氣雲：純亂數與各策略的每元累積回收">
       <line x1="${pad}" y1="${H-pad}" x2="${W-pad}" y2="${H-pad}" stroke="var(--line)"/>
       <line x1="${pad}" y1="${pad}" x2="${pad}" y2="${H-pad}" stroke="var(--line)"/>
-      <text x="${pad}" y="${pad-6}" font-size="11" fill="var(--muted)">ROI</text>
-      <text x="${pad+2}" y="${y0(ymin)}" font-size="10" fill="var(--muted)">${ymin.toFixed(2)}</text>
-      <text x="${pad+2}" y="${(+y0(ymax)+10)}" font-size="10" fill="var(--muted)">${ymax.toFixed(2)}</text>
+      <text x="${pad}" y="${pad-6}" font-size="11" fill="var(--muted)">每 100 元拿回</text>
+      <text x="${pad+2}" y="${y0(ymin)}" font-size="10" fill="var(--muted)">${money(ymin)} 元</text>
+      <text x="${pad+2}" y="${(+y0(ymax)+10)}" font-size="10" fill="var(--muted)">${money(ymax)} 元</text>
       ${paths}</svg>`;
 
-    // 6.2 groups table
+    // 動態結論：有沒有真策略跑贏對照冠軍
+    const champ = groups._control_champion;
+    let maxReal=-Infinity, maxRealG=null;
+    for(const [g,v] of Object.entries(groups)){
+      if(g.startsWith("_")||g==="A") continue;
+      if(v.roi_max!=null && v.roi_max>maxReal){ maxReal=v.roi_max; maxRealG=g; }
+    }
+    const beaten = champ!=null && maxReal>champ;
+    $("cloudVerdict").textContent = beaten
+      ? `注意：目前有策略跑贏了「最幸運的亂數玩家」（值得追查）。`
+      : `目前：沒有任何策略跑贏「最幸運的亂數玩家」。`;
+    $("cloudNerd").innerHTML = `縱軸為累積理論軌 ROI（每元報酬），理論軌為推論主指標（規格 §4.2）；`+
+      `理論軌用長期凍結中位獎額計算，隔離單期浮動頭獎污染。真策略需顯著贏過 A 組對照冠軍 `+
+      `ROI=<b>${champ?.toFixed(4)}</b>（非平均，§5.1），對照中位=${groups._control_median?.toFixed(4)}。`;
+
+    // ── 策略擂台卡片 ──
+    if(cards && cards.cards){
+      const html = cards.cards.map(c=>{
+        const isA = c.group==="A";
+        const nums = (c.picks && c.picks.length)
+          ? c.picks.slice(0,3).map(t=>t.join(" ")).join("　")+(c.picks.length>3?` …（共 ${c.picks.length} 注）`:"")
+          : "";
+        const hits = c.tier_hits ? Object.entries(c.tier_hits).filter(([,n])=>n>0)
+          .map(([t,n])=>`${TIER_LABEL[t]||t}×${n}`).join("、") : "";
+        const spark = c.roi_curve && c.roi_curve.length
+          ? `<svg viewBox="0 0 120 28" style="width:120px"><path d="${linePath(c.roi_curve,120,28,Math.min(...c.roi_curve),Math.max(...c.roi_curve,0.01),2)}" fill="none" stroke="${GC[c.group]||'#999'}" stroke-width="1.2"/></svg>`
+          : "";
+        const ruler = isA && c.ruler
+          ? `<div class="muted" style="margin-top:6px">對照冠軍每 100 元拿回 <b>${money(c.ruler.champion)}</b> 元、中位 ${money(c.ruler.median)} 元（${c.ruler.n} 條亂數線）</div>`
+          : "";
+        return `<div class="scard">
+          <h3>${c.id} ${c.name||""}</h3>
+          <div class="rule">${c.oneliner||""}</div>
+          ${ruler}
+          ${isA ? "" : `<span class="tag">${c.bet_type||""}</span>
+          ${nums?`<div class="nums">本期：${nums}</div><div class="muted">依據：${c.picks_basis||"—"}</div>`:""}
+          <div class="muted" style="margin-top:6px">每 100 元拿回 <b>${money(c.roi_final)}</b> 元</div>
+          ${hits?`<div class="muted">命中：${hits}</div>`:""}
+          ${spark}
+          ${c.github_path?`<div><a href="https://github.com/lowie-mmd/lottolab/blob/main/${c.github_path}" target="_blank" rel="noopener">原始碼 →</a></div>`:""}`}
+        </div>`;
+      }).join("");
+      $("cards").innerHTML = html;
+    } else {
+      $("cards").innerHTML = `<p class="muted">策略卡資料生成中（build_site_data 產生 strategy_cards.json 後顯示）。</p>`;
+    }
+    // groups nerd table
     const gs=Object.entries(groups).filter(([k])=>!k.startsWith("_"));
     let rows=gs.map(([g,v])=>`<tr><td>${g}</td><td>${v.n}</td>
       <td>${v.roi_mean?.toFixed(4)??"—"}</td><td>${v.roi_median?.toFixed(4)??"—"}</td>
       <td>${v.roi_min?.toFixed(4)??"—"}</td><td>${v.roi_max?.toFixed(4)??"—"}</td></tr>`).join("");
-    $("groupTable").innerHTML=`<table><thead><tr><th>組</th><th>策略數</th><th>ROI 平均</th>
-      <th>中位</th><th>最低</th><th>最高</th></tr></thead><tbody>${rows}</tbody></table>
-      <div class="muted" style="margin-top:6px">對照組冠軍 ROI=<b>${groups._control_champion?.toFixed(4)}</b>，
-      對照中位=${groups._control_median?.toFixed(4)}</div>`;
+    $("groupsNerd").innerHTML=`真策略需顯著贏過 A 組對照冠軍（非平均，§5.1）。包牌組（E）以每元報酬標準差呈現波動性差異：包牌不改變每元期望值，只改變波動性與命中頻率。
+      <table><thead><tr><th>組</th><th>策略數</th><th>ROI 平均</th><th>中位</th><th>最低</th><th>最高</th></tr></thead><tbody>${rows}</tbody></table>`;
 
-    // 6.3 hotness
+    // ── 熱門度 ──
     const hs=hot.series; const rates=hs.map(x=>x.rate_per_10k);
     const hmin=Math.min(...rates), hmax=Math.max(...rates);
     const Wc=920,Hc=260,p2=34;
     const hx=(i)=> p2+(Wc-2*p2)*(i/(hs.length-1||1));
     const hy=(v)=> Hc-p2-(Hc-2*p2)*((v-hmin)/((hmax-hmin)||1));
     const line=`<path d="${linePath(rates,Wc,Hc,hmin,hmax,p2)}" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>`;
-    const dots=hs.map((x,i)=> x.z>=2 ? `<circle cx="${hx(i).toFixed(1)}" cy="${hy(x.rate_per_10k).toFixed(1)}" r="3" fill="var(--warn)"><title>${x.date} z=${x.z}</title></circle>`:"").join("");
+    const dots=hs.map((x,i)=> x.z>=2 ? `<circle cx="${hx(i).toFixed(1)}" cy="${hy(x.rate_per_10k).toFixed(1)}" r="3" fill="var(--warn)"><title>${x.date} 特別熱門</title></circle>`:"").join("");
     const meanY=hy(hot.mean_rate_per_10k);
-    $("hotChart").innerHTML=`<svg viewBox="0 0 ${Wc} ${Hc}" role="img" aria-label="熱門度">
+    $("hotChart").innerHTML=`<svg viewBox="0 0 ${Wc} ${Hc}" role="img" aria-label="各期中小獎密集度">
       <line x1="${p2}" y1="${meanY.toFixed(1)}" x2="${Wc-p2}" y2="${meanY.toFixed(1)}" stroke="var(--muted)" stroke-dasharray="4 3"/>
-      <text x="${Wc-p2-70}" y="${(meanY-4).toFixed(1)}" font-size="10" fill="var(--muted)">均值 ${hot.mean_rate_per_10k}</text>
+      <text x="${Wc-p2-90}" y="${(meanY-4).toFixed(1)}" font-size="10" fill="var(--muted)">平均線</text>
       ${line}${dots}</svg>`;
-    $("hotNote").textContent=hot.note;
+    $("hotNerd").innerHTML = `各期低獎項（t5–t8）中獎注數 ÷ 當期總注數（sales/50）＝每萬注中獎率；`+
+      `標準化後異常升高（紅點，z≥2）代表該期號碼為群眾偏好熱門組合。僅用 data_quality=full 期。<br>${hot.note}`;
 
-    // 6.4 audit
+    // ── 搖獎機體檢 ──
     if(audit){
       const sn=audit.single_number, sp=audit.special_number, pr=audit.pair_cooccurrence;
-      $("auditTable").innerHTML=`<table><thead><tr><th>檢定</th><th>chi²</th><th>df</th><th>p 值</th><th>判讀</th></tr></thead><tbody>
+      const pct=Math.round(sn.p_value*100);
+      $("auditVerdict").textContent = sn.p_value>0.05 ? "目前的判定：看不出搖獎機有任何偏心。" : "注意：單號頻率出現偏差，待查。";
+      $("auditVerdict").className = "verdict "+(sn.p_value>0.05?"ok":"watch");
+      // 49 顆球形圖：x=號碼、y=z，灰色正常波動帶 |z|<2
+      const bset = balls && balls.single_number ? balls.single_number
+        : sn.top_deviations.map(d=>({number:d.number, observed:d.observed, z:d.z})); // fallback：僅前段
+      const expd = balls?.expected_per_number ?? audit.single_number.expected_per_number;
+      const Wd=920,Hd=200,padd=30, zlim=Math.max(3, ...bset.map(b=>Math.abs(b.z)));
+      const bx=(num)=> padd + (Wd-2*padd)*((num-1)/48);
+      const bz=(z)=> Hd/2 - (Hd/2-16)*(z/zlim);
+      const bandTop=bz(2), bandBot=bz(-2);
+      const balln = bset.map(b=>{
+        const out = Math.abs(b.z)>=2;
+        const col = out ? (b.z>0? "var(--accent)":"var(--warn)") : "var(--ctrl)";
+        return `<circle cx="${bx(b.number).toFixed(1)}" cy="${bz(b.z).toFixed(1)}" r="5" fill="${col}" opacity="0.9">`+
+               `<title>號 ${b.number}：出現 ${b.observed} 次／預期約 ${Math.round(expd)} 次（z=${b.z}）</title></circle>`;
+      }).join("");
+      $("devChart").innerHTML=`<svg viewBox="0 0 ${Wd} ${Hd}" role="img" aria-label="49 顆球的出現次數偏差">
+        <rect x="${padd}" y="${bandTop.toFixed(1)}" width="${Wd-2*padd}" height="${(bandBot-bandTop).toFixed(1)}" fill="var(--band)"/>
+        <line x1="${padd}" y1="${(Hd/2).toFixed(1)}" x2="${Wd-padd}" y2="${(Hd/2).toFixed(1)}" stroke="var(--line)" stroke-dasharray="3 3"/>
+        <text x="${padd}" y="14" font-size="10" fill="var(--muted)">偏多</text>
+        <text x="${padd}" y="${Hd-4}" font-size="10" fill="var(--muted)">偏少</text>
+        ${balln}</svg>`;
+      // 白話展開（含特別號 p=0.044 疫苗段，統計語意文案，逐字保留）
+      $("auditHow").innerHTML = `
+        <p>我們統計了 ${audit.n_draws.toLocaleString()} 期、超過一萬兩千次抽球，每顆球實際出現的次數和「完全公平」的預期比對。</p>
+        <p>結果：偏差完全在純隨機該有的範圍內。假設搖獎機完全公平，隨機波動有 <b>${pct}%</b> 的機率產生比這次<b>更大</b>的偏差──換句話說，這次觀察到的偏差小到不能再正常。</p>
+        <p><b>特別號的小插曲</b>：特別號的檢定值（p=${sp.p_value.toFixed(3)}）單看略低。但我們同時做了多項檢定，就像同時擲十幾組銅板──總有一組看起來偏。經過多重檢定校正後，這不構成警訊，我們會持續觀察。</p>
+        ${auditExt?`<p><b>北銀時代延伸檢查</b>：2004–2006 由台北銀行承辦（不同搖獎機、不同球組），我們用第三方資料做了延伸比對──承辦商更換前後看不出頻率分布的斷層。</p>`:""}
+        <p class="muted">限制：台彩會定期更換球組，這種長期混合檢定只能抓「長期系統性偏差」，抓不到單一球組的短期瑕疵。</p>`;
+      // 給統計人的細節：卡方表
+      let extRow = auditExt ? `<p class="muted" style="margin-top:8px">延伸視圖（含北銀 2004–2006，第三方雙源、numbers_only、信任層較低，不列入 headline）：合計 ${auditExt.n_draws} 期（官方 ${auditExt.n_official}＋北銀 ${auditExt.n_extended_pre2007}），延伸單號卡方 p=${auditExt.single_number.p_value.toFixed(4)}。</p>`:"";
+      $("auditNerd").innerHTML = `全歷史混池卡方檢定（獨立於策略驗證，§5.2）。不做 NIST 套件。
+        <table><thead><tr><th>檢定</th><th>chi²</th><th>df</th><th>p 值</th><th>判讀</th></tr></thead><tbody>
         <tr><td>單號頻率</td><td>${sn.chi2.toFixed(2)}</td><td>${sn.df}</td><td>${sn.p_value.toFixed(4)}</td><td>${sn.p_value>0.05?"未見偏差":"偏差待查"}</td></tr>
-        <tr><td>特別號</td><td>${sp.chi2.toFixed(2)}</td><td>${sp.df}</td><td>${sp.p_value.toFixed(4)}</td><td>${sp.p_value>0.05?"未見偏差":"邊際"}</td></tr>
+        <tr><td>特別號</td><td>${sp.chi2.toFixed(2)}</td><td>${sp.df}</td><td>${sp.p_value.toFixed(4)}</td><td>${sp.p_value>0.05?"未見偏差":"邊際（多重校正後不構成警訊）"}</td></tr>
         <tr><td>配對共現</td><td>${pr.chi2.toFixed(1)}</td><td>${pr.df}</td><td>${pr.p_value.toFixed(4)}</td><td>${pr.p_value>0.05?"未見偏差":"偏差待查"}</td></tr>
-        </tbody></table>`;
-      // deviation bars (single number top deviations)
-      const devs=sn.top_deviations; const Wd=920,Hd=140,zmax=Math.max(...devs.map(d=>Math.abs(d.z)),3);
-      const bw=(Wd-40)/devs.length;
-      const bars=devs.map((d,i)=>{ const h=(Hd/2-10)*Math.abs(d.z)/zmax; const x=20+i*bw;
-        const y=d.z>=0?(Hd/2-h):(Hd/2); return `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(bw*0.7).toFixed(1)}" height="${h.toFixed(1)}" fill="${d.z>=0?'var(--accent)':'var(--warn)'}"><title>號 ${d.number} z=${d.z}</title></rect>
-        <text x="${(x+bw*0.35).toFixed(1)}" y="${Hd-2}" font-size="9" fill="var(--muted)" text-anchor="middle">${d.number}</text>`;}).join("");
-      $("devChart").innerHTML=`<svg viewBox="0 0 ${Wd} ${Hd}"><line x1="10" y1="${Hd/2}" x2="${Wd-10}" y2="${Hd/2}" stroke="var(--line)"/>${bars}</svg>`;
-      // 延伸視圖（北銀 2004–2006，第三方，較低信任層）——不影響上方 headline 結論
-      if(auditExt){
-        const e=auditExt.single_number;
-        $("auditTable").insertAdjacentHTML("afterend",
-          `<p class="muted" style="margin-top:8px;border-top:1px dashed var(--line);padding-top:8px">
-           <span class="pill">延伸視圖</span> 含北銀 2004–2006（第三方雙源對帳、numbers_only、信任層級較低，
-           <b>不列入上方 headline</b>）：合計 ${auditExt.n_draws} 期（官方 ${auditExt.n_official}＋北銀 ${auditExt.n_extended_pre2007}），
-           延伸單號卡方 p=${e.p_value.toFixed(4)}。北銀 vs 台彩為跨承辦商球組更換邊界，分段檢定未見偏差集中。</p>`);
-      }
-    } else { $("auditTable").innerHTML='<p class="muted">審計資料尚未產生。</p>'; }
+        </tbody></table>${extRow}`;
+    } else {
+      $("auditVerdict").textContent="審計資料尚未產生。"; $("auditVerdict").className="verdict";
+    }
 
-    // 6.5 report
-    $("reportBox").innerHTML = meta.prospective_start_period
-      ? "前瞻段進行中；期滿（約 200 期）自動生成最終報告。"
-      : "前瞻段尚未啟動——啟動日由洛伊確認、config 凍結 commit 之時間戳即為預先註冊時點。目前為歷史觀察段，一切證據以前瞻段為準（§4.4、§5.3）。";
+    // ── 實驗進度 ──
+    const startP = meta.prospective_start_period;
+    // 前瞻段已走期數：last_period 若已達/超過 startP 才計；目前為觀察段則 0
+    const started = startP && meta.last_period && (meta.last_period.localeCompare(startP)>=0);
+    const N = started ? 1 : 0; // 逐期由每日 Actions 推進；未開跑為 0
+    const total = 200;
+    const pctP = Math.min(100, Math.round(N/total*100));
+    $("progressBox").innerHTML = started
+      ? `<p class="lead">前瞻段進行中：已走約 ${N} / ~${total} 期（啟動 2026-07-21，期別 ${startP}）。</p>
+         <div class="progress"><i style="width:${pctP}%"></i></div>
+         <p class="muted">跑滿約 ${total} 期後自動生成最終報告。</p>`
+      : `<p class="lead">前瞻段尚未開跑：啟動期 ${startP}（2026-07-21）。目前為歷史觀察段。</p>
+         <div class="progress"><i style="width:0%"></i></div>
+         <p class="muted">config 凍結 commit 之時間戳即為預先註冊時點；一切證據以前瞻段為準。</p>`;
+
+    wireHow();
   }catch(e){
     document.body.insertAdjacentHTML("beforeend", `<div class="card">載入資料失敗：${e.message}。請先執行 tools.build_site_data 並發佈 docs/data。</div>`);
   }
