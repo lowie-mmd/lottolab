@@ -41,7 +41,7 @@
 
 <div class="note" id="disclaimer">
   這是沙盒：你的號碼<b>不會進入正式實驗、不影響任何統計結論</b>；不寫回任何資料、無後端、無追蹤。
-  回測用「理論軌」長期平均獎金計算（和主站運氣雲同一把尺），隔離單期巨額頭獎的干擾。
+  回測用「<dfn data-term="theoretical-actual-track">理論軌</dfn>」長期典型獎金計算（和主站<dfn data-term="control-luck-cloud">運氣雲</dfn>同一把尺），隔離單期巨額頭獎的干擾。
 </div>
 
 <div class="card">
@@ -186,5 +186,6 @@ $("run").addEventListener("click", async ()=>{
   $("result").scrollIntoView({behavior:"smooth", block:"start"});
 });
 </script>
+<script type="module" src="glossary.js"></script>
 </body>
 </html>

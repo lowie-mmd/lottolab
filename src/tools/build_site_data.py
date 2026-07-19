@@ -192,10 +192,10 @@ def build_strategy_cards(game, strategies, draws, theo, luck):
     }
 
 
-def build_audit_balls(draws):
+def build_audit_balls(draws, pool_max=49, pick=6):
     """49 顆球的出現次數與標準化殘差 z（供搖獎機體檢球形圖）。
-    z=(觀測-期望)/√期望，與 stats.audit 單號卡方同法、同源，純展示、不改寫審計結果。"""
-    pool_max = 49
+    z=(O−E)/√(E·(1−p))，p=pick/pool_max（裁決 B）；與 stats.audit 單號 z 同法、同源，
+    純展示、不改寫審計結果。灰帶 ±2 依此 z 判定。"""
     counts = {n: 0 for n in range(1, pool_max + 1)}
     for d in draws:
         for x in d.numbers:
@@ -203,12 +203,14 @@ def build_audit_balls(draws):
                 counts[x] += 1
     total = sum(counts.values())
     expected = total / pool_max if pool_max else 0
-    sd = expected ** 0.5 if expected else 1
+    factor = 1 - pick / pool_max  # 不放回抽 pick 顆 → 單號變異數因子 (1−p)
+    sd = (expected * factor) ** 0.5 if expected else 1
     single = [{"number": n, "observed": counts[n],
                "z": round((counts[n] - expected) / sd, 3) if sd else 0}
               for n in range(1, pool_max + 1)]
     return {"expected_per_number": round(expected, 3),
             "total_observations": total,
+            "z_sd_factor": round(factor, 6),
             "single_number": single}
 
 
