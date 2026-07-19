@@ -27,7 +27,8 @@ SALT_BYTES = 16
 IV_BYTES = 12
 
 ROOT = Path(__file__).resolve().parents[2]
-ENC_PATH = ROOT / "data" / "private" / "bets.enc"
+# 可用環境變數 LOTTO_BETS_ENC 覆寫存放路徑（測試用，避免動到正式 bets.enc）
+ENC_PATH = Path(os.environ.get("LOTTO_BETS_ENC", ROOT / "data" / "private" / "bets.enc"))
 
 
 def _derive_key(passphrase: str, salt: bytes, iterations: int) -> bytes:
@@ -87,14 +88,20 @@ def main() -> None:
 
     pr = sub.add_parser("add-recurring", help="新增固定組（夢境/塔位）")
     pr.add_argument("--label", required=True)
-    pr.add_argument("--numbers", required=True, help='如 "1 2 3 4 5 6"')
+    pr.add_argument("--numbers", nargs="+", type=int, required=True,
+                    help="6 個號碼，空白分隔且免引號，如 --numbers 3 11 19 28 33 45")
     pr.add_argument("--since", required=True, help="起始期別")
 
     pb = sub.add_parser("add-bet", help="新增某期投注")
     pb.add_argument("--period", required=True)
     pb.add_argument("--cost", type=int, required=True)
+    pb.add_argument("--auto", nargs="+", type=int, default=None,
+                    help="電腦選號的 6 個號碼，免引號，如 --auto 7 14 21 28 35 42")
+    pb.add_argument("--auto-label", default="電腦選號")
+    pb.add_argument("--use", action="append", default=[],
+                    help="引用固定組 label（可重複），如 --use 夢境號碼 --use 祖父塔位")
     pb.add_argument("--ticket", action="append", default=[],
-                    help='格式 label=名稱 或 label=名稱;numbers=1 2 3 4 5 6（可重複）')
+                    help="進階：label=名稱 或 label=名稱;numbers=1,2,3,4,5,6")
 
     sub.add_parser("show", help="顯示筆數摘要（不印號碼明文）")
 
@@ -108,23 +115,34 @@ def main() -> None:
             print("bets.enc 已存在，未覆寫。")
             return
         save(_empty(), passphrase)
-        print(f"已建立 {ENC_PATH.relative_to(ROOT)}")
+        try:
+            shown = ENC_PATH.relative_to(ROOT)
+        except ValueError:
+            shown = ENC_PATH
+        print(f"已建立 {shown}")
     elif args.cmd == "add-recurring":
         data["recurring"].append({
             "label": args.label,
-            "numbers": _parse_numbers(args.numbers),
+            "numbers": sorted(args.numbers),
             "since": args.since,
         })
         save(data, passphrase)
-        print(f"已新增固定組「{args.label}」。")
+        print(f"已新增固定組「{args.label}」（{len(args.numbers)} 號）。")
     elif args.cmd == "add-bet":
         tickets = []
-        for spec in args.ticket:
+        if args.auto:
+            tickets.append({"label": args.auto_label, "numbers": sorted(args.auto)})
+        for label in args.use:
+            tickets.append({"label": label})
+        for spec in args.ticket:  # 進階格式，向後相容
             parts = dict(p.split("=", 1) for p in spec.split(";"))
             tk = {"label": parts["label"]}
             if "numbers" in parts:
                 tk["numbers"] = _parse_numbers(parts["numbers"])
             tickets.append(tk)
+        if not tickets:
+            print("未提供任何注（用 --auto / --use / --ticket）。")
+            return
         data["bets"].append({"period": args.period, "tickets": tickets, "cost": args.cost})
         save(data, passphrase)
         print(f"已記錄期 {args.period} 投注（{len(tickets)} 組，成本 {args.cost}）。")
