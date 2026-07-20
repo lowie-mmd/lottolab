@@ -3,8 +3,8 @@
   "last_date": "2026-07-17",
   "n_periods_official": 2153,
   "prospective_start_period": "115000072",
-  "git_commit": "b492827607557a44eed3d25111ee092127900772",
-  "git_commit_short": "b492827",
+  "git_commit": "fdd0603ba54099fb886bdde8bb1484a3d527a323",
+  "git_commit_short": "fdd0603",
   "audit": {
     "n_draws": 2153,
     "single_number": {
@@ -847,41 +847,56 @@
       "bet_types": {
         "single": {
           "n_tickets": 1,
-          "delta80": 13.0956,
-          "delta80_per_100": 1309.6,
+          "delta80_all_tiers": 13.0956,
+          "delta80_all_tiers_per_100": 1309.6,
+          "delta80_t3_t8_only": 8.3237,
+          "delta80_t3_t8_only_per_100": 832.4,
           "power_at_delta80": 0.81,
           "null_median": 0.28,
           "null_p95": 0.56,
+          "null_bh_quantile": 7.1834,
+          "bh_quantile_level": 0.999265,
           "expected_roi_null": 0.5205,
+          "blind_channel_delta_fraction": 0.365005,
           "jackpot_doubling_power": 0.001,
           "jackpot_doubling_extra_per_100": 16.7
         },
         "wheel7": {
           "n_tickets": 7,
-          "delta80": 3.7187,
-          "delta80_per_100": 371.9,
+          "delta80_all_tiers": 3.7187,
+          "delta80_all_tiers_per_100": 371.9,
+          "delta80_t3_t8_only": 2.3623,
+          "delta80_t3_t8_only_per_100": 236.2,
           "power_at_delta80": 0.819,
           "null_median": 0.2943,
           "null_p95": 0.5323,
+          "null_bh_quantile": 2.2892,
+          "bh_quantile_level": 0.999265,
           "expected_roi_null": 0.5205,
+          "blind_channel_delta_fraction": 0.365005,
           "jackpot_doubling_power": 0.0,
           "jackpot_doubling_extra_per_100": 16.7
         },
         "wheel8": {
           "n_tickets": 28,
-          "delta80": 15.7333,
-          "delta80_per_100": 1573.3,
+          "delta80_all_tiers": 15.7333,
+          "delta80_all_tiers_per_100": 1573.3,
+          "delta80_t3_t8_only": 10.0118,
+          "delta80_t3_t8_only_per_100": 1001.2,
           "power_at_delta80": 0.809,
           "null_median": 0.305,
           "null_p95": 0.5451,
+          "null_bh_quantile": 9.9249,
+          "bh_quantile_level": 0.999265,
           "expected_roi_null": 0.5205,
+          "blind_channel_delta_fraction": 0.365005,
           "jackpot_doubling_power": 0.0015,
           "jackpot_doubling_extra_per_100": 16.7
         }
       },
       "channel_decomposition": {
         "probe_delta": 1.12,
-        "note": "在 single、每元回收優勢 δ=1.12（≈2×null p95）下，各通道單獨注入的偵測率",
+        "note": "single、每元回收優勢 δ=1.12（≈2×null p95）下各通道單獨注入的偵測率（診斷，非聲明主體）",
         "channels": {
           "jackpot_t1": 0.001,
           "tier2_t2": 0.0045,
@@ -899,46 +914,88 @@
       "bet_types": {
         "single": {
           "n_tickets": 1,
-          "delta80": 24.5371,
-          "delta80_per_100": 2453.7,
+          "delta80_all_tiers": 24.5371,
+          "delta80_all_tiers_per_100": 2453.7,
+          "delta80_t3_t8_only": 15.6152,
+          "delta80_t3_t8_only_per_100": 1561.5,
           "power_at_delta80": 0.803,
           "null_median": 0.2308,
           "null_p95": 0.6923,
+          "null_bh_quantile": 13.2758,
+          "bh_quantile_level": 0.999,
           "expected_roi_null": 0.5205,
+          "blind_channel_delta_fraction": 0.365005,
           "jackpot_doubling_power": 0.001,
           "jackpot_doubling_extra_per_100": 16.7
         },
         "wheel7": {
           "n_tickets": 7,
-          "delta80": 3.9073,
-          "delta80_per_100": 390.7,
+          "delta80_all_tiers": 3.9073,
+          "delta80_all_tiers_per_100": 390.7,
+          "delta80_t3_t8_only": 2.4681,
+          "delta80_t3_t8_only_per_100": 246.8,
           "power_at_delta80": 0.804,
           "null_median": 0.2912,
           "null_p95": 0.5,
+          "null_bh_quantile": 2.3526,
+          "bh_quantile_level": 0.999,
           "expected_roi_null": 0.5205,
+          "blind_channel_delta_fraction": 0.365005,
           "jackpot_doubling_power": 0.0005,
           "jackpot_doubling_extra_per_100": 16.7
         },
         "wheel8": {
           "n_tickets": 28,
-          "delta80": 29.942,
-          "delta80_per_100": 2994.2,
+          "delta80_all_tiers": 29.942,
+          "delta80_all_tiers_per_100": 2994.2,
+          "delta80_t3_t8_only": 19.0493,
+          "delta80_t3_t8_only_per_100": 1904.9,
           "power_at_delta80": 0.8,
           "null_median": 0.2995,
           "null_p95": 0.7035,
+          "null_bh_quantile": 18.6437,
+          "bh_quantile_level": 0.999,
           "expected_roi_null": 0.5205,
+          "blind_channel_delta_fraction": 0.365005,
           "jackpot_doubling_power": 0.002,
           "jackpot_doubling_extra_per_100": 16.7
         }
       },
       "channel_decomposition": {
         "probe_delta": 1.3846,
-        "note": "在 single、每元回收優勢 δ=1.3846（≈2×null p95）下，各通道單獨注入的偵測率",
+        "note": "single、每元回收優勢 δ=1.3846（≈2×null p95）下各通道單獨注入的偵測率（診斷，非聲明主體）",
         "channels": {
           "jackpot_t1": 0.0015,
           "tier2_t2": 0.003,
           "detect_t3_t8": 0.012,
           "small_t5_t8": 0.0025
+        }
+      },
+      "cohort2_alt_endpoint": {
+        "statistic": "small_prize_channel_t5_t8_roi",
+        "note": "梯次二候選共同主終點（附錄 K.4）：以 t5–t8 理論軌 ROI 為統計量，null 連續平滑、對現實效應具實用檢定力。對照全軌 δ₈₀ 顯示可偵測性大幅改善。",
+        "bet_types": {
+          "single": {
+            "delta80": 1.2576,
+            "delta80_per_100": 125.8,
+            "power_at_delta80": 0.818,
+            "null_median": 0.2308,
+            "null_p95": 0.6538
+          },
+          "wheel7": {
+            "delta80": 0.3603,
+            "delta80_per_100": 36.0,
+            "power_at_delta80": 0.81,
+            "null_median": 0.2857,
+            "null_p95": 0.4176
+          },
+          "wheel8": {
+            "delta80": 0.1622,
+            "delta80_per_100": 16.2,
+            "power_at_delta80": 0.812,
+            "null_median": 0.2898,
+            "null_p95": 0.353
+          }
         }
       }
     }

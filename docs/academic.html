@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lotto Lab · 技術報告（學術切片）</title>
+<style>
+  :root{ color-scheme: light dark; --fg:#1c1e22; --bg:#fff; --muted:#666; --line:#8884;
+         --accent:#1e4fa0; --warn:#b23; --code:#f2f1ee; }
+  @media (prefers-color-scheme: dark){ :root{ --fg:#e6e6e6; --bg:#141518; --muted:#9aa; --accent:#8ab0ff; --code:#22252b; } }
+  body{ font-family:"Times New Roman","Songti TC","PingFang TC",serif; color:var(--fg); background:var(--bg);
+        max-width:820px; margin:0 auto; padding:28px 22px 80px; line-height:1.7; }
+  h1{ font-size:1.5rem; margin-bottom:2px; } h2{ font-size:1.2rem; margin-top:30px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+  h3{ font-size:1.03rem; margin-top:18px; }
+  .banner{ border:1px solid var(--accent); border-radius:8px; padding:10px 14px; font-size:.9rem; margin:14px 0; }
+  .muted{ color:var(--muted); font-size:.9rem; } .sub{ color:var(--muted); font-size:.92rem; }
+  nav a{ color:var(--accent); margin-right:14px; text-decoration:none; font-size:.9rem; }
+  table{ border-collapse:collapse; width:100%; margin:10px 0; font-size:.88rem; font-variant-numeric:tabular-nums; }
+  th,td{ border:1px solid var(--line); padding:5px 8px; text-align:right; } th:first-child,td:first-child{ text-align:left; }
+  th{ background:var(--code); }
+  code,.mono{ font-family:ui-monospace,Menlo,monospace; background:var(--code); padding:1px 5px; border-radius:4px; font-size:.85em; }
+  .tbl-wrap{ overflow-x:auto; }
+  blockquote{ border-left:3px solid var(--accent); margin:12px 0; padding:6px 14px; color:var(--fg); background:var(--code); border-radius:0 6px 6px 0; }
+  ol li,ul li{ margin:4px 0; }
+  .foot{ margin-top:40px; font-size:.85rem; color:var(--muted); }
+  @media print{ nav,.banner.noprint{ display:none; } body{ max-width:none; } a{ color:inherit; text-decoration:none; } }
+</style>
+</head>
+<body>
+<h1>大樂透隨機性驗證實驗 · 技術報告</h1>
+<p class="sub">Lotto Lab — Academic Slice。作者：莊勝傑（洛伊）。規格 v1.2 凍結。</p>
+<div class="banner noprint">本頁為<b>技術報告</b>，保留完整術語與方法學嚴謹度，目標讀者為統計學者。一般讀者請至 <a href="index.html">主站</a>。</div>
+<nav>
+  <a href="index.html">主站</a><a href="guide.html">使用說明</a><a href="guide.html#glossary">名詞索引</a>
+  <a href="#power">檢定力聲明</a><a href="#corrections">修正記錄</a>
+  <a href="javascript:window.print()">列印／PDF</a>
+</nav>
+<p class="muted" id="meta"></p>
+
+<h2 id="abstract">§1 摘要</h2>
+<p id="abstract-lead"></p>
+<p>研究問題：是否有任何選號策略的長期理論軌每元回收，能顯著且穩健地贏過「同結構隨機下注」的對照分布？預設假說 <dfn data-term="pre-registration">預先註冊</dfn> 的 H0＝不能。設計：68 條策略 ＋ 50 條純亂數對照，於 <dfn data-term="walk-forward">walk-forward</dfn> 前視保護下對官方 2007+ 全歷史回測，<dfn data-term="permutation-test">置換檢定</dfn> ＋ <dfn data-term="fdr">BH-FDR</dfn> 校正。</p>
+<p id="status"></p>
+<p class="muted">證據重心聲明：本實驗對隨機性的推論重心為硬體審計（對百分點級系統性偏差具實用<dfn data-term="statistical-power">檢定力</dfn>）；策略競技場的科學角色為「預先註冊的公開示範」與「FDR 假陽性防火牆」，非隨機性結論的主要證據來源（詳 §3、§5）。</p>
+
+<h2 id="methods">§2 方法</h2>
+<h3>§2.1 預先註冊協定</h3>
+<p>啟動期 <span id="prospective"></span>；config 凍結 commit 之時間戳即為預先註冊時點（規格 §5.3）。策略清單、參數、統計方法、停止規則（前瞻段約 200 期）於啟動前凍結、公開於 repo，事後不改；發現 bug 循「修程式＋全量重跑＋公開留痕」路徑（§7）。本報告對應 commit <code id="commit"></code>。</p>
+<h3>§2.2 資料來源與品質分層</h3>
+<p>主源：台灣彩券官方 JSON API（2007-01 起，期別自 96000001）。延伸層：2004–2006 北銀時代，<b>兩個獨立第三方互相對帳</b>（numbers_only、data_quality 較低），僅供硬體審計「延伸視圖」與分段檢定、<b>永不進入策略推論</b>。data_quality 三級（full／partial／numbers_only）依欄位完整度標記。信任分層理由：headline 結論站官方源；第三方資料受質疑時只傷延伸視圖、不傷主結論。</p>
+<h3>§2.3 Walk-forward 與前視保護</h3>
+<p>第 N 期選號僅餵入第 N 期以前的歷史；引擎層強制切片並設守門（含未來期的 history 丟 <span class="mono">LookAheadError</span>），即使策略自身不作弊亦保證不洩未來。測試套件含前視保護專項。</p>
+<h3>§2.4 雙軌 ROI 與加碼排除</h3>
+<p>推論主指標為<dfn data-term="theoretical-actual-track">理論軌</dfn>每元回收：t1–t4 用開跑前凍結之長期典型獎金（中位數）、t5–t8 用固定獎額，隔離單期浮動頭獎與分獎人數污染，使策略間可公平比較。實際軌保留當期真實獎額，僅供展示、不進統計判斷。加碼獎項（節慶紅包）不計入任一軌（規格 §2.3、§4.2 凍結決策）。</p>
+<h3>§2.5 Permutation null 設計 ＋ BH-FDR</h3>
+<p>虛無分布以「同結構隨機下注」建構：<b>固定真實開獎序列</b>，將策略每期下注替換為同注數結構（single／7 碼包牌／8 碼包牌）的隨機注，重抽 n_perm 次得理論軌每元回收虛無分布；p =（1 + #{null ≥ 觀測}）/(n_perm + 1)。<b>null 的隨機化維度是「下注」而非「開獎」</b>——開獎序列固定為真實歷史，故不存在打散時序結構的問題。跨 N 條策略以 BH-FDR 校正，N ＝ 全部註冊策略數，於凍結時寫死。</p>
+<h3>§2.6 硬體審計</h3>
+<p>獨立於策略驗證，用全歷史：單號頻率、特別號、配對共現、分段（依年）卡方適合度檢定。明確不做 NIST 套件。<b>Monte Carlo 校準（§7 裁決 A）</b>：大樂透每期同時抽 6 顆不放回，49 顆球次數兩兩負相關，統計量 S=Σ(O−E)²/E 在虛無下 E[S]=49×(1−6/49)=43＜χ²₄₈ 期望 48，直接查表偏保守；改以模擬公平開獎建實證虛無分布計 p，並以解析縮放 p=P(χ²₄₈ ≥ S×48/43) 交叉驗證。特別號每期一顆、跨期獨立，χ²₄₈ 成立，不校準。<dfn data-term="std-residual-z">標準化殘差</dfn> z=(O−E)/√(E(1−p))。混池限制：台彩定期輪換球組與搖獎機，長期混池檢定只能偵測長期系統性偏差。</p>
+
+<h2 id="power">§3 檢定力聲明</h2>
+<p>本段量化「接受 H0 ≠ 證明完美隨機」。MDE（最小可偵測效應量）採<b>操作型定義</b>（裁決書附錄 J/K）：模擬植入一條每元回收 +δ 的策略（各獎項命中率等比提升），對真實 null 分布計 permutation p 並經 BH-FDR 校正，δ₈₀ ＝ 偵測率達 80% 的最小 δ。<b>口徑為完整理論軌（含頭獎），與註冊檢定一致。</b></p>
+<h3>§3.1 δ₈₀（數字照登，各梯次 × bet_type）</h3>
+<div class="tbl-wrap"><table id="power-table"><thead><tr>
+  <th>梯次 / 條件</th><th>bet_type</th><th>δ₈₀（全軌，每100元）</th><th>δ₈₀（僅 t3–t8）</th><th>盲區 δ 佔比</th><th>頭獎翻倍偵測率</th></tr></thead>
+  <tbody id="power-rows"></tbody></table></div>
+<p class="muted" id="null-note"></p>
+<h3>§3.2 機制：為何門檻如此之高</h3>
+<p>200 期單注 null 的極端尾巴由<b>離散跳階事件</b>構成：一次三獎（t3）命中即使每元回收跳到 <span id="t3-jump" class="mono"></span> 級。三獎每期命中率約 0.36%，高於 BH 最嚴門檻（0.05/N ≈ 0.074%），故決定顯著與否的臨界值被墊至「一次三獎」的水準。頭獎（t1，約 0.0014%/200 期）與貳獎（t2，約 0.0086%）低於門檻，落在完全<b>盲區</b>——即使把頭獎機率<b>翻倍</b>，偵測率仍約 <span id="jack-power"></span>。敏感度（附錄 K.2-6）：僅提升 t3–t8 的 δ₈₀ 仍屬同一數量級，帳面 δ 中約 <span id="blind-frac"></span> 流經 t1/t2 盲區——確認頭條數字非參數化假象。</p>
+<h3>§3.3 結論翻譯</h3>
+<blockquote>本實驗前瞻段的「接受 H0」不構成「策略無效」的有力證據，僅表示：若任何策略存在真實優勢，其幅度小於本設計可偵測的門檻——而該門檻經模擬量化後極高（見 §3.1 δ₈₀ 表），高於一切現實中可信的選號優勢。因此策略競技場的科學角色是：①預先註冊的公開示範與誠實承諾機制；②FDR 控制下的假陽性防火牆。它不是本站隨機性結論的主要證據來源。</blockquote>
+<h3>§3.4 探索性：偵測通道分解與候選終點（exploratory，不進推論）</h3>
+<p class="muted">下列為描述性分解，明確標示 <b>exploratory</b>、不作為終點、不進結論段。通道分解（single、邊際優勢 δ≈2×p95 下各通道偵測率）：<span id="channels"></span>。梯次二候選共同主終點（附錄 K.4 前置）：以 t5–t8 小獎通道理論軌 ROI 為統計量、null 連續平滑，single δ₈₀ 對照見下——可偵測性較全軌大幅改善，供梯次二凍結前一級裁決參考。</p>
+<div class="tbl-wrap"><table id="alt-table" style="display:none"><thead><tr><th>候選終點（t5–t8，104 期 N50）</th><th>δ₈₀（每100元）</th><th>power</th><th>null 中位</th><th>null p95</th></tr></thead><tbody id="alt-rows"></tbody></table></div>
+
+<h2 id="results">§4 結果</h2>
+<h3>§4.1 硬體審計（官方源 headline）</h3>
+<div class="tbl-wrap"><table id="audit-table"><thead><tr><th>檢定</th><th>統計量 χ²</th><th>df</th><th>p（MC 校準）</th><th>判讀</th></tr></thead><tbody id="audit-rows"></tbody></table></div>
+<p class="muted" id="audit-ext"></p>
+<h3>§4.2 策略驗證（觀察性，非註冊推論）</h3>
+<p id="validation"></p>
+
+<h2 id="limits">§5 限制</h2>
+<ol>
+  <li><b>檢定力邊界（核心）</b>：如 §3，前瞻段對現實中的微弱選號優勢檢定力趨近零。此邊界與 F 組「反熱門」策略的<b>分獎通道盲區</b>為同一結構——<dfn data-term="theoretical-actual-track">理論軌</dfn>刻意用凍結獎額隔離分獎波動，因此「避開大眾號→中獎時少分人→<dfn data-term="expected-value">期望值</dfn>較高」這個真實存在的優勢，在理論軌回測分數上量測不到。反熱門優勢是理論軌設計下的量測盲區；本實驗以熱門度分析間接驗證其前提，<b>不宣稱直接量測</b>。</li>
+  <li><b>F 組不可測性</b>：同上，分獎人數優勢不在理論軌口徑內。</li>
+  <li><b>北銀資料信任層</b>：2004–2006 為第三方雙源對帳、numbers_only，僅入延伸視圖，永不進策略推論。</li>
+  <li><b>球組輪換混池</b>：長期混池卡方只能抓長期系統性偏差，抓不到單一球組短期物理瑕疵。</li>
+  <li><b>電腦選號稀釋</b>：熱門度分析測到的是「剩餘人為偏好強度」，電腦選號（均勻隨機）會稀釋訊號。</li>
+</ol>
+
+<h2 id="repro">§6 再現性聲明</h2>
+<ul>
+  <li>Repo：<code>github.com/lowie-mmd/lottolab</code>（MIT）。本報告對應 commit <code id="commit2"></code>。</li>
+  <li>重跑：<span class="mono">python -m scraper.build_draws --full</span> → <span class="mono">engine.run_backtest</span> → <span class="mono">stats.run_stats --audit</span> → <span class="mono">tools.build_academic</span>。</li>
+  <li>檢定力：<span class="mono">stats.power</span>（Poisson 命中數模型＋秩次偵測），驗收 <span class="mono">tests/test_power.py</span>、<span class="mono">tests/test_audit_mc.py</span>。</li>
+  <li>測試套件：<span class="mono">pytest</span>（含前視保護、合成資料統計驗收、MC 校準、檢定力）。</li>
+</ul>
+
+<h2 id="corrections">§7 修正記錄</h2>
+<p class="muted">依規格 §0.2-1，任何 bug 修正在此公開記載。</p>
+<h3>§7.1 裁決 A：硬體審計卡方 Monte Carlo 校準（修保守偏誤）</h3>
+<p>不放回抽 6 顆使教科書 χ²₄₈ 系統性偏保守；改 MC 校準（單號＋配對）＋解析交叉驗證，特別號不校準。全量重跑前後 p 對照：</p>
+<div class="tbl-wrap"><table id="corr-table"><thead><tr><th>檢定</th><th>χ²</th><th>df</th><th>p（前·教科書）</th><th>p（後·MC）</th><th>說明</th></tr></thead><tbody id="corr-rows"></tbody></table></div>
+<p class="muted">結論方向不變（全不顯著＝結果甲）。標準化殘差 z 併加 (1−p) 因子（單號 43/49、特別號 48/49）。</p>
+<h3>§7.2 裁決 J/K：檢定力 MDE 由 mean/SD 式改為操作型</h3>
+<p>初版以 mean/SD 位移模型計 MDE，在含凍結頭獎的重尾 null 下產生天文數字；根因為 mean/SD 描述法對秩次型檢定無效（臨界值由 null 極端百分位決定，不受頭獎稀有事件影響）。改操作型 δ₈₀（本 §3）。附錄 J 對數量級的預期為未經計算之錯誤估計，於此修正。詳見 DECISIONS.md。</p>
+
+<div class="foot" id="citation"></div>
+
+<script type="module" src="glossary.js"></script>
+<script type="module">
+const $ = (id)=>document.getElementById(id);
+async function j(p){ const r=await fetch(p,{cache:"no-store"}); if(!r.ok) throw new Error(p); return r.json(); }
+const TIER_JP = { single:"單注", wheel7:"7 碼包牌", wheel8:"8 碼包牌" };
+const pct = (x)=> (x*100).toFixed(2)+"%";
+(async function(){
+  let a;
+  try{ a = await j("./data/academic.json"); }
+  catch(e){ document.body.insertAdjacentHTML("beforeend", `<p class="muted">學術資料尚未生成（執行 tools.build_academic）。</p>`); return; }
+
+  $("meta").textContent = `資料截至期別 ${a.generated_at_period}（${a.last_date}）· 官方源 ${a.n_periods_official} 期 · 產生 commit ${a.git_commit_short}`;
+  $("commit").textContent = a.git_commit_short || "—";
+  $("commit2").textContent = a.git_commit_short || "—";
+  $("prospective").textContent = a.prospective_start_period || "—";
+
+  // §1 摘要首句（審計優先）
+  const sn = a.audit.single_number;
+  $("abstract-lead").innerHTML = `本實驗對大樂透隨機性的推論重心是<b>硬體審計</b>：對 ${a.audit.n_draws.toLocaleString()} 期、逾一萬兩千次抽球做卡方適合度檢定（Monte Carlo 校準），對百分點級的系統性偏差具實用檢定力；結果<b>未偵測到偏差</b>（單號 p=${sn.p_value.toFixed(3)}）。策略競技場（68 策略 vs 50 亂數對照）為輔助的示範與防火牆機制。`;
+  $("status").innerHTML = a.observational_validation.available
+    ? `目前狀態：前瞻段${a.prospective_start_period?`啟動期 ${a.prospective_start_period}`:""}；本報告含全歷史<b>觀察段</b>結果（非註冊推論）。`
+    : `目前狀態：前瞻段尚未開跑，本報告為歷史觀察段。`;
+
+  // §3.1 檢定力表
+  const cohorts = a.power;
+  let prows="";
+  for(const key of Object.keys(cohorts)){
+    const c = cohorts[key];
+    for(const bt of Object.keys(c.bet_types)){
+      const e = c.bet_types[bt];
+      prows += `<tr><td>${c.label}（${c.n_periods} 期 N=${c.n_strategies}）</td><td>${TIER_JP[bt]||bt}</td>`+
+        `<td>${e.delta80_all_tiers_per_100}</td><td>${e.delta80_t3_t8_only_per_100}</td>`+
+        `<td>${pct(e.blind_channel_delta_fraction)}</td><td>${e.jackpot_doubling_power}</td></tr>`;
+    }
+  }
+  $("power-rows").innerHTML = prows;
+  const c1 = cohorts.cohort1.bet_types.single;
+  $("null-note").innerHTML = `null 分位（梯次一單注）：中位每100元拿回 ${(c1.null_median*100).toFixed(0)} 元、p95 ${(c1.null_p95*100).toFixed(0)} 元、`+
+    `BH 門檻分位（${(c1.bh_quantile_level*100).toFixed(3)}%ile）≈ ${(c1.null_bh_quantile*100).toFixed(0)} 元。δ₈₀ 表示需把每元回收長期抬高的幅度（每100元）。`;
+  $("t3-jump").textContent = "每100元 "+(c1.null_bh_quantile*100).toFixed(0)+" 元";
+  $("jack-power").textContent = c1.jackpot_doubling_power;
+  $("blind-frac").textContent = pct(c1.blind_channel_delta_fraction);
+
+  // §3.4 通道分解 + 候選終點
+  const cd = cohorts.cohort1.channel_decomposition;
+  $("channels").innerHTML = Object.entries(cd.channels).map(([k,v])=>`${k}=${v}`).join("、")+`（δ=${cd.probe_delta}）`;
+  const alt = cohorts.cohort2.cohort2_alt_endpoint;
+  if(alt){
+    $("alt-table").style.display="";
+    $("alt-rows").innerHTML = Object.entries(alt.bet_types).map(([bt,e])=>
+      `<tr><td>${TIER_JP[bt]||bt}</td><td>${e.delta80_per_100}</td><td>${e.power_at_delta80}</td><td>${(e.null_median*100).toFixed(0)} 元</td><td>${(e.null_p95*100).toFixed(0)} 元</td></tr>`).join("");
+  }
+
+  // §4.1 審計表
+  const sp=a.audit.special_number, pr=a.audit.pair_cooccurrence;
+  $("audit-rows").innerHTML =
+    `<tr><td>單號頻率</td><td>${sn.chi2.toFixed(2)}</td><td>${sn.df}</td><td>${sn.p_value.toFixed(4)}</td><td>${sn.p_value>0.05?"未見偏差":"偏差待查"}</td></tr>`+
+    `<tr><td>特別號（教科書 χ²，不校準）</td><td>${sp.chi2.toFixed(2)}</td><td>${sp.df}</td><td>${sp.p_value.toFixed(4)}</td><td>${sp.p_value>0.05?"未見偏差":"邊際（多重校正後不構成警訊）"}</td></tr>`+
+    `<tr><td>配對共現</td><td>${pr.chi2.toFixed(1)}</td><td>${pr.df}</td><td>${pr.p_value.toFixed(4)}</td><td>${pr.p_value>0.05?"未見偏差":"偏差待查"}</td></tr>`;
+  if(a.audit_extended){
+    const e=a.audit_extended.single_number;
+    $("audit-ext").innerHTML = `延伸視圖（含北銀 2004–2006，第三方、信任層較低，不列入 headline）：合計 ${a.audit_extended.n_draws} 期（官方 ${a.audit_extended.n_official}＋北銀 ${a.audit_extended.n_extended_pre2007}），延伸單號 p=${e.p_value.toFixed(4)}。`;
+  }
+  const v=a.observational_validation;
+  $("validation").innerHTML = v.available
+    ? `觀察段（全歷史 ${v.n_periods} 期，n_perm=${v.n_perm}）：對照組冠軍每元回收 ${v.champion_roi}、中位 ${v.champion_median}；BH-FDR 校正後顯著策略數＝<b>${v.n_fdr_rejected} / ${v.n_strategies}</b>。${v.honest_note}`
+    : `前瞻段尚未啟動；正式推論以前瞻段期滿報告為準。`;
+
+  // §7.1 修正記錄表
+  const corr=a.audit_correction;
+  $("corr-rows").innerHTML =
+    `<tr><td>單號頻率</td><td>${corr.single.chi2}</td><td>${corr.single.df}</td><td>${corr.single.p_textbook_before}</td><td>${corr.single.p_mc_after}</td><td>MC 校準；解析交叉驗證 ${corr.single.p_analytic_crosscheck}</td></tr>`+
+    `<tr><td>配對共現</td><td>${corr.pair.chi2}</td><td>${corr.pair.df}</td><td>${corr.pair.p_textbook_before}</td><td>${corr.pair.p_mc_after}</td><td>MC 校準</td></tr>`+
+    `<tr><td>特別號</td><td>${corr.special.chi2}</td><td>${corr.special.df}</td><td colspan="2" style="text-align:center">${corr.special.p}（不變）</td><td>${corr.special.note}</td></tr>`;
+
+  $("citation").innerHTML = `引用：莊勝傑（洛伊），《大樂透隨機性驗證實驗 · 技術報告》，版本 v1.2，${a.last_date}，commit ${a.git_commit_short}，https://lowie-mmd.github.io/lottolab/academic.html 。詳見 repo 之 CITATION.cff。`;
+})();
+</script>
+</body>
+</html>

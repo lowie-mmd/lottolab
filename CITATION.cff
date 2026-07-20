@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "若引用本作品，請依下列格式。"
+title: "Lotto Lab — 大樂透隨機性驗證實驗"
+abstract: >-
+  一台用兩年時間證明（或推翻）大樂透隨機性的預先註冊實驗裝置：68 條選號策略
+  ＋50 條純亂數對照，walk-forward 前視保護回測、permutation 檢定＋BH-FDR，
+  並對 13,000+ 次抽球做 Monte Carlo 校準的硬體隨機性審計。
+type: software
+authors:
+  - family-names: "莊"
+    given-names: "勝傑"
+    alias: "洛伊 (Lotto Lab)"
+version: "1.2"
+date-released: "2026-07-19"
+license: MIT
+url: "https://lowie-mmd.github.io/lottolab/"
+repository-code: "https://github.com/lowie-mmd/lottolab"
+keywords:
+  - lottery
+  - randomness
+  - pre-registration
+  - permutation-test
+  - false-discovery-rate
+  - statistical-power

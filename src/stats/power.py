@@ -147,11 +147,14 @@ def delta80(bet_type, amounts, n_periods, n_strategies, alpha=0.05, target_power
         if hi - lo < tol:
             break
     p_hi = power_at(hi)
+    bh_q = 1.0 - alpha / n_strategies  # BH 最嚴門檻對應的 null 分位（0.05/N）
     return {
         "bet_type": bet_type, "n_periods": n_periods, "n_strategies": n_strategies,
         "delta80": hi, "delta80_per_100": hi * 100, "power_at_delta80": p_hi,
         "null_median": float(np.median(sorted_null)),
         "null_p95": float(np.quantile(sorted_null, 0.95)),
+        "null_bh_quantile": float(np.quantile(sorted_null, bh_q)),
+        "bh_quantile_level": bh_q,
         "expected_roi_null": e_base, "n_perm": n_perm, "n_sim": n_sim,
         "boost_tiers": list(tiers),
     }
