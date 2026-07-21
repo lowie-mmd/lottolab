@@ -1,147 +1,147 @@
 {
-  "n_draws": 2465,
+  "n_draws": 2466,
   "single_number": {
-    "chi2": 35.067613252197425,
-    "p_value": 0.9179940775632159,
+    "chi2": 35.71316572046499,
+    "p_value": 0.9050465872098106,
     "df": 48,
-    "total_observations": 14790,
-    "expected_per_number": 301.83673469387753,
+    "total_observations": 14796,
+    "expected_per_number": 301.9591836734694,
     "top_deviations": [
       {
         "number": 24,
         "observed": 270,
-        "z": -1.832
+        "z": -1.839
       },
       {
         "number": 9,
         "observed": 270,
-        "z": -1.832
+        "z": -1.839
       },
       {
         "number": 8,
-        "observed": 331,
-        "z": 1.679
+        "observed": 332,
+        "z": 1.729
       },
       {
         "number": 17,
         "observed": 275,
-        "z": -1.545
+        "z": -1.551
       },
       {
         "number": 11,
         "observed": 328,
-        "z": 1.506
+        "z": 1.499
       },
       {
         "number": 4,
         "observed": 277,
-        "z": -1.43
+        "z": -1.436
       },
       {
         "number": 2,
-        "observed": 325,
-        "z": 1.333
+        "observed": 326,
+        "z": 1.383
       },
       {
         "number": 6,
         "observed": 279,
-        "z": -1.314
+        "z": -1.321
       },
       {
         "number": 23,
         "observed": 324,
-        "z": 1.276
+        "z": 1.268
       },
       {
-        "number": 14,
-        "observed": 280,
-        "z": -1.257
+        "number": 15,
+        "observed": 324,
+        "z": 1.268
       }
     ]
   },
   "special_number": {
-    "chi2": 69.14482758620689,
-    "p_value": 0.024432043768541162,
+    "chi2": 69.04460665044608,
+    "p_value": 0.024896829230233487,
     "df": 48,
-    "total_observations": 2465,
-    "expected_per_number": 50.30612244897959,
+    "total_observations": 2466,
+    "expected_per_number": 50.326530612244895,
     "top_deviations": [
       {
         "number": 24,
         "observed": 70,
-        "z": 2.777
+        "z": 2.773
       },
       {
         "number": 17,
         "observed": 33,
-        "z": -2.44
+        "z": -2.442
       },
       {
         "number": 41,
         "observed": 67,
-        "z": 2.354
+        "z": 2.35
       },
       {
         "number": 20,
         "observed": 34,
-        "z": -2.299
+        "z": -2.301
       },
       {
         "number": 37,
         "observed": 65,
-        "z": 2.072
+        "z": 2.068
       },
       {
         "number": 31,
         "observed": 65,
-        "z": 2.072
+        "z": 2.068
       },
       {
         "number": 23,
         "observed": 36,
-        "z": -2.017
+        "z": -2.019
       },
       {
         "number": 32,
         "observed": 38,
-        "z": -1.735
+        "z": -1.738
       },
       {
         "number": 1,
         "observed": 38,
-        "z": -1.735
+        "z": -1.738
       },
       {
         "number": 44,
         "observed": 39,
-        "z": -1.594
+        "z": -1.597
       }
     ]
   },
   "pair_cooccurrence": {
     "test": "pair_cooccurrence",
-    "n_draws": 2465,
-    "expected_per_pair": 31.441326530612244,
-    "chi2": 1064.7118052738333,
+    "n_draws": 2466,
+    "expected_per_pair": 31.45408163265306,
+    "chi2": 1069.035198702347,
     "df": 1175,
-    "p_value": 0.990268977101741,
+    "p_value": 0.987500787739629,
     "n_pairs": 1176,
     "top_deviations": [
+      {
+        "pair": [
+          2,
+          26
+        ],
+        "observed": 50,
+        "z": 3.307
+      },
       {
         "pair": [
           4,
           16
         ],
         "observed": 13,
-        "z": -3.289
-      },
-      {
-        "pair": [
-          2,
-          26
-        ],
-        "observed": 49,
-        "z": 3.131
+        "z": -3.29
       },
       {
         "pair": [
@@ -149,7 +149,7 @@
           30
         ],
         "observed": 47,
-        "z": 2.775
+        "z": 2.772
       },
       {
         "pair": [
@@ -157,7 +157,7 @@
           15
         ],
         "observed": 47,
-        "z": 2.775
+        "z": 2.772
       },
       {
         "pair": [
@@ -165,7 +165,7 @@
           49
         ],
         "observed": 16,
-        "z": -2.754
+        "z": -2.756
       },
       {
         "pair": [
@@ -173,7 +173,7 @@
           30
         ],
         "observed": 46,
-        "z": 2.596
+        "z": 2.594
       },
       {
         "pair": [
@@ -181,7 +181,7 @@
           37
         ],
         "observed": 46,
-        "z": 2.596
+        "z": 2.594
       },
       {
         "pair": [
@@ -189,7 +189,7 @@
           45
         ],
         "observed": 46,
-        "z": 2.596
+        "z": 2.594
       },
       {
         "pair": [
@@ -197,7 +197,7 @@
           36
         ],
         "observed": 46,
-        "z": 2.596
+        "z": 2.594
       },
       {
         "pair": [
@@ -205,7 +205,7 @@
           27
         ],
         "observed": 46,
-        "z": 2.596
+        "z": 2.594
       },
       {
         "pair": [
@@ -213,7 +213,7 @@
           32
         ],
         "observed": 17,
-        "z": -2.575
+        "z": -2.577
       },
       {
         "pair": [
@@ -221,7 +221,7 @@
           28
         ],
         "observed": 17,
-        "z": -2.575
+        "z": -2.577
       },
       {
         "pair": [
@@ -229,7 +229,7 @@
           41
         ],
         "observed": 45,
-        "z": 2.418
+        "z": 2.415
       },
       {
         "pair": [
@@ -237,7 +237,7 @@
           39
         ],
         "observed": 45,
-        "z": 2.418
+        "z": 2.415
       },
       {
         "pair": [
@@ -245,7 +245,7 @@
           41
         ],
         "observed": 45,
-        "z": 2.418
+        "z": 2.415
       }
     ],
     "note": "配對非獨立，chi2 為近似統計量；top_deviations 供人工檢視離群配對"
@@ -386,16 +386,16 @@
         "df": 48
       },
       "2026": {
-        "n_draws": 71,
-        "chi2": 44.67605633802817,
-        "p_value": 0.6098407993515753,
+        "n_draws": 72,
+        "chi2": 42.12037037037038,
+        "p_value": 0.711467585128026,
         "df": 48
       }
     },
     "note": "球組輪換的間接偵測：觀察偏差是否集中於特定年份"
   },
   "trust_tier": "extended_thirdparty",
-  "n_official": 2153,
+  "n_official": 2154,
   "n_extended_pre2007": 312,
   "note": "延伸視圖：含 2004–2006 北銀時代第三方雙源對帳資料（numbers_only、信任層級較低）。非 headline 結論；headline 以官方源 audit.json 為準。分段檢定可見北銀 vs 台彩跨承辦商（球組更換）邊界。永不進入策略推論。"
 }
