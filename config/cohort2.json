@@ -1,0 +1,41 @@
+{
+  "_status": "DRAFT — 尚未凍結。梯次二啟動由洛伊依 roadmap §3.1 觸發條件拍板；凍結 commit 之時間戳＝梯次二預先註冊時點。",
+  "_isolation": "梯次二與梯次一永不混池（§3.3）：獨立 config、獨立對照組 A2、results 輸出於 data/results/cohort2/。梯次一之 config/config.json 一律不動。",
+  "cohort": 2,
+  "game": "lotto649",
+  "ticket_cost": 50,
+  "registered_period": null,
+  "_registered_period_note": "凍結後填入啟動期（凍結後第一個間隔 ≥3 天的開獎期，§3.4-3）",
+  "control": {
+    "count": 50,
+    "seed_base": 20260722,
+    "id_prefix": "A2",
+    "_note": "A2-00～A2-49 全新 seeds（不得沿用梯次一 42424242）。seed_base 於凍結時由洛伊確認並寫死。"
+  },
+  "strategies": [],
+  "_strategies_note": "參賽策略 manifest 清單，徵集截止＋洛伊篩選後於凍結時寫入；全梯次真策略上限 50（§3.2）。",
+  "fdr_n": null,
+  "_fdr_n_note": "＝該梯次全部真策略數，凍結時寫死（§3.3）。",
+  "endpoints": {
+    "primary": [
+      {
+        "key": "full_track_roi",
+        "label": "全軌理論軌每元回收",
+        "tiers": ["t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8"],
+        "_note": "沿用梯次一之註冊檢定口徑。"
+      },
+      {
+        "key": "small_prize_roi",
+        "label": "小獎通道（t5–t8）理論軌每元回收",
+        "tiers": ["t5", "t6", "t7", "t8"],
+        "_note": "裁決書附錄 K.4 新增之共同主終點：null 連續平滑、對現實效應具實用檢定力（104 期 δ₈₀ 約 126/100 元 vs 全軌 2454/100 元）。"
+      }
+    ],
+    "multiplicity": "bonferroni_split",
+    "_multiplicity_note": "雙終點多重性校正。bonferroni_split＝α 平分至兩終點（各 α/2）後於各終點內對 N 策略做 BH-FDR；替代方案 pooled_bh＝2N 個 p 值合為單一 BH family。最終採用何者於凍結時由洛伊裁決（附錄 K.4）。",
+    "alpha": 0.05,
+    "main_report_periods": 104,
+    "final_report_periods": 208,
+    "_endpoint_note": "雙終點制（§3.3）：104 期主報告、208 期最終報告，兩份都預先承諾發布，不因結果好壞增刪。"
+  }
+}
