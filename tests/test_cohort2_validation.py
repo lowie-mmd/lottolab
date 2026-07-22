@@ -1,6 +1,7 @@
 """梯次二驗證管線四關驗收（roadmap §3.2）：每一關都必須真的攔得到違規。"""
 from __future__ import annotations
 
+import json
 import random
 
 import pytest
@@ -127,6 +128,45 @@ def test_duplicate_gate_catches_clone():
     assert overlap_rate(a, clone, DRAWS, window=40) == pytest.approx(1.0)
     assert not gate_duplicate(a, [clone], DRAWS, window=40).passed
     assert gate_duplicate(a, [distinct], DRAWS, window=40).passed
+
+
+def test_reference_demo_passes_all_gates(tmp_path):
+    """文件宣稱的程式碼契約必須真的可用：參考實作要過四關（含 CLI 入口）。"""
+    from cohort2.check import main as check_main
+    from cohort2.manifest import Manifest
+
+    man = Manifest.from_dict({
+        "id": "demo-sum-offset", "author": "示範作者",
+        "oneliner": "以上一期號碼之和決定偏移，再由 seed 決定性選號。",
+        "bet_type": "single", "code_path": "cohort2.examples.demo",
+        "seed": 20260722, "registered_cohort": 2,
+    })
+    s = man.build_strategy(GAME)
+    assert hasattr(s, "predict") and s.group == "S2"
+    rep = validate_strategy(s, GAME, DRAWS, existing=[], rebuild=lambda: man.build_strategy(GAME))
+    assert rep.passed, rep.summary()
+
+    # CLI：合規 manifest → 離開碼 0
+    p = tmp_path / "m.json"
+    p.write_text(json.dumps({
+        "id": "demo-sum-offset", "author": "示範作者",
+        "oneliner": "示範。", "bet_type": "single",
+        "code_path": "cohort2.examples.demo", "seed": 20260722, "registered_cohort": 2,
+    }, ensure_ascii=False), encoding="utf-8")
+    assert check_main([str(p), "--window", "10"]) == 0
+
+
+def test_cli_rejects_bad_manifest(tmp_path):
+    from cohort2.check import main as check_main
+    p = tmp_path / "bad.json"
+    p.write_text(json.dumps({"id": "x", "author": "a"}), encoding="utf-8")
+    assert check_main([str(p)]) == 1
+    p2 = tmp_path / "nocode.json"
+    p2.write_text(json.dumps({
+        "id": "ghost", "author": "a", "oneliner": "x", "bet_type": "single",
+        "code_path": "cohort2.examples.does_not_exist", "seed": 1, "registered_cohort": 2,
+    }, ensure_ascii=False), encoding="utf-8")
+    assert check_main([str(p2)]) == 1
 
 
 def test_full_pipeline_report():
