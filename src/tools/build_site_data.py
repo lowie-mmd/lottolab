@@ -14,7 +14,7 @@ import shutil
 import statistics
 from pathlib import Path
 
-from engine.backtest import TheoreticalPrizeTable, run_walk_forward
+from engine.backtest import TheoreticalPrizeTable, run_walk_forward, summarize
 from engine.game import get_game
 from engine.models import load_draws
 from strategies.registry import build_all_strategies
@@ -26,6 +26,38 @@ RESULTS_DIR = ROOT / "data" / "results"
 DOCS_DATA = ROOT / "docs" / "data"
 
 SAMPLE_POINTS = 160  # 曲線降采樣點數
+
+GITHUB_PATH = {  # 各組原始碼路徑（策略卡「原始碼 →」連結）
+    "A": "src/strategies/group_a.py", "B": "src/strategies/group_b.py",
+    "C": "src/strategies/group_c.py", "D": "src/strategies/group_d.py",
+    "E": "src/strategies/group_e.py", "F": "src/strategies/group_f.py",
+}
+
+# 策略卡展示文案（名稱／白話一句話／本期選號依據摘要）。文案為 v1.3 §2.3 定稿，逐字沿用。
+# D01–03（養牌）、E01–05（包牌）各共用一句話。
+_ONELINER_D = "一組隨機產生後就永遠固定的號碼。驗證「長期養一組牌」和每期換號有沒有差。"
+_ONELINER_E = "多選幾個號碼、排出所有 6 碼組合全買。中獎次數更多，但成本等比放大──驗證包牌到底有沒有改變每一塊錢的期望值。"
+STRATEGY_META = {
+    "B01": ("熱門號", "哪些號碼最近 50 期最常開，就買哪些。", "近 50 期出現頻率排行前段"),
+    "B02": ("冷門號", "哪些號碼最近 50 期最少開，就買哪些（賭它「該輪到了」）。", "近 50 期出現頻率最低段"),
+    "B03": ("遺漏回補", "哪些號碼最久沒出現，就買哪些。", "遺漏期數（最久未出現）前段"),
+    "B04": ("尾數平衡", "按歷史上各尾數（0–9）出現的比例抽號。", "各尾數歷史比例加權抽樣"),
+    "B05": ("奇偶大小平衡", "強制 3 單 3 雙、3 大 3 小的隨機組合。", "3 單 3 雙 × 3 大 3 小 約束隨機"),
+    "C01": ("馬可夫轉移", "統計哪些號碼傾向跟著哪些號碼一起出現，選共現機率最高的組合。", "共現轉移機率前段"),
+    "C02": ("上期重複", "保留上期 1–2 個號碼，其餘隨機（歷史上約四成的期數會重複上期至少一號）。", "保留上期 1–2 號 + 其餘隨機"),
+    "C03": ("差值模式", "模仿歷史上相鄰號碼之間差距的分布來生成號碼。", "相鄰號差距分布抽樣"),
+    "D01": ("養牌 D01", _ONELINER_D, "固定號（開跑前凍結）"),
+    "D02": ("養牌 D02", _ONELINER_D, "固定號（開跑前凍結）"),
+    "D03": ("養牌 D03", _ONELINER_D, "固定號（開跑前凍結）"),
+    "E01": ("包牌 E01｜隨機 7 號", _ONELINER_E, "隨機 7 號包牌"),
+    "E02": ("包牌 E02｜隨機 8 號", _ONELINER_E, "隨機 8 號包牌"),
+    "E03": ("包牌 E03｜熱門 8 號", _ONELINER_E, "近 50 期熱門 8 號包牌"),
+    "E04": ("包牌 E04｜冷門 8 號", _ONELINER_E, "近 50 期冷門 8 號包牌"),
+    "E05": ("包牌 E05｜凍結 8 號", _ONELINER_E, "固定 8 號（開跑前凍結）包牌"),
+    "F01": ("全大號", "6 個號碼全部大於 31──避開生日數字。就算中獎機率相同，中的時候分獎的人比較少。", "全部 >31 的號碼隨機"),
+    "F02": ("反模式", "排除順子、等差、同尾數過多這些人類愛買的「漂亮組合」後隨機選。", "排除人類偏好「漂亮組合」後隨機"),
+}
+_ONELINER_A = "這 50 個不是策略，是量尺。純亂數選號，用來畫出「純運氣能有多好」的範圍。"
 
 
 def _downsample(xs, k):
@@ -107,6 +139,81 @@ def build_hotness(draws):
     }
 
 
+def _bet_type_and_picks(tickets):
+    """由 predict 輸出推導 bet_type 標示與卡片顯示號組。
+    單注→顯示該注 6 碼；包牌→顯示 wheel 號組並標示注數。"""
+    n = len(tickets)
+    if n <= 1:
+        return "單注", ([list(tickets[0])] if tickets else [])
+    union = sorted({x for t in tickets for x in t})
+    return f"{len(union)} 碼包牌 {n} 注", [union]
+
+
+def build_strategy_cards(game, strategies, draws, theo, luck):
+    """每策略一張卡（A 組彙整為單張「量尺」卡）。本期選號＝以全歷史 predict
+    產生對下一期（前瞻段啟動期）的下注，與展示資料同源、不重算實驗結果。"""
+    latest = draws[-1] if draws else None
+    cards = []
+    # A 組彙整卡（量尺）
+    a_rois = [s["roi_final"] for sid, s in luck["strategies"].items()
+              if s["group"] == "A" and s["roi_final"] is not None]
+    cards.append({
+        "id": "A", "group": "A", "name": "純亂數對照組（50）",
+        "oneliner": _ONELINER_A,
+        "ruler": {
+            "champion": max(a_rois) if a_rois else None,
+            "median": statistics.median(a_rois) if a_rois else None,
+            "n": len(a_rois),
+        },
+        "github_path": GITHUB_PATH["A"],
+    })
+    # B–F 真策略卡
+    for s in strategies:
+        if s.group == "A":
+            continue
+        name, oneliner, basis = STRATEGY_META.get(s.id, (s.id, "", ""))
+        results = run_walk_forward(game, s, draws, theo)
+        summ = summarize(results)
+        tickets = [tuple(t) for t in s.predict(draws)]  # 本期選號（對啟動期）
+        bet_type, picks = _bet_type_and_picks(tickets)
+        cards.append({
+            "id": s.id, "group": s.group, "name": name,
+            "oneliner": oneliner, "bet_type": bet_type,
+            "picks": picks, "picks_basis": basis,
+            "roi_final": round(summ["roi_theoretical"], 4) if summ["roi_theoretical"] is not None else None,
+            "tier_hits": summ["tier_hits"],
+            "roi_curve": luck["strategies"].get(s.id, {}).get("curve", []),
+            "github_path": GITHUB_PATH.get(s.group),
+        })
+    return {
+        "for_period": latest.period if latest else None,
+        "note": "本期選號＝以截至上表最後一期的全歷史，對下一期（前瞻段啟動期 115000072）之下注；每期由每日 Actions 更新。",
+        "cards": cards,
+    }
+
+
+def build_audit_balls(draws, pool_max=49, pick=6):
+    """49 顆球的出現次數與標準化殘差 z（供搖獎機體檢球形圖）。
+    z=(O−E)/√(E·(1−p))，p=pick/pool_max（裁決 B）；與 stats.audit 單號 z 同法、同源，
+    純展示、不改寫審計結果。灰帶 ±2 依此 z 判定。"""
+    counts = {n: 0 for n in range(1, pool_max + 1)}
+    for d in draws:
+        for x in d.numbers:
+            if x in counts:
+                counts[x] += 1
+    total = sum(counts.values())
+    expected = total / pool_max if pool_max else 0
+    factor = 1 - pick / pool_max  # 不放回抽 pick 顆 → 單號變異數因子 (1−p)
+    sd = (expected * factor) ** 0.5 if expected else 1
+    single = [{"number": n, "observed": counts[n],
+               "z": round((counts[n] - expected) / sd, 3) if sd else 0}
+              for n in range(1, pool_max + 1)]
+    return {"expected_per_number": round(expected, 3),
+            "total_observations": total,
+            "z_sd_factor": round(factor, 6),
+            "single_number": single}
+
+
 def main() -> None:
     cfg = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     game = get_game(cfg["game"])
@@ -125,6 +232,13 @@ def main() -> None:
 
     (DOCS_DATA / "hotness.json").write_text(
         json.dumps(build_hotness(draws), ensure_ascii=False), encoding="utf-8")
+
+    # 策略卡（本期選號／bet_type／各獎命中／迷你圖）與 49 顆球審計殘差
+    (DOCS_DATA / "strategy_cards.json").write_text(
+        json.dumps(build_strategy_cards(game, strategies, draws, theo, luck),
+                   ensure_ascii=False), encoding="utf-8")
+    (DOCS_DATA / "audit_balls.json").write_text(
+        json.dumps(build_audit_balls(draws), ensure_ascii=False), encoding="utf-8")
 
     # 複製審計結果（若已由 run_stats 產生）
     audit = RESULTS_DIR / "audit.json"

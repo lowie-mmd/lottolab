@@ -54,12 +54,13 @@ def make_biased(n, seed, forced=(7, 13)):
 
 # ---------- 卡方 ----------
 def test_chisquare_detects_bias():
-    r = single_number_chisquare(make_biased(500, 1), GAME)
-    assert r["p_value"] < 1e-6, f"植入偏差未被偵測 p={r['p_value']}"
+    # MC 校準後 p 下限為 1/(n_sim+1)；植入偏差應壓到下限（遠 < 0.05）
+    r = single_number_chisquare(make_biased(500, 1), GAME, n_sim=3000)
+    assert r["p_value"] < 1e-3, f"植入偏差未被偵測 p={r['p_value']}"
 
 
 def test_chisquare_no_false_positive():
-    r = single_number_chisquare(make_unbiased(2000, 2), GAME)
+    r = single_number_chisquare(make_unbiased(2000, 2), GAME, n_sim=3000)
     assert r["p_value"] > 0.001, f"純隨機被誤報 p={r['p_value']}"
 
 

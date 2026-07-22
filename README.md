@@ -3,7 +3,7 @@
 > 這不是報明牌系統，而是一台「證明（或推翻）隨機性」的實驗裝置。
 > 預設假說 **H0：所有策略的長期每元投報率，統計上無法與純隨機對照組區分。**
 
-🌐 **公開實驗**：https://lowie-mmd.github.io/lottolab/ ｜ 📖 [使用說明](https://lowie-mmd.github.io/lottolab/guide.html) ｜ 🔒 [私人分析](https://lowie-mmd.github.io/lottolab/personal.html)
+🌐 **公開實驗**：https://lowie-mmd.github.io/lottolab/ ｜ 🎲 [試玩沙盒](https://lowie-mmd.github.io/lottolab/playground.html) ｜ 📖 [使用說明／名詞索引](https://lowie-mmd.github.io/lottolab/guide.html) ｜ 🎓 [技術報告](https://lowie-mmd.github.io/lottolab/academic.html) ｜ 🔒 [私人分析](https://lowie-mmd.github.io/lottolab/personal.html)
 
 規格（凍結）：[`lotto-lab-spec-v1.2.md`](lotto-lab-spec-v1.2.md)　實作裁決記錄：[`DECISIONS.md`](DECISIONS.md)　開發覆盤：[`RETROSPECTIVE.md`](RETROSPECTIVE.md)
 
@@ -28,7 +28,7 @@
 | M3 策略庫 | A–F 共 68 策略 | ✅ |
 | M4 統計 | permutation test + FDR、卡方硬體審計、合成資料驗收 | ✅ |
 | M5 私人加密層 | WebCrypto AES-256-GCM、engine.js、網頁編輯器、add_bet.py | ✅ |
-| M6 展示層 | 公開 dashboard（運氣雲/組別/熱門度/審計） | ✅ |
+| M6 展示層 | 公開 dashboard（白話化）＋策略卡＋試玩沙盒＋名詞索引＋技術報告（學術切片） | ✅ |
 | M7 自動化 | GitHub Actions 每日冪等更新 | ✅ |
 
 ## 怎麼用（不用寫程式）

@@ -1,0 +1,1004 @@
+{
+  "generated_at_period": "115000072",
+  "last_date": "2026-07-21",
+  "n_periods_official": 2154,
+  "prospective_start_period": "115000072",
+  "git_commit": "27a97ae96167246bf47c5ab82aac1b08f415e900",
+  "git_commit_short": "27a97ae",
+  "audit": {
+    "n_draws": 2154,
+    "single_number": {
+      "chi2": 34.80145465800062,
+      "p_value": 0.8245146237813515,
+      "df": 48,
+      "total_observations": 12924,
+      "expected_per_number": 263.7551020408163,
+      "z_sd_factor": 0.877551,
+      "mc_calibrated": true,
+      "top_deviations": [
+        {
+          "number": 6,
+          "observed": 233,
+          "z": -2.022
+        },
+        {
+          "number": 4,
+          "observed": 234,
+          "z": -1.956
+        },
+        {
+          "number": 8,
+          "observed": 293,
+          "z": 1.922
+        },
+        {
+          "number": 9,
+          "observed": 236,
+          "z": -1.824
+        },
+        {
+          "number": 17,
+          "observed": 239,
+          "z": -1.627
+        },
+        {
+          "number": 24,
+          "observed": 241,
+          "z": -1.496
+        },
+        {
+          "number": 15,
+          "observed": 286,
+          "z": 1.462
+        },
+        {
+          "number": 2,
+          "observed": 285,
+          "z": 1.396
+        },
+        {
+          "number": 14,
+          "observed": 244,
+          "z": -1.299
+        },
+        {
+          "number": 23,
+          "observed": 283,
+          "z": 1.265
+        }
+      ],
+      "n_sim": 12000,
+      "p_analytic_scaled_chi2": 0.824279
+    },
+    "special_number": {
+      "chi2": 65.87743732590529,
+      "p_value": 0.04423233218285116,
+      "df": 48,
+      "total_observations": 2154,
+      "expected_per_number": 43.95918367346939,
+      "z_sd_factor": 0.979592,
+      "mc_calibrated": false,
+      "top_deviations": [
+        {
+          "number": 24,
+          "observed": 63,
+          "z": 2.902
+        },
+        {
+          "number": 31,
+          "observed": 61,
+          "z": 2.597
+        },
+        {
+          "number": 23,
+          "observed": 28,
+          "z": -2.432
+        },
+        {
+          "number": 17,
+          "observed": 29,
+          "z": -2.28
+        },
+        {
+          "number": 41,
+          "observed": 58,
+          "z": 2.14
+        },
+        {
+          "number": 44,
+          "observed": 32,
+          "z": -1.822
+        },
+        {
+          "number": 37,
+          "observed": 55,
+          "z": 1.682
+        },
+        {
+          "number": 25,
+          "observed": 33,
+          "z": -1.67
+        },
+        {
+          "number": 20,
+          "observed": 33,
+          "z": -1.67
+        },
+        {
+          "number": 1,
+          "observed": 33,
+          "z": -1.67
+        }
+      ]
+    },
+    "pair_cooccurrence": {
+      "test": "pair_cooccurrence",
+      "n_draws": 2154,
+      "expected_per_pair": 27.47448979591837,
+      "chi2": 1071.5116063138416,
+      "df": 1175,
+      "p_value": 0.944587951004083,
+      "n_pairs": 1176,
+      "n_sim": 12000,
+      "mc_calibrated": true,
+      "top_deviations": [
+        {
+          "pair": [
+            15,
+            30
+          ],
+          "observed": 45,
+          "z": 3.344
+        },
+        {
+          "pair": [
+            4,
+            16
+          ],
+          "observed": 11,
+          "z": -3.143
+        },
+        {
+          "pair": [
+            32,
+            43
+          ],
+          "observed": 42,
+          "z": 2.771
+        },
+        {
+          "pair": [
+            12,
+            37
+          ],
+          "observed": 42,
+          "z": 2.771
+        },
+        {
+          "pair": [
+            8,
+            36
+          ],
+          "observed": 42,
+          "z": 2.771
+        },
+        {
+          "pair": [
+            34,
+            49
+          ],
+          "observed": 41,
+          "z": 2.58
+        },
+        {
+          "pair": [
+            16,
+            41
+          ],
+          "observed": 41,
+          "z": 2.58
+        },
+        {
+          "pair": [
+            10,
+            45
+          ],
+          "observed": 41,
+          "z": 2.58
+        },
+        {
+          "pair": [
+            7,
+            21
+          ],
+          "observed": 41,
+          "z": 2.58
+        },
+        {
+          "pair": [
+            2,
+            26
+          ],
+          "observed": 41,
+          "z": 2.58
+        },
+        {
+          "pair": [
+            12,
+            49
+          ],
+          "observed": 14,
+          "z": -2.571
+        },
+        {
+          "pair": [
+            6,
+            28
+          ],
+          "observed": 14,
+          "z": -2.571
+        },
+        {
+          "pair": [
+            31,
+            44
+          ],
+          "observed": 40,
+          "z": 2.39
+        },
+        {
+          "pair": [
+            23,
+            43
+          ],
+          "observed": 40,
+          "z": 2.39
+        },
+        {
+          "pair": [
+            13,
+            39
+          ],
+          "observed": 40,
+          "z": 2.39
+        }
+      ],
+      "note": "配對非獨立，chi2 為近似統計量；p 由 Monte Carlo 校準；top_deviations 供人工檢視離群配對"
+    },
+    "segmented_by_year": {
+      "test": "segmented_single_number_by_year",
+      "windows": {
+        "2007": {
+          "n_draws": 104,
+          "chi2": 44.72435897435897,
+          "p_value": 0.42063174730107955,
+          "df": 48
+        },
+        "2008": {
+          "n_draws": 105,
+          "chi2": 41.68888888888886,
+          "p_value": 0.5509796081567373,
+          "df": 48
+        },
+        "2009": {
+          "n_draws": 104,
+          "chi2": 43.93910256410258,
+          "p_value": 0.4566173530587765,
+          "df": 48
+        },
+        "2010": {
+          "n_draws": 105,
+          "chi2": 44.17777777777778,
+          "p_value": 0.4338264694122351,
+          "df": 48
+        },
+        "2011": {
+          "n_draws": 104,
+          "chi2": 40.64102564102564,
+          "p_value": 0.6037584966013595,
+          "df": 48
+        },
+        "2012": {
+          "n_draws": 104,
+          "chi2": 43.310897435897466,
+          "p_value": 0.4886045581767293,
+          "df": 48
+        },
+        "2013": {
+          "n_draws": 108,
+          "chi2": 44.2006172839506,
+          "p_value": 0.44022391043582565,
+          "df": 48
+        },
+        "2014": {
+          "n_draws": 108,
+          "chi2": 51.00617283950616,
+          "p_value": 0.18512594962015194,
+          "df": 48
+        },
+        "2015": {
+          "n_draws": 109,
+          "chi2": 46.23547400611619,
+          "p_value": 0.34146341463414637,
+          "df": 48
+        },
+        "2016": {
+          "n_draws": 111,
+          "chi2": 31.77177177177177,
+          "p_value": 0.911235505797681,
+          "df": 48
+        },
+        "2017": {
+          "n_draws": 108,
+          "chi2": 43.898148148148145,
+          "p_value": 0.45221911235505796,
+          "df": 48
+        },
+        "2018": {
+          "n_draws": 108,
+          "chi2": 34.97530864197531,
+          "p_value": 0.8248700519792083,
+          "df": 48
+        },
+        "2019": {
+          "n_draws": 112,
+          "chi2": 42.0,
+          "p_value": 0.5377848860455817,
+          "df": 48
+        },
+        "2020": {
+          "n_draws": 112,
+          "chi2": 45.93749999999997,
+          "p_value": 0.358656537385046,
+          "df": 48
+        },
+        "2021": {
+          "n_draws": 114,
+          "chi2": 38.248538011695885,
+          "p_value": 0.6993202718912435,
+          "df": 48
+        },
+        "2022": {
+          "n_draws": 114,
+          "chi2": 33.37719298245616,
+          "p_value": 0.8740503798480608,
+          "df": 48
+        },
+        "2023": {
+          "n_draws": 116,
+          "chi2": 54.20689655172412,
+          "p_value": 0.11595361855257896,
+          "df": 48
+        },
+        "2024": {
+          "n_draws": 118,
+          "chi2": 41.25706214689266,
+          "p_value": 0.5721711315473811,
+          "df": 48
+        },
+        "2025": {
+          "n_draws": 118,
+          "chi2": 35.028248587570616,
+          "p_value": 0.8268692522990804,
+          "df": 48
+        },
+        "2026": {
+          "n_draws": 72,
+          "chi2": 42.120370370370374,
+          "p_value": 0.5365853658536586,
+          "df": 48
+        }
+      },
+      "note": "球組輪換的間接偵測：觀察偏差是否集中於特定年份（MC 校準）"
+    },
+    "trust_tier": "official",
+    "note": "主混池檢定只用官方源（台彩 2007+）。不做 NIST 套件（§5.2）。台彩定期輪換球組與搖獎機，混池檢定只能偵測長期系統性偏差，無法偵測單一球組短期物理瑕疵。"
+  },
+  "audit_extended": {
+    "n_draws": 2466,
+    "single_number": {
+      "chi2": 35.713165720464985,
+      "p_value": 0.7996000333305557,
+      "df": 48,
+      "total_observations": 14796,
+      "expected_per_number": 301.9591836734694,
+      "z_sd_factor": 0.877551,
+      "mc_calibrated": true,
+      "top_deviations": [
+        {
+          "number": 24,
+          "observed": 270,
+          "z": -1.963
+        },
+        {
+          "number": 9,
+          "observed": 270,
+          "z": -1.963
+        },
+        {
+          "number": 8,
+          "observed": 332,
+          "z": 1.845
+        },
+        {
+          "number": 17,
+          "observed": 275,
+          "z": -1.656
+        },
+        {
+          "number": 11,
+          "observed": 328,
+          "z": 1.6
+        },
+        {
+          "number": 4,
+          "observed": 277,
+          "z": -1.533
+        },
+        {
+          "number": 2,
+          "observed": 326,
+          "z": 1.477
+        },
+        {
+          "number": 6,
+          "observed": 279,
+          "z": -1.41
+        },
+        {
+          "number": 23,
+          "observed": 324,
+          "z": 1.354
+        },
+        {
+          "number": 15,
+          "observed": 324,
+          "z": 1.354
+        }
+      ],
+      "n_sim": 12000,
+      "p_analytic_scaled_chi2": 0.791956
+    },
+    "special_number": {
+      "chi2": 69.04460665044608,
+      "p_value": 0.02489682923023329,
+      "df": 48,
+      "total_observations": 2466,
+      "expected_per_number": 50.326530612244895,
+      "z_sd_factor": 0.979592,
+      "mc_calibrated": false,
+      "top_deviations": [
+        {
+          "number": 24,
+          "observed": 70,
+          "z": 2.802
+        },
+        {
+          "number": 17,
+          "observed": 33,
+          "z": -2.468
+        },
+        {
+          "number": 41,
+          "observed": 67,
+          "z": 2.375
+        },
+        {
+          "number": 20,
+          "observed": 34,
+          "z": -2.325
+        },
+        {
+          "number": 37,
+          "observed": 65,
+          "z": 2.09
+        },
+        {
+          "number": 31,
+          "observed": 65,
+          "z": 2.09
+        },
+        {
+          "number": 23,
+          "observed": 36,
+          "z": -2.04
+        },
+        {
+          "number": 32,
+          "observed": 38,
+          "z": -1.756
+        },
+        {
+          "number": 1,
+          "observed": 38,
+          "z": -1.756
+        },
+        {
+          "number": 44,
+          "observed": 39,
+          "z": -1.613
+        }
+      ]
+    },
+    "pair_cooccurrence": {
+      "test": "pair_cooccurrence",
+      "n_draws": 2466,
+      "expected_per_pair": 31.45408163265306,
+      "chi2": 1069.035198702347,
+      "df": 1175,
+      "p_value": 0.945671194067161,
+      "n_pairs": 1176,
+      "n_sim": 12000,
+      "mc_calibrated": true,
+      "top_deviations": [
+        {
+          "pair": [
+            2,
+            26
+          ],
+          "observed": 50,
+          "z": 3.307
+        },
+        {
+          "pair": [
+            4,
+            16
+          ],
+          "observed": 13,
+          "z": -3.29
+        },
+        {
+          "pair": [
+            7,
+            30
+          ],
+          "observed": 47,
+          "z": 2.772
+        },
+        {
+          "pair": [
+            5,
+            15
+          ],
+          "observed": 47,
+          "z": 2.772
+        },
+        {
+          "pair": [
+            12,
+            49
+          ],
+          "observed": 16,
+          "z": -2.756
+        },
+        {
+          "pair": [
+            15,
+            30
+          ],
+          "observed": 46,
+          "z": 2.594
+        },
+        {
+          "pair": [
+            12,
+            37
+          ],
+          "observed": 46,
+          "z": 2.594
+        },
+        {
+          "pair": [
+            10,
+            45
+          ],
+          "observed": 46,
+          "z": 2.594
+        },
+        {
+          "pair": [
+            8,
+            36
+          ],
+          "observed": 46,
+          "z": 2.594
+        },
+        {
+          "pair": [
+            2,
+            27
+          ],
+          "observed": 46,
+          "z": 2.594
+        },
+        {
+          "pair": [
+            9,
+            32
+          ],
+          "observed": 17,
+          "z": -2.577
+        },
+        {
+          "pair": [
+            6,
+            28
+          ],
+          "observed": 17,
+          "z": -2.577
+        },
+        {
+          "pair": [
+            16,
+            41
+          ],
+          "observed": 45,
+          "z": 2.415
+        },
+        {
+          "pair": [
+            13,
+            39
+          ],
+          "observed": 45,
+          "z": 2.415
+        },
+        {
+          "pair": [
+            1,
+            41
+          ],
+          "observed": 45,
+          "z": 2.415
+        }
+      ],
+      "note": "配對非獨立，chi2 為近似統計量；p 由 Monte Carlo 校準；top_deviations 供人工檢視離群配對"
+    },
+    "segmented_by_year": {
+      "test": "segmented_single_number_by_year",
+      "windows": {
+        "2004": {
+          "n_draws": 104,
+          "chi2": 32.78846153846155,
+          "p_value": 0.8912435025989605,
+          "df": 48
+        },
+        "2005": {
+          "n_draws": 104,
+          "chi2": 45.352564102564116,
+          "p_value": 0.39304278288684524,
+          "df": 48
+        },
+        "2006": {
+          "n_draws": 104,
+          "chi2": 39.2275641025641,
+          "p_value": 0.6685325869652139,
+          "df": 48
+        },
+        "2007": {
+          "n_draws": 104,
+          "chi2": 44.72435897435897,
+          "p_value": 0.42063174730107955,
+          "df": 48
+        },
+        "2008": {
+          "n_draws": 105,
+          "chi2": 41.68888888888886,
+          "p_value": 0.5509796081567373,
+          "df": 48
+        },
+        "2009": {
+          "n_draws": 104,
+          "chi2": 43.93910256410258,
+          "p_value": 0.4566173530587765,
+          "df": 48
+        },
+        "2010": {
+          "n_draws": 105,
+          "chi2": 44.17777777777778,
+          "p_value": 0.4338264694122351,
+          "df": 48
+        },
+        "2011": {
+          "n_draws": 104,
+          "chi2": 40.64102564102564,
+          "p_value": 0.6037584966013595,
+          "df": 48
+        },
+        "2012": {
+          "n_draws": 104,
+          "chi2": 43.310897435897466,
+          "p_value": 0.4886045581767293,
+          "df": 48
+        },
+        "2013": {
+          "n_draws": 108,
+          "chi2": 44.2006172839506,
+          "p_value": 0.44022391043582565,
+          "df": 48
+        },
+        "2014": {
+          "n_draws": 108,
+          "chi2": 51.00617283950616,
+          "p_value": 0.18512594962015194,
+          "df": 48
+        },
+        "2015": {
+          "n_draws": 109,
+          "chi2": 46.23547400611619,
+          "p_value": 0.34146341463414637,
+          "df": 48
+        },
+        "2016": {
+          "n_draws": 111,
+          "chi2": 31.77177177177177,
+          "p_value": 0.911235505797681,
+          "df": 48
+        },
+        "2017": {
+          "n_draws": 108,
+          "chi2": 43.898148148148145,
+          "p_value": 0.45221911235505796,
+          "df": 48
+        },
+        "2018": {
+          "n_draws": 108,
+          "chi2": 34.97530864197531,
+          "p_value": 0.8248700519792083,
+          "df": 48
+        },
+        "2019": {
+          "n_draws": 112,
+          "chi2": 42.0,
+          "p_value": 0.5377848860455817,
+          "df": 48
+        },
+        "2020": {
+          "n_draws": 112,
+          "chi2": 45.93749999999997,
+          "p_value": 0.358656537385046,
+          "df": 48
+        },
+        "2021": {
+          "n_draws": 114,
+          "chi2": 38.248538011695885,
+          "p_value": 0.6993202718912435,
+          "df": 48
+        },
+        "2022": {
+          "n_draws": 114,
+          "chi2": 33.37719298245616,
+          "p_value": 0.8740503798480608,
+          "df": 48
+        },
+        "2023": {
+          "n_draws": 116,
+          "chi2": 54.20689655172412,
+          "p_value": 0.11595361855257896,
+          "df": 48
+        },
+        "2024": {
+          "n_draws": 118,
+          "chi2": 41.25706214689266,
+          "p_value": 0.5721711315473811,
+          "df": 48
+        },
+        "2025": {
+          "n_draws": 118,
+          "chi2": 35.028248587570616,
+          "p_value": 0.8268692522990804,
+          "df": 48
+        },
+        "2026": {
+          "n_draws": 72,
+          "chi2": 42.120370370370374,
+          "p_value": 0.5365853658536586,
+          "df": 48
+        }
+      },
+      "note": "球組輪換的間接偵測：觀察偏差是否集中於特定年份（MC 校準）"
+    },
+    "trust_tier": "extended_thirdparty",
+    "n_official": 2154,
+    "n_extended_pre2007": 312,
+    "note": "延伸視圖：含 2004–2006 北銀時代第三方雙源對帳資料（numbers_only、信任層級較低）。非 headline 結論；headline 以官方源 audit.json 為準。分段檢定可見北銀 vs 台彩跨承辦商（球組更換）邊界。永不進入策略推論。"
+  },
+  "audit_correction": {
+    "single": {
+      "chi2": 34.8,
+      "df": 48,
+      "p_textbook_before": 0.923,
+      "p_mc_after": 0.8245,
+      "p_analytic_crosscheck": 0.824279,
+      "n_sim": 12000
+    },
+    "pair": {
+      "chi2": 1071.5,
+      "df": 1175,
+      "p_textbook_before": 0.9856,
+      "p_mc_after": 0.9446
+    },
+    "special": {
+      "chi2": 65.88,
+      "df": 48,
+      "p": 0.0442,
+      "calibrated": false,
+      "note": "每期一顆、跨期獨立，χ²₄₈ 成立，不校準；p 維持原值"
+    }
+  },
+  "observational_validation": {
+    "available": true,
+    "label": "observational_full_history",
+    "n_periods": 2153,
+    "n_strategies": 68,
+    "n_perm": 400,
+    "champion_roi": 1.0488,
+    "champion_median": 0.3028,
+    "n_fdr_rejected": 0,
+    "honest_note": "觀察性（歷史段），非預先註冊推論；200 期的檢定力只足以偵測『大幅』偏離；接受 H0 ≠ 證明完美隨機，只代表偏差（若存在）小於本實驗可偵測門檻（§5.1）。"
+  },
+  "power": {
+    "cohort1": {
+      "label": "梯次一（啟動期實驗）",
+      "n_periods": 200,
+      "n_strategies": 68,
+      "n_perm": 100000,
+      "n_sim": 2000,
+      "bet_types": {
+        "single": {
+          "n_tickets": 1,
+          "delta80_all_tiers": 13.0956,
+          "delta80_all_tiers_per_100": 1309.6,
+          "delta80_t3_t8_only": 8.3237,
+          "delta80_t3_t8_only_per_100": 832.4,
+          "power_at_delta80": 0.81,
+          "null_median": 0.28,
+          "null_p95": 0.56,
+          "null_bh_quantile": 7.1834,
+          "bh_quantile_level": 0.999265,
+          "expected_roi_null": 0.5205,
+          "blind_channel_delta_fraction": 0.365005,
+          "jackpot_doubling_power": 0.001,
+          "jackpot_doubling_extra_per_100": 16.7
+        },
+        "wheel7": {
+          "n_tickets": 7,
+          "delta80_all_tiers": 3.7187,
+          "delta80_all_tiers_per_100": 371.9,
+          "delta80_t3_t8_only": 2.3623,
+          "delta80_t3_t8_only_per_100": 236.2,
+          "power_at_delta80": 0.819,
+          "null_median": 0.2943,
+          "null_p95": 0.5323,
+          "null_bh_quantile": 2.2892,
+          "bh_quantile_level": 0.999265,
+          "expected_roi_null": 0.5205,
+          "blind_channel_delta_fraction": 0.365005,
+          "jackpot_doubling_power": 0.0,
+          "jackpot_doubling_extra_per_100": 16.7
+        },
+        "wheel8": {
+          "n_tickets": 28,
+          "delta80_all_tiers": 15.7333,
+          "delta80_all_tiers_per_100": 1573.3,
+          "delta80_t3_t8_only": 10.0118,
+          "delta80_t3_t8_only_per_100": 1001.2,
+          "power_at_delta80": 0.809,
+          "null_median": 0.305,
+          "null_p95": 0.5451,
+          "null_bh_quantile": 9.9249,
+          "bh_quantile_level": 0.999265,
+          "expected_roi_null": 0.5205,
+          "blind_channel_delta_fraction": 0.365005,
+          "jackpot_doubling_power": 0.0015,
+          "jackpot_doubling_extra_per_100": 16.7
+        }
+      },
+      "channel_decomposition": {
+        "probe_delta": 1.12,
+        "note": "single、每元回收優勢 δ=1.12（≈2×null p95）下各通道單獨注入的偵測率（診斷，非聲明主體）",
+        "channels": {
+          "jackpot_t1": 0.001,
+          "tier2_t2": 0.0045,
+          "detect_t3_t8": 0.0155,
+          "small_t5_t8": 0.0035
+        }
+      }
+    },
+    "cohort2": {
+      "label": "梯次二（社群實驗，規劃）",
+      "n_periods": 104,
+      "n_strategies": 50,
+      "n_perm": 100000,
+      "n_sim": 2000,
+      "bet_types": {
+        "single": {
+          "n_tickets": 1,
+          "delta80_all_tiers": 24.5371,
+          "delta80_all_tiers_per_100": 2453.7,
+          "delta80_t3_t8_only": 15.6152,
+          "delta80_t3_t8_only_per_100": 1561.5,
+          "power_at_delta80": 0.803,
+          "null_median": 0.2308,
+          "null_p95": 0.6923,
+          "null_bh_quantile": 13.2758,
+          "bh_quantile_level": 0.999,
+          "expected_roi_null": 0.5205,
+          "blind_channel_delta_fraction": 0.365005,
+          "jackpot_doubling_power": 0.001,
+          "jackpot_doubling_extra_per_100": 16.7
+        },
+        "wheel7": {
+          "n_tickets": 7,
+          "delta80_all_tiers": 3.9073,
+          "delta80_all_tiers_per_100": 390.7,
+          "delta80_t3_t8_only": 2.4681,
+          "delta80_t3_t8_only_per_100": 246.8,
+          "power_at_delta80": 0.804,
+          "null_median": 0.2912,
+          "null_p95": 0.5,
+          "null_bh_quantile": 2.3526,
+          "bh_quantile_level": 0.999,
+          "expected_roi_null": 0.5205,
+          "blind_channel_delta_fraction": 0.365005,
+          "jackpot_doubling_power": 0.0005,
+          "jackpot_doubling_extra_per_100": 16.7
+        },
+        "wheel8": {
+          "n_tickets": 28,
+          "delta80_all_tiers": 29.942,
+          "delta80_all_tiers_per_100": 2994.2,
+          "delta80_t3_t8_only": 19.0493,
+          "delta80_t3_t8_only_per_100": 1904.9,
+          "power_at_delta80": 0.8,
+          "null_median": 0.2995,
+          "null_p95": 0.7035,
+          "null_bh_quantile": 18.6437,
+          "bh_quantile_level": 0.999,
+          "expected_roi_null": 0.5205,
+          "blind_channel_delta_fraction": 0.365005,
+          "jackpot_doubling_power": 0.002,
+          "jackpot_doubling_extra_per_100": 16.7
+        }
+      },
+      "channel_decomposition": {
+        "probe_delta": 1.3846,
+        "note": "single、每元回收優勢 δ=1.3846（≈2×null p95）下各通道單獨注入的偵測率（診斷，非聲明主體）",
+        "channels": {
+          "jackpot_t1": 0.0015,
+          "tier2_t2": 0.003,
+          "detect_t3_t8": 0.012,
+          "small_t5_t8": 0.0025
+        }
+      },
+      "cohort2_alt_endpoint": {
+        "statistic": "small_prize_channel_t5_t8_roi",
+        "note": "梯次二候選共同主終點（附錄 K.4）：以 t5–t8 理論軌 ROI 為統計量，null 連續平滑、對現實效應具實用檢定力。對照全軌 δ₈₀ 顯示可偵測性大幅改善。",
+        "bet_types": {
+          "single": {
+            "delta80": 1.2576,
+            "delta80_per_100": 125.8,
+            "power_at_delta80": 0.818,
+            "null_median": 0.2308,
+            "null_p95": 0.6538
+          },
+          "wheel7": {
+            "delta80": 0.3603,
+            "delta80_per_100": 36.0,
+            "power_at_delta80": 0.81,
+            "null_median": 0.2857,
+            "null_p95": 0.4176
+          },
+          "wheel8": {
+            "delta80": 0.1622,
+            "delta80_per_100": 16.2,
+            "power_at_delta80": 0.812,
+            "null_median": 0.2898,
+            "null_p95": 0.353
+          }
+        }
+      }
+    }
+  },
+  "power_note": "δ₈₀＝一條策略理論軌每元回收需偏離對照基準多少，才能在 n 期、N 策略、α=0.05（BH-FDR 校正後）下以 80% 機率被偵測（附錄 J 操作型定義）。口徑＝完整理論軌（含頭獎），與註冊檢定一致；命中數以 Poisson(n·λ_t) 模擬，稀有頭獎穩定處理。channel_decomposition 為各獎項通道的偵測貢獻診斷，非聲明主體。"
+}
