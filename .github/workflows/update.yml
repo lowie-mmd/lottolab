@@ -52,7 +52,6 @@ jobs:
           PYTHONPATH=src python -m engine.run_backtest --group A --group B --group C --group D --group E --group F --quiet
           PYTHONPATH=src python -m stats.run_stats --audit
           PYTHONPATH=src python -m tools.build_site_data
-          PYTHONPATH=src python -m tools.build_academic
 
       - name: 提交更新（任一步失敗不提交半套）
         if: steps.fetch.outputs.changed == 'true'
