@@ -1,7 +1,7 @@
 {
   "meta": {
     "game": "lotto649",
-    "updated": "2026-07-22T05:18:00.910458+00:00",
+    "updated": "2026-07-25T15:54:02.734937+00:00",
     "sources": [
       "taiwanlottery"
     ]
@@ -107701,6 +107701,56 @@
         },
         "t8": {
           "winners": 95658,
+          "amount": 400
+        }
+      },
+      "data_quality": "full",
+      "promo": null
+    },
+    {
+      "period": "115000073",
+      "date": "2026-07-24",
+      "numbers": [
+        3,
+        15,
+        27,
+        34,
+        35,
+        44
+      ],
+      "special": 40,
+      "sales_amount": 319113800,
+      "prizes": {
+        "t1": {
+          "winners": 0,
+          "amount": 0
+        },
+        "t2": {
+          "winners": 3,
+          "amount": 2025515
+        },
+        "t3": {
+          "winners": 125,
+          "amount": 52351
+        },
+        "t4": {
+          "winners": 260,
+          "amount": 16180
+        },
+        "t5": {
+          "winners": 5539,
+          "amount": 2000
+        },
+        "t6": {
+          "winners": 6806,
+          "amount": 1000
+        },
+        "t7": {
+          "winners": 68285,
+          "amount": 400
+        },
+        "t8": {
+          "winners": 100051,
           "amount": 400
         }
       },
