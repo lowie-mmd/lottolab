@@ -1,8 +1,8 @@
 {
-  "n_periods": 2160,
+  "n_periods": 2161,
   "first_period": "96000001",
-  "last_period": "115000078",
-  "last_date": "2026-08-11",
+  "last_period": "115000079",
+  "last_date": "2026-08-14",
   "prospective_start_period": "115000072",
   "n_strategies": 68
 }
