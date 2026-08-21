@@ -1,136 +1,136 @@
 {
-  "n_draws": 2474,
+  "n_draws": 2475,
   "single_number": {
-    "chi2": 36.08919428725412,
-    "p_value": 0.7833513873843846,
+    "chi2": 36.087811447811454,
+    "p_value": 0.7786017831847346,
     "df": 48,
-    "total_observations": 14844,
-    "expected_per_number": 302.9387755102041,
+    "total_observations": 14850,
+    "expected_per_number": 303.0612244897959,
     "z_sd_factor": 0.877551,
     "mc_calibrated": true,
     "top_deviations": [
       {
         "number": 9,
         "observed": 271,
-        "z": -1.959
+        "z": -1.966
       },
       {
         "number": 8,
-        "observed": 334,
-        "z": 1.905
+        "observed": 335,
+        "z": 1.958
       },
       {
         "number": 24,
-        "observed": 272,
-        "z": -1.898
+        "observed": 273,
+        "z": -1.843
       },
       {
         "number": 17,
         "observed": 275,
-        "z": -1.714
+        "z": -1.721
       },
       {
         "number": 11,
         "observed": 329,
-        "z": 1.598
+        "z": 1.591
       },
       {
         "number": 4,
         "observed": 278,
-        "z": -1.53
-      },
-      {
-        "number": 2,
-        "observed": 327,
-        "z": 1.476
+        "z": -1.537
       },
       {
         "number": 6,
         "observed": 279,
-        "z": -1.468
+        "z": -1.475
+      },
+      {
+        "number": 2,
+        "observed": 327,
+        "z": 1.468
+      },
+      {
+        "number": 23,
+        "observed": 326,
+        "z": 1.407
       },
       {
         "number": 15,
         "observed": 326,
-        "z": 1.414
-      },
-      {
-        "number": 23,
-        "observed": 325,
-        "z": 1.353
+        "z": 1.407
       }
     ],
     "n_sim": 12000,
-    "p_analytic_scaled_chi2": 0.777841
+    "p_analytic_scaled_chi2": 0.777893
   },
   "special_number": {
-    "chi2": 70.19725141471302,
-    "p_value": 0.0199981204661702,
+    "chi2": 70.5648484848485,
+    "p_value": 0.01862834003520013,
     "df": 48,
-    "total_observations": 2474,
-    "expected_per_number": 50.48979591836735,
+    "total_observations": 2475,
+    "expected_per_number": 50.51020408163265,
     "z_sd_factor": 0.979592,
     "mc_calibrated": false,
     "top_deviations": [
       {
         "number": 24,
         "observed": 70,
-        "z": 2.774
+        "z": 2.771
       },
       {
         "number": 17,
         "observed": 33,
-        "z": -2.487
-      },
-      {
-        "number": 41,
-        "observed": 67,
-        "z": 2.348
+        "z": -2.489
       },
       {
         "number": 20,
         "observed": 34,
-        "z": -2.345
+        "z": -2.347
+      },
+      {
+        "number": 41,
+        "observed": 67,
+        "z": 2.344
       },
       {
         "number": 31,
         "observed": 66,
-        "z": 2.205
-      },
-      {
-        "number": 37,
-        "observed": 65,
-        "z": 2.063
+        "z": 2.202
       },
       {
         "number": 23,
         "observed": 36,
-        "z": -2.06
+        "z": -2.063
       },
       {
-        "number": 10,
-        "observed": 63,
-        "z": 1.779
+        "number": 37,
+        "observed": 65,
+        "z": 2.06
       },
       {
         "number": 32,
         "observed": 38,
-        "z": -1.776
+        "z": -1.778
       },
       {
         "number": 1,
         "observed": 38,
-        "z": -1.776
+        "z": -1.778
+      },
+      {
+        "number": 10,
+        "observed": 63,
+        "z": 1.776
       }
     ]
   },
   "pair_cooccurrence": {
     "test": "pair_cooccurrence",
-    "n_draws": 2474,
-    "expected_per_pair": 31.556122448979593,
-    "chi2": 1072.8915117219149,
+    "n_draws": 2475,
+    "expected_per_pair": 31.56887755102041,
+    "chi2": 1073.6656969696935,
     "df": 1175,
-    "p_value": 0.939838346804433,
+    "p_value": 0.9371719023414715,
     "n_pairs": 1176,
     "n_sim": 12000,
     "mc_calibrated": true,
@@ -141,7 +141,7 @@
           16
         ],
         "observed": 13,
-        "z": -3.303
+        "z": -3.305
       },
       {
         "pair": [
@@ -149,7 +149,7 @@
           26
         ],
         "observed": 50,
-        "z": 3.283
+        "z": 3.28
       },
       {
         "pair": [
@@ -157,7 +157,7 @@
           49
         ],
         "observed": 16,
-        "z": -2.769
+        "z": -2.771
       },
       {
         "pair": [
@@ -165,7 +165,7 @@
           30
         ],
         "observed": 47,
-        "z": 2.749
+        "z": 2.746
       },
       {
         "pair": [
@@ -173,7 +173,7 @@
           30
         ],
         "observed": 47,
-        "z": 2.749
+        "z": 2.746
       },
       {
         "pair": [
@@ -181,7 +181,7 @@
           15
         ],
         "observed": 47,
-        "z": 2.749
+        "z": 2.746
       },
       {
         "pair": [
@@ -189,7 +189,7 @@
           32
         ],
         "observed": 17,
-        "z": -2.591
+        "z": -2.593
       },
       {
         "pair": [
@@ -197,7 +197,7 @@
           28
         ],
         "observed": 17,
-        "z": -2.591
+        "z": -2.593
       },
       {
         "pair": [
@@ -205,7 +205,7 @@
           37
         ],
         "observed": 46,
-        "z": 2.571
+        "z": 2.568
       },
       {
         "pair": [
@@ -213,7 +213,7 @@
           45
         ],
         "observed": 46,
-        "z": 2.571
+        "z": 2.568
       },
       {
         "pair": [
@@ -221,7 +221,7 @@
           36
         ],
         "observed": 46,
-        "z": 2.571
+        "z": 2.568
       },
       {
         "pair": [
@@ -229,7 +229,7 @@
           27
         ],
         "observed": 46,
-        "z": 2.571
+        "z": 2.568
       },
       {
         "pair": [
@@ -237,7 +237,7 @@
           35
         ],
         "observed": 18,
-        "z": -2.413
+        "z": -2.415
       },
       {
         "pair": [
@@ -245,7 +245,7 @@
           43
         ],
         "observed": 45,
-        "z": 2.393
+        "z": 2.39
       },
       {
         "pair": [
@@ -253,7 +253,7 @@
           41
         ],
         "observed": 45,
-        "z": 2.393
+        "z": 2.39
       }
     ],
     "note": "配對非獨立，chi2 為近似統計量；p 由 Monte Carlo 校準；top_deviations 供人工檢視離群配對"
@@ -394,16 +394,16 @@
         "df": 48
       },
       "2026": {
-        "n_draws": 80,
-        "chi2": 41.64583333333336,
-        "p_value": 0.5489804078368653,
+        "n_draws": 81,
+        "chi2": 42.31275720164608,
+        "p_value": 0.5237904838064774,
         "df": 48
       }
     },
     "note": "球組輪換的間接偵測：觀察偏差是否集中於特定年份（MC 校準）"
   },
   "trust_tier": "extended_thirdparty",
-  "n_official": 2162,
+  "n_official": 2163,
   "n_extended_pre2007": 312,
   "note": "延伸視圖：含 2004–2006 北銀時代第三方雙源對帳資料（numbers_only、信任層級較低）。非 headline 結論；headline 以官方源 audit.json 為準。分段檢定可見北銀 vs 台彩跨承辦商（球組更換）邊界。永不進入策略推論。"
 }
