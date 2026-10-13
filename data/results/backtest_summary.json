@@ -1,5 +1,5 @@
 {
-  "n_draws": 2177,
+  "n_draws": 2178,
   "start_index": 0,
   "n_strategies": 68,
   "groups": [
@@ -12,20 +12,20 @@
   ],
   "summaries": {
     "A00": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 30800,
-      "roi_theoretical": 0.2829581993569132,
+      "roi_theoretical": 0.2828282828282828,
       "total_payout_actual": 25657,
-      "roi_actual": 0.23570969223702343,
-      "actual_periods": 2177,
+      "roi_actual": 0.23560146923783287,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 28,
         "t8": 39,
         "t6": 2,
         "t5": 1
       },
-      "max_drawdown_theoretical": -78350,
+      "max_drawdown_theoretical": -78400,
       "cumulative_curve_theoretical": [
         -50,
         300,
@@ -2203,24 +2203,25 @@
         -77900,
         -77950,
         -78000,
-        -78050
+        -78050,
+        -78100
       ]
     },
     "A01": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 29000,
-      "roi_theoretical": 0.266421681212678,
+      "roi_theoretical": 0.2662993572084481,
       "total_payout_actual": 31623,
-      "roi_actual": 0.2905190629306385,
-      "actual_periods": 2177,
+      "roi_actual": 0.2903856749311295,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 20,
         "t8": 35,
         "t5": 3,
         "t6": 1
       },
-      "max_drawdown_theoretical": -80200,
+      "max_drawdown_theoretical": -80250,
       "cumulative_curve_theoretical": [
         350,
         300,
@@ -4398,17 +4399,18 @@
         -79700,
         -79750,
         -79800,
-        -79850
+        -79850,
+        -79900
       ]
     },
     "A02": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 34600,
-      "roi_theoretical": 0.31786862655029857,
+      "roi_theoretical": 0.317722681359045,
       "total_payout_actual": 36430,
-      "roi_actual": 0.33468075333027103,
-      "actual_periods": 2177,
+      "roi_actual": 0.33452708907254364,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 24,
         "t8": 25,
@@ -6593,17 +6595,18 @@
         -74100,
         -74150,
         -74200,
-        -74250
+        -74250,
+        -74300
       ]
     },
     "A03": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 34600,
-      "roi_theoretical": 0.31786862655029857,
+      "roi_theoretical": 0.317722681359045,
       "total_payout_actual": 31794,
-      "roi_actual": 0.2920900321543408,
-      "actual_periods": 2177,
+      "roi_actual": 0.29195592286501376,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 27,
         "t8": 42,
@@ -8788,17 +8791,18 @@
         -74100,
         -74150,
         -74200,
-        -74250
+        -74250,
+        -74300
       ]
     },
     "A04": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 23600,
-      "roi_theoretical": 0.21681212677997244,
+      "roi_theoretical": 0.21671258034894397,
       "total_payout_actual": 21600,
-      "roi_actual": 0.19843821773082224,
-      "actual_periods": 2177,
+      "roi_actual": 0.19834710743801653,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 32,
         "t7": 17,
@@ -10983,24 +10987,25 @@
         -85100,
         -85150,
         -85200,
-        -85250
+        -85250,
+        -85300
       ]
     },
     "A05": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 39400,
-      "roi_theoretical": 0.3619660082682591,
+      "roi_theoretical": 0.36179981634527086,
       "total_payout_actual": 38857,
-      "roi_actual": 0.3569774919614148,
-      "actual_periods": 2177,
+      "roi_actual": 0.3568135904499541,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 30,
         "t8": 46,
         "t5": 2,
         "t6": 5
       },
-      "max_drawdown_theoretical": -69500,
+      "max_drawdown_theoretical": -69550,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -13178,24 +13183,25 @@
         -69300,
         -69350,
         -69400,
-        -69450
+        -69450,
+        -69500
       ]
     },
     "A06": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 31000,
-      "roi_theoretical": 0.2847955902618282,
+      "roi_theoretical": 0.2846648301193756,
       "total_payout_actual": 26232,
-      "roi_actual": 0.2409921910886541,
-      "actual_periods": 2177,
+      "roi_actual": 0.2408815426997245,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 34,
         "t7": 36,
         "t6": 1,
         "t5": 1
       },
-      "max_drawdown_theoretical": -77850,
+      "max_drawdown_theoretical": -77900,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -15373,24 +15379,25 @@
         -77700,
         -77750,
         -77800,
-        -77850
+        -77850,
+        -77900
       ]
     },
     "A07": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 31000,
-      "roi_theoretical": 0.2847955902618282,
+      "roi_theoretical": 0.2846648301193756,
       "total_payout_actual": 32424,
-      "roi_actual": 0.2978778135048232,
-      "actual_periods": 2177,
+      "roi_actual": 0.2977410468319559,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 39,
         "t7": 21,
         "t5": 2,
         "t6": 3
       },
-      "max_drawdown_theoretical": -78150,
+      "max_drawdown_theoretical": -78200,
       "cumulative_curve_theoretical": [
         -50,
         300,
@@ -17568,22 +17575,23 @@
         -77700,
         -77750,
         -77800,
-        -77850
+        -77850,
+        -77900
       ]
     },
     "A08": {
-      "periods": 2177,
-      "total_cost": 108850,
-      "total_payout_theoretical": 26200,
-      "roi_theoretical": 0.2406982085438677,
-      "total_payout_actual": 22200,
-      "roi_actual": 0.2039503904455673,
-      "actual_periods": 2177,
+      "periods": 2178,
+      "total_cost": 108900,
+      "total_payout_theoretical": 28200,
+      "roi_theoretical": 0.25895316804407714,
+      "total_payout_actual": 24200,
+      "roi_actual": 0.2222222222222222,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 33,
         "t7": 25,
         "t6": 1,
-        "t5": 1
+        "t5": 2
       },
       "max_drawdown_theoretical": -82900,
       "cumulative_curve_theoretical": [
@@ -19763,23 +19771,24 @@
         -82900,
         -82550,
         -82600,
-        -82650
+        -82650,
+        -80700
       ]
     },
     "A09": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 33800,
-      "roi_theoretical": 0.31051906293063847,
+      "roi_theoretical": 0.310376492194674,
       "total_payout_actual": 29400,
-      "roi_actual": 0.27009646302250806,
-      "actual_periods": 2177,
+      "roi_actual": 0.2699724517906336,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 42,
         "t7": 25,
         "t6": 7
       },
-      "max_drawdown_theoretical": -75050,
+      "max_drawdown_theoretical": -75100,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -21957,24 +21966,25 @@
         -74900,
         -74950,
         -75000,
-        -75050
+        -75050,
+        -75100
       ]
     },
     "A10": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 35000,
-      "roi_theoretical": 0.3215434083601286,
+      "roi_theoretical": 0.3213957759412305,
       "total_payout_actual": 32073,
-      "roi_actual": 0.2946531924666973,
-      "actual_periods": 2177,
+      "roi_actual": 0.29451790633608815,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 25,
         "t8": 40,
         "t6": 3,
         "t5": 3
       },
-      "max_drawdown_theoretical": -74500,
+      "max_drawdown_theoretical": -74550,
       "cumulative_curve_theoretical": [
         -50,
         300,
@@ -24152,17 +24162,18 @@
         -73700,
         -73750,
         -73800,
-        -73850
+        -73850,
+        -73900
       ]
     },
     "A11": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 26400,
-      "roi_theoretical": 0.24253559944878272,
+      "roi_theoretical": 0.24242424242424243,
       "total_payout_actual": 21187,
-      "roi_actual": 0.1946440055121727,
-      "actual_periods": 2177,
+      "roi_actual": 0.19455463728191,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 25,
         "t8": 26,
@@ -26347,24 +26358,25 @@
         -82300,
         -82350,
         -82400,
-        -82450
+        -82450,
+        -82500
       ]
     },
     "A12": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 32600,
-      "roi_theoretical": 0.29949471750114837,
+      "roi_theoretical": 0.29935720844811753,
       "total_payout_actual": 31376,
-      "roi_actual": 0.28824988516306843,
-      "actual_periods": 2177,
+      "roi_actual": 0.28811753902662995,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 22,
         "t8": 37,
         "t5": 4,
         "t6": 1
       },
-      "max_drawdown_theoretical": -76250,
+      "max_drawdown_theoretical": -76300,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -28542,17 +28554,18 @@
         -76100,
         -76150,
         -76200,
-        -76250
+        -76250,
+        -76300
       ]
     },
     "A13": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 38000,
-      "roi_theoretical": 0.3491042719338539,
+      "roi_theoretical": 0.34894398530762166,
       "total_payout_actual": 35612,
-      "roi_actual": 0.3271658245291686,
-      "actual_periods": 2177,
+      "roi_actual": 0.32701561065197426,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 42,
         "t7": 28,
@@ -30737,17 +30750,18 @@
         -70700,
         -70750,
         -70800,
-        -70850
+        -70850,
+        -70900
       ]
     },
     "A14": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 41464,
-      "roi_theoretical": 0.3809278824069821,
+      "roi_theoretical": 0.380752984389348,
       "total_payout_actual": 49738,
-      "roi_actual": 0.4569407441433165,
-      "actual_periods": 2177,
+      "roi_actual": 0.4567309458218549,
+      "actual_periods": 2178,
       "tier_hits": {
         "t6": 2,
         "t8": 34,
@@ -30755,7 +30769,7 @@
         "t4": 1,
         "t5": 1
       },
-      "max_drawdown_theoretical": -71300,
+      "max_drawdown_theoretical": -71350,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -32933,24 +32947,25 @@
         -67236,
         -67286,
         -67336,
-        -67386
+        -67386,
+        -67436
       ]
     },
     "A15": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 40800,
-      "roi_theoretical": 0.3748277446026642,
+      "roi_theoretical": 0.3746556473829201,
       "total_payout_actual": 35504,
-      "roi_actual": 0.3261736334405145,
-      "actual_periods": 2177,
+      "roi_actual": 0.3260238751147842,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 38,
         "t7": 39,
         "t5": 3,
         "t6": 4
       },
-      "max_drawdown_theoretical": -68050,
+      "max_drawdown_theoretical": -68100,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -35128,24 +35143,25 @@
         -67900,
         -67950,
         -68000,
-        -68050
+        -68050,
+        -68100
       ]
     },
     "A16": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 27400,
-      "roi_theoretical": 0.25172255397335785,
+      "roi_theoretical": 0.2516069788797062,
       "total_payout_actual": 22200,
-      "roi_actual": 0.2039503904455673,
-      "actual_periods": 2177,
+      "roi_actual": 0.20385674931129477,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 25,
         "t7": 31,
         "t6": 3,
         "t5": 1
       },
-      "max_drawdown_theoretical": -81950,
+      "max_drawdown_theoretical": -82000,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -37323,23 +37339,24 @@
         -81300,
         -81350,
         -81400,
-        -81450
+        -81450,
+        -81500
       ]
     },
     "A17": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 29800,
-      "roi_theoretical": 0.27377124483233806,
+      "roi_theoretical": 0.2736455463728191,
       "total_payout_actual": 25000,
-      "roi_actual": 0.2296738631143776,
-      "actual_periods": 2177,
+      "roi_actual": 0.2295684113865932,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 41,
         "t7": 26,
         "t6": 3
       },
-      "max_drawdown_theoretical": -79400,
+      "max_drawdown_theoretical": -79450,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -39517,17 +39534,18 @@
         -78900,
         -78950,
         -79000,
-        -79050
+        -79050,
+        -79100
       ]
     },
     "A18": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 42400,
-      "roi_theoretical": 0.38952687184198437,
+      "roi_theoretical": 0.38934802571166205,
       "total_payout_actual": 41053,
-      "roi_actual": 0.37715204409738173,
-      "actual_periods": 2177,
+      "roi_actual": 0.37697887970615246,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 44,
         "t7": 22,
@@ -41712,23 +41730,24 @@
         -66300,
         -66350,
         -66400,
-        -66450
+        -66450,
+        -66500
       ]
     },
     "A19": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 22800,
-      "roi_theoretical": 0.20946256316031236,
+      "roi_theoretical": 0.209366391184573,
       "total_payout_actual": 20000,
-      "roi_actual": 0.18373909049150206,
-      "actual_periods": 2177,
+      "roi_actual": 0.18365472910927455,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 21,
         "t6": 2,
         "t8": 31
       },
-      "max_drawdown_theoretical": -86050,
+      "max_drawdown_theoretical": -86100,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -43906,20 +43925,21 @@
         -85900,
         -85950,
         -86000,
-        -86050
+        -86050,
+        -86100
       ]
     },
     "A20": {
-      "periods": 2177,
-      "total_cost": 108850,
-      "total_payout_theoretical": 35200,
-      "roi_theoretical": 0.32338079926504365,
-      "total_payout_actual": 31934,
-      "roi_actual": 0.29337620578778134,
-      "actual_periods": 2177,
+      "periods": 2178,
+      "total_cost": 108900,
+      "total_payout_theoretical": 35600,
+      "roi_theoretical": 0.3269054178145087,
+      "total_payout_actual": 32334,
+      "roi_actual": 0.2969146005509642,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 38,
-        "t7": 30,
+        "t7": 31,
         "t5": 2,
         "t6": 4
       },
@@ -46101,24 +46121,25 @@
         -73500,
         -73550,
         -73600,
-        -73650
+        -73650,
+        -73300
       ]
     },
     "A21": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 33600,
-      "roi_theoretical": 0.3086816720257235,
+      "roi_theoretical": 0.3085399449035813,
       "total_payout_actual": 29772,
-      "roi_actual": 0.27351401010564996,
-      "actual_periods": 2177,
+      "roi_actual": 0.2733884297520661,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 31,
         "t7": 33,
         "t5": 2,
         "t6": 4
       },
-      "max_drawdown_theoretical": -75250,
+      "max_drawdown_theoretical": -75300,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -48296,23 +48317,24 @@
         -75100,
         -75150,
         -75200,
-        -75250
+        -75250,
+        -75300
       ]
     },
     "A22": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 29600,
-      "roi_theoretical": 0.2719338539274231,
+      "roi_theoretical": 0.27180899908172634,
       "total_payout_actual": 25600,
-      "roi_actual": 0.23518603582912265,
-      "actual_periods": 2177,
+      "roi_actual": 0.23507805325987144,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 43,
         "t7": 26,
         "t5": 1
       },
-      "max_drawdown_theoretical": -79250,
+      "max_drawdown_theoretical": -79300,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -50490,17 +50512,18 @@
         -79100,
         -79150,
         -79200,
-        -79250
+        -79250,
+        -79300
       ]
     },
     "A23": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 38200,
-      "roi_theoretical": 0.35094166283876893,
+      "roi_theoretical": 0.3507805325987144,
       "total_payout_actual": 32200,
-      "roi_actual": 0.2958199356913183,
-      "actual_periods": 2177,
+      "roi_actual": 0.2956841138659321,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 34,
         "t8": 39,
@@ -52685,24 +52708,25 @@
         -70500,
         -70550,
         -70600,
-        -70650
+        -70650,
+        -70700
       ]
     },
     "A24": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 97834,
-      "roi_theoretical": 0.8987965089572807,
+      "roi_theoretical": 0.8983838383838384,
       "total_payout_actual": 94233,
-      "roi_actual": 0.8657142857142858,
-      "actual_periods": 2177,
+      "roi_actual": 0.8653168044077135,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 40,
         "t7": 25,
         "t6": 4,
         "t3": 1
       },
-      "max_drawdown_theoretical": -42550,
+      "max_drawdown_theoretical": -42600,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -54880,24 +54904,25 @@
         -10866,
         -10916,
         -10966,
-        -11016
+        -11016,
+        -11066
       ]
     },
     "A25": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 27800,
-      "roi_theoretical": 0.25539733578318785,
+      "roi_theoretical": 0.25528007346189163,
       "total_payout_actual": 27479,
-      "roi_actual": 0.25244832338079926,
-      "actual_periods": 2177,
+      "roi_actual": 0.2523324150596878,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 34,
         "t6": 3,
         "t7": 23,
         "t5": 1
       },
-      "max_drawdown_theoretical": -81050,
+      "max_drawdown_theoretical": -81100,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -57075,23 +57100,24 @@
         -80900,
         -80950,
         -81000,
-        -81050
+        -81050,
+        -81100
       ]
     },
     "A26": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 31800,
-      "roi_theoretical": 0.29214515388148826,
+      "roi_theoretical": 0.29201101928374656,
       "total_payout_actual": 27400,
-      "roi_actual": 0.25172255397335785,
-      "actual_periods": 2177,
+      "roi_actual": 0.2516069788797062,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 25,
         "t8": 42,
         "t6": 5
       },
-      "max_drawdown_theoretical": -77050,
+      "max_drawdown_theoretical": -77100,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -59269,17 +59295,18 @@
         -76900,
         -76950,
         -77000,
-        -77050
+        -77050,
+        -77100
       ]
     },
     "A27": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 36600,
-      "roi_theoretical": 0.3362425355994488,
+      "roi_theoretical": 0.33608815426997246,
       "total_payout_actual": 32729,
-      "roi_actual": 0.30067983463481857,
-      "actual_periods": 2177,
+      "roi_actual": 0.30054178145087235,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 49,
         "t7": 30,
@@ -61464,17 +61491,18 @@
         -72100,
         -72150,
         -72200,
-        -72250
+        -72250,
+        -72300
       ]
     },
     "A28": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 37800,
-      "roi_theoretical": 0.34726688102893893,
+      "roi_theoretical": 0.34710743801652894,
       "total_payout_actual": 36144,
-      "roi_actual": 0.33205328433624254,
-      "actual_periods": 2177,
+      "roi_actual": 0.331900826446281,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 50,
         "t7": 22,
@@ -63659,23 +63687,24 @@
         -71300,
         -71350,
         -71000,
-        -71050
+        -71050,
+        -71100
       ]
     },
     "A29": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 25400,
-      "roi_theoretical": 0.23334864492420762,
+      "roi_theoretical": 0.23324150596877868,
       "total_payout_actual": 22600,
-      "roi_actual": 0.20762517225539734,
-      "actual_periods": 2177,
+      "roi_actual": 0.20752984389348025,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 32,
         "t7": 24,
         "t6": 3
       },
-      "max_drawdown_theoretical": -83450,
+      "max_drawdown_theoretical": -83500,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -65853,24 +65882,25 @@
         -83300,
         -83350,
         -83400,
-        -83450
+        -83450,
+        -83500
       ]
     },
     "A30": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 32600,
-      "roi_theoretical": 0.29949471750114837,
+      "roi_theoretical": 0.29935720844811753,
       "total_payout_actual": 32174,
-      "roi_actual": 0.29558107487367935,
-      "actual_periods": 2177,
+      "roi_actual": 0.29544536271808997,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 26,
         "t7": 33,
         "t5": 4,
         "t6": 1
       },
-      "max_drawdown_theoretical": -76250,
+      "max_drawdown_theoretical": -76300,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -68048,17 +68078,18 @@
         -76100,
         -76150,
         -76200,
-        -76250
+        -76250,
+        -76300
       ]
     },
     "A31": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 94234,
-      "roi_theoretical": 0.8657234726688103,
+      "roi_theoretical": 0.865325987144169,
       "total_payout_actual": 68649,
-      "roi_actual": 0.6306752411575562,
-      "actual_periods": 2177,
+      "roi_actual": 0.6303856749311295,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 22,
         "t8": 29,
@@ -68066,7 +68097,7 @@
         "t3": 1,
         "t5": 2
       },
-      "max_drawdown_theoretical": -50100,
+      "max_drawdown_theoretical": -50150,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -70244,17 +70275,18 @@
         -14466,
         -14516,
         -14566,
-        -14616
+        -14616,
+        -14666
       ]
     },
     "A32": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 48664,
-      "roi_theoretical": 0.4470739549839228,
+      "roi_theoretical": 0.44686868686868686,
       "total_payout_actual": 61433,
-      "roi_actual": 0.5643821773082224,
-      "actual_periods": 2177,
+      "roi_actual": 0.5641230486685033,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 33,
         "t7": 28,
@@ -72440,24 +72472,25 @@
         -60436,
         -60486,
         -60536,
-        -60186
+        -60186,
+        -60236
       ]
     },
     "A33": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 34000,
-      "roi_theoretical": 0.3123564538355535,
+      "roi_theoretical": 0.3122130394857668,
       "total_payout_actual": 30400,
-      "roi_actual": 0.27928341754708313,
-      "actual_periods": 2177,
+      "roi_actual": 0.27915518824609736,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 30,
         "t6": 4,
         "t8": 40,
         "t5": 1
       },
-      "max_drawdown_theoretical": -74850,
+      "max_drawdown_theoretical": -74900,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -74635,23 +74668,24 @@
         -74700,
         -74750,
         -74800,
-        -74850
+        -74850,
+        -74900
       ]
     },
     "A34": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 28000,
-      "roi_theoretical": 0.2572347266881029,
+      "roi_theoretical": 0.2571166207529844,
       "total_payout_actual": 24400,
-      "roi_actual": 0.22416169039963252,
-      "actual_periods": 2177,
+      "roi_actual": 0.22405876951331496,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 35,
         "t7": 30,
         "t5": 1
       },
-      "max_drawdown_theoretical": -80850,
+      "max_drawdown_theoretical": -80900,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -76829,24 +76863,25 @@
         -80700,
         -80750,
         -80800,
-        -80850
+        -80850,
+        -80900
       ]
     },
     "A35": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 31400,
-      "roi_theoretical": 0.28847037207165827,
+      "roi_theoretical": 0.28833792470156105,
       "total_payout_actual": 31610,
-      "roi_actual": 0.290399632521819,
-      "actual_periods": 2177,
+      "roi_actual": 0.29026629935720843,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 31,
         "t5": 2,
         "t6": 3,
         "t7": 30
       },
-      "max_drawdown_theoretical": -79450,
+      "max_drawdown_theoretical": -79500,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -79024,24 +79059,25 @@
         -77300,
         -77350,
         -77400,
-        -77450
+        -77450,
+        -77500
       ]
     },
     "A36": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 38200,
-      "roi_theoretical": 0.35094166283876893,
+      "roi_theoretical": 0.3507805325987144,
       "total_payout_actual": 40308,
-      "roi_actual": 0.37030776297657325,
-      "actual_periods": 2177,
+      "roi_actual": 0.37013774104683195,
+      "actual_periods": 2178,
       "tier_hits": {
         "t5": 2,
         "t6": 5,
         "t8": 41,
         "t7": 32
       },
-      "max_drawdown_theoretical": -71300,
+      "max_drawdown_theoretical": -71350,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -81219,23 +81255,24 @@
         -70500,
         -70550,
         -70600,
-        -70650
+        -70650,
+        -70700
       ]
     },
     "A37": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 30600,
-      "roi_theoretical": 0.28112080845199816,
+      "roi_theoretical": 0.2809917355371901,
       "total_payout_actual": 26987,
-      "roi_actual": 0.24792834175470832,
-      "actual_periods": 2177,
+      "roi_actual": 0.24781450872359964,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 26,
         "t8": 43,
         "t6": 3
       },
-      "max_drawdown_theoretical": -78350,
+      "max_drawdown_theoretical": -78400,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -83413,17 +83450,18 @@
         -78100,
         -78150,
         -78200,
-        -78250
+        -78250,
+        -78300
       ]
     },
     "A38": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 38400,
-      "roi_theoretical": 0.35277905374368396,
+      "roi_theoretical": 0.3526170798898072,
       "total_payout_actual": 36284,
-      "roi_actual": 0.33333945796968306,
-      "actual_periods": 2177,
+      "roi_actual": 0.3331864095500459,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 50,
         "t7": 21,
@@ -85608,17 +85646,18 @@
         -70700,
         -70750,
         -70400,
-        -70450
+        -70450,
+        -70500
       ]
     },
     "A39": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 25600,
-      "roi_theoretical": 0.23518603582912265,
+      "roi_theoretical": 0.23507805325987144,
       "total_payout_actual": 21200,
-      "roi_actual": 0.19476343592099218,
-      "actual_periods": 2177,
+      "roi_actual": 0.19467401285583102,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 31,
         "t7": 28,
@@ -87802,24 +87841,25 @@
         -83500,
         -83150,
         -83200,
-        -83250
+        -83250,
+        -83300
       ]
     },
     "A40": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 30000,
-      "roi_theoretical": 0.2756086357372531,
+      "roi_theoretical": 0.27548209366391185,
       "total_payout_actual": 27190,
-      "roi_actual": 0.24979329352319707,
-      "actual_periods": 2177,
+      "roi_actual": 0.24967860422405877,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 29,
         "t8": 26,
         "t5": 3,
         "t6": 2
       },
-      "max_drawdown_theoretical": -78850,
+      "max_drawdown_theoretical": -78900,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -89997,17 +90037,18 @@
         -78700,
         -78750,
         -78800,
-        -78850
+        -78850,
+        -78900
       ]
     },
     "A41": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 30800,
-      "roi_theoretical": 0.2829581993569132,
+      "roi_theoretical": 0.2828282828282828,
       "total_payout_actual": 28000,
-      "roi_actual": 0.2572347266881029,
-      "actual_periods": 2177,
+      "roi_actual": 0.2571166207529844,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 49,
         "t7": 23,
@@ -92191,24 +92232,25 @@
         -77900,
         -77950,
         -78000,
-        -78050
+        -78050,
+        -78100
       ]
     },
     "A42": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 31400,
-      "roi_theoretical": 0.28847037207165827,
+      "roi_theoretical": 0.28833792470156105,
       "total_payout_actual": 29731,
-      "roi_actual": 0.2731373449701424,
-      "actual_periods": 2177,
+      "roi_actual": 0.2730119375573921,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 24,
         "t8": 37,
         "t5": 2,
         "t6": 3
       },
-      "max_drawdown_theoretical": -77450,
+      "max_drawdown_theoretical": -77500,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -94386,24 +94428,25 @@
         -77300,
         -77350,
         -77400,
-        -77450
+        -77450,
+        -77500
       ]
     },
     "A43": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 36800,
-      "roi_theoretical": 0.3380799265043638,
+      "roi_theoretical": 0.3379247015610652,
       "total_payout_actual": 34314,
-      "roi_actual": 0.3152411575562701,
-      "actual_periods": 2177,
+      "roi_actual": 0.3150964187327824,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 43,
         "t7": 29,
         "t6": 4,
         "t5": 2
       },
-      "max_drawdown_theoretical": -72050,
+      "max_drawdown_theoretical": -72100,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -96581,19 +96624,20 @@
         -71900,
         -71950,
         -72000,
-        -72050
+        -72050,
+        -72100
       ]
     },
     "A44": {
-      "periods": 2177,
-      "total_cost": 108850,
-      "total_payout_theoretical": 32000,
-      "roi_theoretical": 0.2939825447864033,
-      "total_payout_actual": 28800,
-      "roi_actual": 0.264584290307763,
-      "actual_periods": 2177,
+      "periods": 2178,
+      "total_cost": 108900,
+      "total_payout_theoretical": 32400,
+      "roi_theoretical": 0.2975206611570248,
+      "total_payout_actual": 29200,
+      "roi_actual": 0.2681359044995409,
+      "actual_periods": 2178,
       "tier_hits": {
-        "t7": 28,
+        "t7": 29,
         "t8": 37,
         "t6": 6
       },
@@ -98775,24 +98819,25 @@
         -76700,
         -76750,
         -76800,
-        -76850
+        -76850,
+        -76500
       ]
     },
     "A45": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 34800,
-      "roi_theoretical": 0.3197060174552136,
+      "roi_theoretical": 0.31955922865013775,
       "total_payout_actual": 30722,
-      "roi_actual": 0.28224161690399635,
-      "actual_periods": 2177,
+      "roi_actual": 0.28211202938475666,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 31,
         "t7": 41,
         "t6": 2,
         "t5": 2
       },
-      "max_drawdown_theoretical": -74200,
+      "max_drawdown_theoretical": -74250,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -100970,17 +101015,18 @@
         -73900,
         -73950,
         -74000,
-        -74050
+        -74050,
+        -74100
       ]
     },
     "A46": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 113298,
-      "roi_theoretical": 1.04086357372531,
+      "roi_theoretical": 1.0403856749311295,
       "total_payout_actual": 98632,
-      "roi_actual": 0.9061276986678916,
-      "actual_periods": 2177,
+      "roi_actual": 0.9057116620752984,
+      "actual_periods": 2178,
       "tier_hits": {
         "t6": 4,
         "t8": 43,
@@ -103166,24 +103212,25 @@
         4598,
         4548,
         4498,
-        4448
+        4448,
+        4398
       ]
     },
     "A47": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 31000,
-      "roi_theoretical": 0.2847955902618282,
+      "roi_theoretical": 0.2846648301193756,
       "total_payout_actual": 28416,
-      "roi_actual": 0.26105649977032613,
-      "actual_periods": 2177,
+      "roi_actual": 0.2609366391184573,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 27,
         "t7": 28,
         "t6": 5,
         "t5": 2
       },
-      "max_drawdown_theoretical": -78300,
+      "max_drawdown_theoretical": -78350,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -105361,24 +105408,25 @@
         -77700,
         -77750,
         -77800,
-        -77850
+        -77850,
+        -77900
       ]
     },
     "A48": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 27600,
-      "roi_theoretical": 0.2535599448782728,
+      "roi_theoretical": 0.2534435261707989,
       "total_payout_actual": 22000,
-      "roi_actual": 0.20211299954065226,
-      "actual_periods": 2177,
+      "roi_actual": 0.20202020202020202,
+      "actual_periods": 2178,
       "tier_hits": {
         "t6": 2,
         "t8": 28,
         "t7": 31,
         "t5": 1
       },
-      "max_drawdown_theoretical": -81250,
+      "max_drawdown_theoretical": -81300,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -107556,24 +107604,25 @@
         -81100,
         -81150,
         -81200,
-        -81250
+        -81250,
+        -81300
       ]
     },
     "A49": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 30800,
-      "roi_theoretical": 0.2829581993569132,
+      "roi_theoretical": 0.2828282828282828,
       "total_payout_actual": 28735,
-      "roi_actual": 0.2639871382636656,
-      "actual_periods": 2177,
+      "roi_actual": 0.2638659320477502,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 36,
         "t7": 26,
         "t6": 2,
         "t5": 2
       },
-      "max_drawdown_theoretical": -78050,
+      "max_drawdown_theoretical": -78100,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -109751,24 +109800,25 @@
         -77900,
         -77950,
         -78000,
-        -78050
+        -78050,
+        -78100
       ]
     },
     "B01": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 38400,
-      "roi_theoretical": 0.35277905374368396,
+      "roi_theoretical": 0.3526170798898072,
       "total_payout_actual": 36142,
-      "roi_actual": 0.3320349104271934,
-      "actual_periods": 2177,
+      "roi_actual": 0.33188246097337004,
+      "actual_periods": 2178,
       "tier_hits": {
         "t6": 4,
         "t7": 29,
         "t5": 3,
         "t8": 42
       },
-      "max_drawdown_theoretical": -70450,
+      "max_drawdown_theoretical": -70500,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -111946,23 +111996,24 @@
         -70300,
         -70350,
         -70400,
-        -70450
+        -70450,
+        -70500
       ]
     },
     "B02": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 31200,
-      "roi_theoretical": 0.28663298116674324,
+      "roi_theoretical": 0.2865013774104683,
       "total_payout_actual": 29200,
-      "roi_actual": 0.26825907211759303,
-      "actual_periods": 2177,
+      "roi_actual": 0.2681359044995409,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 37,
         "t7": 31,
         "t6": 4
       },
-      "max_drawdown_theoretical": -77650,
+      "max_drawdown_theoretical": -77700,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -114140,17 +114191,18 @@
         -77500,
         -77550,
         -77600,
-        -77650
+        -77650,
+        -77700
       ]
     },
     "B03": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 35400,
-      "roi_theoretical": 0.3252181901699587,
+      "roi_theoretical": 0.325068870523416,
       "total_payout_actual": 30392,
-      "roi_actual": 0.27920992191088656,
-      "actual_periods": 2177,
+      "roi_actual": 0.2790817263544536,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 34,
         "t5": 4,
@@ -116335,24 +116387,25 @@
         -73700,
         -73750,
         -73800,
-        -73450
+        -73450,
+        -73500
       ]
     },
     "B04": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 32400,
-      "roi_theoretical": 0.29765732659623334,
+      "roi_theoretical": 0.2975206611570248,
       "total_payout_actual": 30706,
-      "roi_actual": 0.28209462563160315,
-      "actual_periods": 2177,
+      "roi_actual": 0.28196510560146926,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 32,
         "t8": 29,
         "t5": 3,
         "t6": 2
       },
-      "max_drawdown_theoretical": -76450,
+      "max_drawdown_theoretical": -76500,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -118530,24 +118583,25 @@
         -76300,
         -76350,
         -76400,
-        -76450
+        -76450,
+        -76500
       ]
     },
     "B05": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 34000,
-      "roi_theoretical": 0.3123564538355535,
+      "roi_theoretical": 0.3122130394857668,
       "total_payout_actual": 32279,
-      "roi_actual": 0.29654570509875977,
-      "actual_periods": 2177,
+      "roi_actual": 0.2964095500459137,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 40,
         "t6": 2,
         "t7": 30,
         "t5": 2
       },
-      "max_drawdown_theoretical": -75650,
+      "max_drawdown_theoretical": -75700,
       "cumulative_curve_theoretical": [
         -50,
         300,
@@ -120725,23 +120779,24 @@
         -74700,
         -74750,
         -74800,
-        -74850
+        -74850,
+        -74900
       ]
     },
     "C01": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 28200,
-      "roi_theoretical": 0.2590721175930179,
+      "roi_theoretical": 0.25895316804407714,
       "total_payout_actual": 24600,
-      "roi_actual": 0.22599908130454754,
-      "actual_periods": 2177,
+      "roi_actual": 0.22589531680440772,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 26,
         "t8": 37,
         "t6": 3
       },
-      "max_drawdown_theoretical": -80850,
+      "max_drawdown_theoretical": -80900,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -122919,24 +122974,25 @@
         -80500,
         -80550,
         -80600,
-        -80650
+        -80650,
+        -80700
       ]
     },
     "C02": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 29000,
-      "roi_theoretical": 0.266421681212678,
+      "roi_theoretical": 0.2662993572084481,
       "total_payout_actual": 28275,
-      "roi_actual": 0.25976113918236104,
-      "actual_periods": 2177,
+      "roi_actual": 0.2596418732782369,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 17,
         "t8": 33,
         "t5": 3,
         "t6": 3
       },
-      "max_drawdown_theoretical": -79850,
+      "max_drawdown_theoretical": -79900,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -125114,24 +125170,25 @@
         -79700,
         -79750,
         -79800,
-        -79850
+        -79850,
+        -79900
       ]
     },
     "C03": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 36400,
-      "roi_theoretical": 0.33440514469453375,
+      "roi_theoretical": 0.3342516069788797,
       "total_payout_actual": 35782,
-      "roi_actual": 0.32872760679834634,
-      "actual_periods": 2177,
+      "roi_actual": 0.32857667584940314,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 37,
         "t5": 4,
         "t7": 29,
         "t6": 2
       },
-      "max_drawdown_theoretical": -72450,
+      "max_drawdown_theoretical": -72500,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -127309,24 +127366,25 @@
         -72300,
         -72350,
         -72400,
-        -72450
+        -72450,
+        -72500
       ]
     },
     "D01": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 29000,
-      "roi_theoretical": 0.266421681212678,
+      "roi_theoretical": 0.2662993572084481,
       "total_payout_actual": 24352,
-      "roi_actual": 0.2237207165824529,
-      "actual_periods": 2177,
+      "roi_actual": 0.2236179981634527,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 28,
         "t8": 37,
         "t5": 1,
         "t6": 1
       },
-      "max_drawdown_theoretical": -79850,
+      "max_drawdown_theoretical": -79900,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -129504,24 +129562,25 @@
         -79700,
         -79750,
         -79800,
-        -79850
+        -79850,
+        -79900
       ]
     },
     "D02": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 33800,
-      "roi_theoretical": 0.31051906293063847,
+      "roi_theoretical": 0.310376492194674,
       "total_payout_actual": 31904,
-      "roi_actual": 0.2931005971520441,
-      "actual_periods": 2177,
+      "roi_actual": 0.2929660238751148,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 39,
         "t7": 28,
         "t6": 5,
         "t5": 1
       },
-      "max_drawdown_theoretical": -75050,
+      "max_drawdown_theoretical": -75100,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -131699,17 +131758,18 @@
         -74900,
         -74950,
         -75000,
-        -75050
+        -75050,
+        -75100
       ]
     },
     "D03": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 22800,
-      "roi_theoretical": 0.20946256316031236,
+      "roi_theoretical": 0.209366391184573,
       "total_payout_actual": 20000,
-      "roi_actual": 0.18373909049150206,
-      "actual_periods": 2177,
+      "roi_actual": 0.18365472910927455,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 27,
         "t6": 2,
@@ -133894,24 +133954,25 @@
         -86300,
         -86350,
         -86400,
-        -86050
+        -86050,
+        -86100
       ]
     },
     "E01": {
-      "periods": 2177,
-      "total_cost": 761950,
+      "periods": 2178,
+      "total_cost": 762300,
       "total_payout_theoretical": 280200,
-      "roi_theoretical": 0.367740665397992,
+      "roi_theoretical": 0.3675718221172767,
       "total_payout_actual": 239417,
-      "roi_actual": 0.3142161559157425,
-      "actual_periods": 2177,
+      "roi_actual": 0.31407188770825134,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 265,
         "t6": 33,
         "t8": 263,
         "t5": 18
       },
-      "max_drawdown_theoretical": -481750,
+      "max_drawdown_theoretical": -482100,
       "cumulative_curve_theoretical": [
         -350,
         -700,
@@ -136089,17 +136150,18 @@
         -480700,
         -481050,
         -481400,
-        -481750
+        -481750,
+        -482100
       ]
     },
     "E02": {
-      "periods": 2177,
-      "total_cost": 3047800,
+      "periods": 2178,
+      "total_cost": 3049200,
       "total_payout_theoretical": 967902,
-      "roi_theoretical": 0.3175739877944747,
+      "roi_theoretical": 0.3174281778827233,
       "total_payout_actual": 887474,
-      "roi_actual": 0.2911851171336702,
-      "actual_periods": 2177,
+      "roi_actual": 0.29105142332415057,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 772,
         "t7": 764,
@@ -136107,7 +136169,7 @@
         "t5": 39,
         "t3": 3
       },
-      "max_drawdown_theoretical": -2082498,
+      "max_drawdown_theoretical": -2083898,
       "cumulative_curve_theoretical": [
         2600,
         1200,
@@ -138285,17 +138347,18 @@
         -2079698,
         -2077098,
         -2078498,
-        -2079898
+        -2079898,
+        -2081298
       ]
     },
     "E03": {
-      "periods": 2177,
-      "total_cost": 3047800,
+      "periods": 2178,
+      "total_cost": 3049200,
       "total_payout_theoretical": 915592,
-      "roi_theoretical": 0.300410788109456,
+      "roi_theoretical": 0.30027285845467666,
       "total_payout_actual": 819622,
-      "roi_actual": 0.26892250147647484,
-      "actual_periods": 2177,
+      "roi_actual": 0.2687990292535747,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 776,
         "t6": 72,
@@ -138303,7 +138366,7 @@
         "t5": 45,
         "t4": 3
       },
-      "max_drawdown_theoretical": -2132208,
+      "max_drawdown_theoretical": -2133608,
       "cumulative_curve_theoretical": [
         -1400,
         -2800,
@@ -140481,24 +140544,25 @@
         -2128008,
         -2129408,
         -2130808,
-        -2132208
+        -2132208,
+        -2133608
       ]
     },
     "E04": {
-      "periods": 2177,
-      "total_cost": 3047800,
+      "periods": 2178,
+      "total_cost": 3049200,
       "total_payout_theoretical": 868800,
-      "roi_theoretical": 0.28505807467681604,
+      "roi_theoretical": 0.2849271940181031,
       "total_payout_actual": 790620,
-      "roi_actual": 0.25940678522212746,
-      "actual_periods": 2177,
+      "roi_actual": 0.2592876820149547,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 946,
         "t7": 836,
         "t6": 108,
         "t5": 24
       },
-      "max_drawdown_theoretical": -2179000,
+      "max_drawdown_theoretical": -2180400,
       "cumulative_curve_theoretical": [
         -1400,
         -2800,
@@ -142676,17 +142740,18 @@
         -2174800,
         -2176200,
         -2177600,
-        -2179000
+        -2179000,
+        -2180400
       ]
     },
     "E05": {
-      "periods": 2177,
-      "total_cost": 3047800,
+      "periods": 2178,
+      "total_cost": 3049200,
       "total_payout_theoretical": 1186694,
-      "roi_theoretical": 0.3893608504495046,
+      "roi_theoretical": 0.3891820805457169,
       "total_payout_actual": 1072264,
-      "roi_actual": 0.3518157359406785,
-      "actual_periods": 2177,
+      "roi_actual": 0.3516542043814771,
+      "actual_periods": 2178,
       "tier_hits": {
         "t7": 784,
         "t8": 1012,
@@ -142695,7 +142760,7 @@
         "t4": 3,
         "t3": 3
       },
-      "max_drawdown_theoretical": -1861106,
+      "max_drawdown_theoretical": -1862506,
       "cumulative_curve_theoretical": [
         -1400,
         -2800,
@@ -144873,24 +144938,25 @@
         -1856906,
         -1858306,
         -1859706,
-        -1861106
+        -1861106,
+        -1862506
       ]
     },
     "F01": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 38600,
-      "roi_theoretical": 0.354616444648599,
+      "roi_theoretical": 0.3544536271808999,
       "total_payout_actual": 40107,
-      "roi_actual": 0.36846118511713366,
-      "actual_periods": 2177,
+      "roi_actual": 0.36829201101928377,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 53,
         "t6": 5,
         "t7": 26,
         "t5": 1
       },
-      "max_drawdown_theoretical": -71750,
+      "max_drawdown_theoretical": -71800,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -147068,24 +147134,25 @@
         -70100,
         -70150,
         -70200,
-        -70250
+        -70250,
+        -70300
       ]
     },
     "F02": {
-      "periods": 2177,
-      "total_cost": 108850,
+      "periods": 2178,
+      "total_cost": 108900,
       "total_payout_theoretical": 43200,
-      "roi_theoretical": 0.3968764354616445,
+      "roi_theoretical": 0.39669421487603307,
       "total_payout_actual": 37200,
-      "roi_actual": 0.34175470831419386,
-      "actual_periods": 2177,
+      "roi_actual": 0.3415977961432507,
+      "actual_periods": 2178,
       "tier_hits": {
         "t8": 49,
         "t7": 34,
         "t6": 6,
         "t5": 2
       },
-      "max_drawdown_theoretical": -65650,
+      "max_drawdown_theoretical": -65700,
       "cumulative_curve_theoretical": [
         -50,
         -100,
@@ -149263,7 +149330,8 @@
         -65500,
         -65550,
         -65600,
-        -65650
+        -65650,
+        -65700
       ]
     }
   }

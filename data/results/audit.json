@@ -1,136 +1,136 @@
 {
-  "n_draws": 2177,
+  "n_draws": 2178,
   "single_number": {
-    "chi2": 34.98499464094319,
-    "p_value": 0.818931755687026,
+    "chi2": 35.000459136822776,
+    "p_value": 0.816931922339805,
     "df": 48,
-    "total_observations": 13062,
-    "expected_per_number": 266.57142857142856,
+    "total_observations": 13068,
+    "expected_per_number": 266.6938775510204,
     "z_sd_factor": 0.877551,
     "mc_calibrated": true,
     "top_deviations": [
       {
         "number": 6,
         "observed": 235,
-        "z": -2.064
+        "z": -2.072
       },
       {
         "number": 8,
         "observed": 296,
-        "z": 1.924
+        "z": 1.916
       },
       {
         "number": 4,
         "observed": 238,
-        "z": -1.868
+        "z": -1.876
       },
       {
         "number": 9,
         "observed": 239,
-        "z": -1.803
+        "z": -1.81
       },
       {
         "number": 17,
         "observed": 240,
-        "z": -1.737
+        "z": -1.745
       },
       {
         "number": 15,
         "observed": 291,
-        "z": 1.597
+        "z": 1.589
       },
       {
         "number": 35,
-        "observed": 288,
-        "z": 1.401
+        "observed": 289,
+        "z": 1.458
       },
       {
         "number": 2,
         "observed": 288,
-        "z": 1.401
+        "z": 1.393
       },
       {
         "number": 24,
         "observed": 246,
-        "z": -1.345
+        "z": -1.353
       },
       {
         "number": 23,
         "observed": 286,
-        "z": 1.27
+        "z": 1.262
       }
     ],
     "n_sim": 12000,
-    "p_analytic_scaled_chi2": 0.817997
+    "p_analytic_scaled_chi2": 0.817462
   },
   "special_number": {
-    "chi2": 67.02893890675242,
-    "p_value": 0.03606217113639353,
+    "chi2": 66.55096418732784,
+    "p_value": 0.03927858310596381,
     "df": 48,
-    "total_observations": 2177,
-    "expected_per_number": 44.42857142857143,
+    "total_observations": 2178,
+    "expected_per_number": 44.44897959183673,
     "z_sd_factor": 0.979592,
     "mc_calibrated": false,
     "top_deviations": [
       {
         "number": 24,
         "observed": 63,
-        "z": 2.815
+        "z": 2.811
       },
       {
         "number": 31,
         "observed": 62,
-        "z": 2.664
+        "z": 2.66
       },
       {
         "number": 23,
         "observed": 29,
-        "z": -2.339
+        "z": -2.341
       },
       {
         "number": 17,
         "observed": 29,
-        "z": -2.339
+        "z": -2.341
       },
       {
         "number": 41,
         "observed": 58,
-        "z": 2.057
+        "z": 2.054
       },
       {
         "number": 44,
         "observed": 32,
-        "z": -1.884
+        "z": -1.887
       },
       {
         "number": 20,
         "observed": 33,
-        "z": -1.732
+        "z": -1.735
       },
       {
         "number": 1,
         "observed": 33,
-        "z": -1.732
+        "z": -1.735
       },
       {
         "number": 42,
         "observed": 55,
-        "z": 1.602
+        "z": 1.599
       },
       {
         "number": 37,
         "observed": 55,
-        "z": 1.602
+        "z": 1.599
       }
     ]
   },
   "pair_cooccurrence": {
     "test": "pair_cooccurrence",
-    "n_draws": 2177,
-    "expected_per_pair": 27.767857142857142,
-    "chi2": 1073.2418006430944,
+    "n_draws": 2178,
+    "expected_per_pair": 27.78061224489796,
+    "chi2": 1071.8769513314965,
     "df": 1175,
-    "p_value": 0.9382551454045496,
+    "p_value": 0.9401716523623032,
     "n_pairs": 1176,
     "n_sim": 12000,
     "mc_calibrated": true,
@@ -141,7 +141,7 @@
           30
         ],
         "observed": 47,
-        "z": 3.65
+        "z": 3.646
       },
       {
         "pair": [
@@ -149,7 +149,7 @@
           16
         ],
         "observed": 11,
-        "z": -3.182
+        "z": -3.184
       },
       {
         "pair": [
@@ -157,7 +157,7 @@
           43
         ],
         "observed": 43,
-        "z": 2.891
+        "z": 2.888
       },
       {
         "pair": [
@@ -165,7 +165,7 @@
           37
         ],
         "observed": 42,
-        "z": 2.701
+        "z": 2.698
       },
       {
         "pair": [
@@ -173,7 +173,7 @@
           36
         ],
         "observed": 42,
-        "z": 2.701
+        "z": 2.698
       },
       {
         "pair": [
@@ -181,7 +181,7 @@
           49
         ],
         "observed": 14,
-        "z": -2.613
+        "z": -2.615
       },
       {
         "pair": [
@@ -189,7 +189,7 @@
           28
         ],
         "observed": 14,
-        "z": -2.613
+        "z": -2.615
       },
       {
         "pair": [
@@ -197,7 +197,7 @@
           49
         ],
         "observed": 41,
-        "z": 2.511
+        "z": 2.508
       },
       {
         "pair": [
@@ -205,7 +205,7 @@
           41
         ],
         "observed": 41,
-        "z": 2.511
+        "z": 2.508
       },
       {
         "pair": [
@@ -213,7 +213,7 @@
           45
         ],
         "observed": 41,
-        "z": 2.511
+        "z": 2.508
       },
       {
         "pair": [
@@ -221,7 +221,7 @@
           21
         ],
         "observed": 41,
-        "z": 2.511
+        "z": 2.508
       },
       {
         "pair": [
@@ -229,7 +229,7 @@
           26
         ],
         "observed": 41,
-        "z": 2.511
+        "z": 2.508
       },
       {
         "pair": [
@@ -237,7 +237,7 @@
           35
         ],
         "observed": 15,
-        "z": -2.423
+        "z": -2.425
       },
       {
         "pair": [
@@ -245,7 +245,7 @@
           38
         ],
         "observed": 15,
-        "z": -2.423
+        "z": -2.425
       },
       {
         "pair": [
@@ -253,7 +253,7 @@
           43
         ],
         "observed": 15,
-        "z": -2.423
+        "z": -2.425
       }
     ],
     "note": "配對非獨立，chi2 為近似統計量；p 由 Monte Carlo 校準；top_deviations 供人工檢視離群配對"
@@ -376,9 +376,9 @@
         "df": 48
       },
       "2026": {
-        "n_draws": 95,
-        "chi2": 46.196491228070165,
-        "p_value": 0.35265893642542984,
+        "n_draws": 96,
+        "chi2": 46.70833333333332,
+        "p_value": 0.33706517393042784,
         "df": 48
       }
     },
